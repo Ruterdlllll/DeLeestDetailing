@@ -1,2 +1,6 @@
 .DS_Store
 Thumbs.db
+
+# Local QA tooling (screenshot loop)
+.qa-venv/
+qa-screenshots/
