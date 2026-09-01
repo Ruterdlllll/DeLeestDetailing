@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#0b0d10">
+  <title>De Leest Detailing — Premium Car &amp; Motorcycle Detailing</title>
+  <meta name="description" content="High-end detailing for cars and motorcycles. Cleaning, polishing and ceramic coating — finished until it could not be more perfect.">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== Header ===== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="#top" class="logo" aria-label="De Leest Detailing">
+        <img src="assets/favicon.svg" alt="" class="logo-mark" width="28" height="28">
+        <span class="logo-text">De Leest <em>Detailing</em></span>
+      </a>
+
+      <div class="header-contact">
+        <a href="tel:+31620781765"><span data-i18n="header.call">Call</span> +31(6)20781765</a>
+        <span class="header-contact-sep" data-i18n="header.or">or</span>
+        <!-- TODO: replace with the real email address once available -->
+        <a href="mailto:" data-i18n="header.email">e-mail us directly</a>
+      </div>
+
+      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+        <a href="#services" data-i18n="nav.services">Services</a>
+        <a href="#gallery" data-i18n="nav.gallery">Gallery</a>
+        <a href="#about" data-i18n="nav.about">About</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="lang-toggle" role="group" aria-label="Taal / Language">
+          <button type="button" data-lang="nl" class="lang-btn active">NL</button>
+          <span class="lang-sep" aria-hidden="true">/</span>
+          <button type="button" data-lang="en" class="lang-btn">EN</button>
+        </div>
+        <div class="social-links header-social">
+          <!-- TODO: replace the # hrefs with the real profile URLs once the accounts exist -->
+          <a href="#" aria-label="Facebook" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a href="#" aria-label="Instagram" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="#" aria-label="LinkedIn" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ===== Hero ===== -->
+    <section class="hero">
+      <div class="hero-bg" aria-hidden="true">
+        <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=2000&q=80" alt="">
+      </div>
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="container hero-content">
+        <p class="kicker reveal" data-i18n="hero.kicker">Premium detailing — cars &amp; motorcycles</p>
+        <h1 class="reveal" data-i18n="hero.title">Perfection in every detail.</h1>
+        <p class="hero-sub reveal" data-i18n="hero.subtitle">High-end detailing for cars and motorcycles. Cleaned, polished and protected — until it could not be more perfect.</p>
+        <div class="hero-ctas reveal">
+          <a href="#contact" class="btn btn-primary" data-i18n="hero.ctaPrimary">Get in touch</a>
+          <a href="#services" class="btn btn-ghost" data-i18n="hero.ctaSecondary">View services</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Services: Cars ===== -->
+    <section class="section" id="services">
+      <div class="container">
+        <p class="kicker reveal" data-i18n="services.kicker">What we do</p>
+        <h2 class="reveal" data-i18n="services.title">Our services</h2>
+        <p class="section-intro reveal" data-i18n="services.intro">This is our base offering — more specialist services will follow. Every treatment is carried out by hand, with premium products and an obsession for the end result.</p>
+
+        <h3 class="group-title reveal" data-i18n="cars.groupTitle">For your car</h3>
+        <div class="card-grid">
+          <article class="card reveal">
+            <span class="card-num" aria-hidden="true">01</span>
+            <h4 data-i18n="clean.int.title">Interior cleaning</h4>
+            <p data-i18n="clean.int.desc">A complete interior treatment: vacuuming, upholstery and carpets, dashboard, trim and glass. Step into a fresh, clean cabin.</p>
+          </article>
+          <article class="card reveal">
+            <span class="card-num" aria-hidden="true">02</span>
+            <h4 data-i18n="clean.ext.title">Exterior cleaning</h4>
+            <p data-i18n="clean.ext.desc">A thorough hand wash with deep-cleaned rims, tyres and wheel arches, door shuts and windows. The outside of your car, spotless.</p>
+          </article>
+          <article class="card reveal">
+            <span class="card-num" aria-hidden="true">03</span>
+            <h4 data-i18n="cars.clean.title">Exterior &amp; interior cleaning</h4>
+            <p data-i18n="cars.clean.desc">A thorough hand wash, deep-cleaned rims and wheel arches, and a complete interior treatment — from upholstery to the smallest trim. Your car leaves fresh, inside and out.</p>
+          </article>
+          <article class="card reveal">
+            <span class="card-num" aria-hidden="true">04</span>
+            <h4 data-i18n="cars.polish.title">Polishing</h4>
+            <p data-i18n="cars.polish.desc">Machine polishing that removes swirls, haze and light scratches, bringing back a deep, mirror-like gloss your paintwork hasn't shown in years.</p>
+          </article>
+          <article class="card reveal">
+            <span class="card-num" aria-hidden="true">05</span>
+            <h4 data-i18n="cars.ceramic.title">Ceramic coating</h4>
+            <p data-i18n="cars.ceramic.desc">Long-lasting paint protection with extreme gloss and a strong hydrophobic effect. Dirt slides off, washing gets easier, and the finish stays sharper for longer.</p>
+          </article>
+        </div>
+
+        <!-- ===== Services: Motorcycles ===== -->
+        <h3 class="group-title reveal" data-i18n="moto.groupTitle">For your motorcycle</h3>
+        <div class="moto-block">
+          <div class="moto-media reveal">
+            <img src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=1200&q=80" alt="Detailed motorcycle in evening light" loading="lazy">
+          </div>
+          <div class="moto-body">
+            <article class="card card-flat reveal">
+              <span class="card-num" aria-hidden="true">01</span>
+              <h4 data-i18n="moto.deep.title">Full deep clean</h4>
+              <p data-i18n="moto.deep.desc">A complete deep clean of your motorcycle — engine, frame, wheels, chain and every hard-to-reach spot. Careful, paint-safe and finished to perfection.</p>
+            </article>
+            <div class="lube-box reveal">
+              <h4 data-i18n="moto.lube.title">Your chain, your choice</h4>
+              <p data-i18n="moto.lube.desc">After cleaning and degreasing the chain, you decide which lubricant we apply — matched to how and where you ride.</p>
+              <div class="lube-options">
+                <div class="lube-option">
+                  <h5 data-i18n="moto.lube.wet.title">Wet lubricant</h5>
+                  <p data-i18n="moto.lube.wet.desc">Stays put in rain and on long rides. Maximum protection, ideal for all-season and touring riders.</p>
+                </div>
+                <div class="lube-option">
+                  <h5 data-i18n="moto.lube.dry.title">Dry lubricant</h5>
+                  <p data-i18n="moto.lube.dry.desc">Clean finish that attracts less dust and dirt. Perfect for fair-weather riding and a spotless look.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Gallery ===== -->
+    <section class="section section-alt" id="gallery">
+      <div class="container">
+        <p class="kicker reveal" data-i18n="gallery.kicker">Recent work</p>
+        <h2 class="reveal" data-i18n="gallery.title">The results speak for themselves.</h2>
+        <div class="gallery-grid">
+          <figure class="reveal">
+            <button type="button" class="gallery-item" data-i18n-aria="gallery.open" aria-label="View more photos of this result"
+                    data-images="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1600&q=80,https://images.unsplash.com/photo-1535732820275-9ffd998cac22?auto=format&fit=crop&w=1600&q=80,https://images.unsplash.com/photo-1553440569-bcc63803a83d?auto=format&fit=crop&w=1600&q=80">
+              <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=900&q=80" alt="Sports car with glossy finish" loading="lazy">
+            </button>
+          </figure>
+          <figure class="reveal">
+            <button type="button" class="gallery-item" data-i18n-aria="gallery.open" aria-label="View more photos of this result"
+                    data-images="https://images.unsplash.com/photo-1493238792000-8113da705763?auto=format&fit=crop&w=1600&q=80,https://images.unsplash.com/photo-1607860108855-64acf2078ed9?auto=format&fit=crop&w=1600&q=80,https://images.unsplash.com/photo-1615906655593-ad0386982a0f?auto=format&fit=crop&w=1600&q=80">
+              <img src="https://images.unsplash.com/photo-1493238792000-8113da705763?auto=format&fit=crop&w=900&q=80" alt="Detailed black car front" loading="lazy">
+            </button>
+          </figure>
+          <figure class="reveal">
+            <button type="button" class="gallery-item" data-i18n-aria="gallery.open" aria-label="View more photos of this result"
+                    data-images="https://images.unsplash.com/photo-1558981852-426c6c22a060?auto=format&fit=crop&w=1600&q=80,https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=1600&q=80,https://images.unsplash.com/photo-1591637333184-19aa84b3e01f?auto=format&fit=crop&w=1600&q=80">
+              <img src="https://images.unsplash.com/photo-1558981852-426c6c22a060?auto=format&fit=crop&w=900&q=80" alt="Motorcycle at sunset after a full detail" loading="lazy">
+            </button>
+          </figure>
+          <figure class="reveal">
+            <button type="button" class="gallery-item" data-i18n-aria="gallery.open" aria-label="View more photos of this result"
+                    data-images="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=1600&q=80,https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=1600&q=80,https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?auto=format&fit=crop&w=1600&q=80">
+              <img src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=900&q=80" alt="White sports car with clean lines" loading="lazy">
+            </button>
+          </figure>
+          <figure class="reveal">
+            <button type="button" class="gallery-item" data-i18n-aria="gallery.open" aria-label="View more photos of this result"
+                    data-images="https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&w=1600&q=80,https://images.unsplash.com/photo-1591637333184-19aa84b3e01f?auto=format&fit=crop&w=1600&q=80,https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=1600&q=80">
+              <img src="https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&w=900&q=80" alt="Motorcycle being washed and detailed" loading="lazy">
+            </button>
+          </figure>
+          <figure class="reveal">
+            <button type="button" class="gallery-item" data-i18n-aria="gallery.open" aria-label="View more photos of this result"
+                    data-images="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?auto=format&fit=crop&w=1600&q=80,https://images.unsplash.com/photo-1615906655593-ad0386982a0f?auto=format&fit=crop&w=1600&q=80,https://images.unsplash.com/photo-1544636331-e26879cd4d9b?auto=format&fit=crop&w=1600&q=80">
+              <img src="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?auto=format&fit=crop&w=900&q=80" alt="Car paintwork reflecting light after polishing" loading="lazy">
+            </button>
+          </figure>
+          <figure class="reveal">
+            <button type="button" class="gallery-item" data-i18n-aria="gallery.open" aria-label="View more photos of this result"
+                    data-images="https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=1600&q=80,https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=1600&q=80,https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?auto=format&fit=crop&w=1600&q=80">
+              <img src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=900&q=80" alt="Blue sports car with ceramic-coated shine" loading="lazy">
+            </button>
+          </figure>
+          <figure class="reveal">
+            <button type="button" class="gallery-item" data-i18n-aria="gallery.open" aria-label="View more photos of this result"
+                    data-images="https://images.unsplash.com/photo-1607853202273-797f1c22a38e?auto=format&fit=crop&w=1600&q=80,https://images.unsplash.com/photo-1591637333184-19aa84b3e01f?auto=format&fit=crop&w=1600&q=80,https://images.unsplash.com/photo-1558981852-426c6c22a060?auto=format&fit=crop&w=1600&q=80">
+              <img src="https://images.unsplash.com/photo-1607853202273-797f1c22a38e?auto=format&fit=crop&w=900&q=80" alt="Motorcycle parked after a full detail" loading="lazy">
+            </button>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== About / standards ===== -->
+    <section class="section" id="about">
+      <div class="container about-grid">
+        <div class="about-body">
+          <p class="kicker reveal" data-i18n="about.kicker">Our standard</p>
+          <h2 class="reveal" data-i18n="about.title">Good enough is not good enough.</h2>
+          <p class="reveal" data-i18n="about.p1">Detailing is not a quick wash — it's craftsmanship. We take the time others won't, work panel by panel and check every result under the light before we call it done.</p>
+          <p class="reveal" data-i18n="about.p2">Whether it's your daily driver, your pride-and-joy sports car or your motorcycle: it gets the same obsessive attention, until it could not be more perfect.</p>
+          <ul class="standards reveal">
+            <li><strong data-i18n="about.s1t">Hand-finished</strong><span data-i18n="about.s1d">Every vehicle, every time</span></li>
+            <li><strong data-i18n="about.s2t">Premium products</strong><span data-i18n="about.s2d">Paint-safe and proven</span></li>
+            <li><strong data-i18n="about.s3t">Cars &amp; motorcycles</strong><span data-i18n="about.s3d">One high standard for both</span></li>
+            <li><strong data-i18n="about.s4t">Eye for detail</strong><span data-i18n="about.s4d">Checked until it's flawless</span></li>
+          </ul>
+        </div>
+        <div class="about-media reveal">
+          <img src="https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?auto=format&fit=crop&w=1200&q=80" alt="Freshly detailed sports car with deep gloss" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section class="section" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-body">
+          <p class="kicker reveal" data-i18n="contact.kicker">Contact</p>
+          <h2 class="reveal" data-i18n="contact.title">Ask us anything.</h2>
+          <p class="reveal" data-i18n="contact.p1">Have a specific question about detailing your car or motorcycle? Not sure which treatment fits your vehicle? Send us a message — we're happy to think along with you.</p>
+          <p class="contact-note reveal" data-i18n="contact.note">We reply as quickly as possible, usually within one working day.</p>
+        </div>
+
+        <form class="contact-form reveal" id="contactForm"
+              action="https://formspree.io/f/xkjnjdzb" method="POST" novalidate>
+          <div class="field">
+            <label for="cf-name" data-i18n="form.name">Name</label>
+            <input type="text" id="cf-name" name="name" required autocomplete="name"
+                   data-i18n-placeholder="form.namePh" placeholder="Your name">
+          </div>
+          <div class="field">
+            <label for="cf-email" data-i18n="form.email">Email</label>
+            <input type="email" id="cf-email" name="email" required autocomplete="email"
+                   data-i18n-placeholder="form.emailPh" placeholder="you@example.com">
+          </div>
+          <div class="field">
+            <label for="cf-vehicle" data-i18n="form.vehicle">Vehicle</label>
+            <select id="cf-vehicle" name="vehicle">
+              <option value="car" data-i18n="form.vehicleCar">Car</option>
+              <option value="motorcycle" data-i18n="form.vehicleMoto">Motorcycle</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="cf-message" data-i18n="form.message">Your question</label>
+            <textarea id="cf-message" name="message" rows="5" required
+                      data-i18n-placeholder="form.messagePh" placeholder="Tell us about your vehicle and what you'd like to know…"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block" data-i18n="form.submit">Send message</button>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <span class="logo-text">De Leest <em>Detailing</em></span>
+        <p class="footer-tag" data-i18n="footer.tag">Detailing until it could not be more perfect.</p>
+      </div>
+      <div class="footer-right">
+        <nav class="footer-nav" aria-label="Footer">
+          <a href="#services" data-i18n="nav.services">Services</a>
+          <a href="#gallery" data-i18n="nav.gallery">Gallery</a>
+          <a href="#about" data-i18n="nav.about">About</a>
+          <a href="#contact" data-i18n="nav.contact">Contact</a>
+        </nav>
+        <div class="social-links footer-social">
+          <!-- TODO: replace the # hrefs with the real profile URLs once the accounts exist -->
+          <a href="#" aria-label="Facebook" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a href="#" aria-label="Instagram" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="#" aria-label="LinkedIn" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <p class="footer-copy">© <span id="year">2026</span> De Leest Detailing</p>
+  </footer>
+
+  <!-- ===== Gallery lightbox ===== -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" data-i18n-aria="lightbox.label" aria-label="Fotogalerij" hidden>
+    <div class="lightbox-backdrop" data-lightbox-close aria-hidden="true"></div>
+    <figure class="lightbox-stage">
+      <img id="lightboxImg" src="" alt="">
+      <figcaption class="lightbox-counter" id="lightboxCounter">1 / 1</figcaption>
+    </figure>
+    <button type="button" class="lightbox-btn lightbox-close" id="lightboxClose" data-i18n-aria="lightbox.close" aria-label="Sluiten">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6L6 18"/><path d="M6 6l12 12"/></svg>
+    </button>
+    <button type="button" class="lightbox-btn lightbox-prev" id="lightboxPrev" data-i18n-aria="lightbox.prev" aria-label="Vorige foto">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+    </button>
+    <button type="button" class="lightbox-btn lightbox-next" id="lightboxNext" data-i18n-aria="lightbox.next" aria-label="Volgende foto">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+    </button>
+  </div>
+
+  <!-- ===== Floating page navigation ===== -->
+  <div class="page-nav">
+    <button type="button" class="page-nav-btn hidden" id="pageNavTop" data-i18n-aria="page.top" aria-label="Naar boven">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5"/><path d="M5 12l7-7 7 7"/></svg>
+    </button>
+    <button type="button" class="page-nav-btn" id="pageNavBottom" data-i18n-aria="page.bottom" aria-label="Naar beneden">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14"/><path d="M19 12l-7 7-7-7"/></svg>
+    </button>
+  </div>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

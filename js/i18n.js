@@ -1,0 +1,188 @@
+/* ============================================================
+   De Leest Detailing — translations (EN / NL)
+   Keys match data-i18n / data-i18n-placeholder attributes.
+   ============================================================ */
+
+const I18N = {
+  en: {
+    "nav.services": "Services",
+    "nav.about": "About",
+    "nav.gallery": "Gallery",
+    "nav.contact": "Contact",
+
+    "header.call": "Call",
+    "header.or": "or",
+    "header.email": "e-mail us directly",
+
+    "hero.kicker": "Premium detailing — cars & motorcycles",
+    "hero.title": "Perfection in every detail.",
+    "hero.subtitle": "High-end detailing for cars and motorcycles. Cleaned, polished and protected — until it could not be more perfect.",
+    "hero.ctaPrimary": "Get in touch",
+    "hero.ctaSecondary": "View services",
+
+    "services.kicker": "What we do",
+    "services.title": "Our services",
+    "services.intro": "This is our base offering — more specialist services will follow. Every treatment is carried out by hand, with premium products and an obsession for the end result.",
+
+    "cars.groupTitle": "For your car",
+    "cars.clean.title": "Exterior & interior cleaning",
+    "cars.clean.desc": "A thorough hand wash, deep-cleaned rims and wheel arches, and a complete interior treatment — from upholstery to the smallest trim. Your car leaves fresh, inside and out.",
+    "cars.polish.title": "Polishing",
+    "cars.polish.desc": "Machine polishing that removes swirls, haze and light scratches, bringing back a deep, mirror-like gloss your paintwork hasn't shown in years.",
+    "cars.ceramic.title": "Ceramic coating",
+    "cars.ceramic.desc": "Long-lasting paint protection with extreme gloss and a strong hydrophobic effect. Dirt slides off, washing gets easier, and the finish stays sharper for longer.",
+
+    "clean.int.title": "Interior cleaning",
+    "clean.int.desc": "A complete interior treatment: vacuuming, upholstery and carpets, dashboard, trim and glass. Step into a fresh, clean cabin.",
+    "clean.ext.title": "Exterior cleaning",
+    "clean.ext.desc": "A thorough hand wash with deep-cleaned rims, tyres and wheel arches, door shuts and windows. The outside of your car, spotless.",
+
+    "moto.groupTitle": "For your motorcycle",
+    "moto.deep.title": "Full deep clean",
+    "moto.deep.desc": "A complete deep clean of your motorcycle — engine, frame, wheels, chain and every hard-to-reach spot. Careful, paint-safe and finished to perfection.",
+    "moto.lube.title": "Your chain, your choice",
+    "moto.lube.desc": "After cleaning and degreasing the chain, you decide which lubricant we apply — matched to how and where you ride.",
+    "moto.lube.wet.title": "Wet lubricant",
+    "moto.lube.wet.desc": "Stays put in rain and on long rides. Maximum protection, ideal for all-season and touring riders.",
+    "moto.lube.dry.title": "Dry lubricant",
+    "moto.lube.dry.desc": "Clean finish that attracts less dust and dirt. Perfect for fair-weather riding and a spotless look.",
+
+    "about.kicker": "Our standard",
+    "about.title": "Good enough is not good enough.",
+    "about.p1": "Detailing is not a quick wash — it's craftsmanship. We take the time others won't, work panel by panel and check every result under the light before we call it done.",
+    "about.p2": "Whether it's your daily driver, your pride-and-joy sports car or your motorcycle: it gets the same obsessive attention, until it could not be more perfect.",
+    "about.s1t": "Hand-finished",
+    "about.s1d": "Every vehicle, every time",
+    "about.s2t": "Premium products",
+    "about.s2d": "Paint-safe and proven",
+    "about.s3t": "Cars & motorcycles",
+    "about.s3d": "One high standard for both",
+    "about.s4t": "Eye for detail",
+    "about.s4d": "Checked until it's flawless",
+
+    "gallery.kicker": "Recent work",
+    "gallery.title": "The results speak for themselves.",
+    "gallery.open": "View more photos of this result",
+
+    "contact.kicker": "Contact",
+    "contact.title": "Ask us anything.",
+    "contact.p1": "Have a specific question about detailing your car or motorcycle? Not sure which treatment fits your vehicle? Send us a message — we're happy to think along with you.",
+    "contact.note": "We reply as quickly as possible, usually within one working day.",
+
+    "form.name": "Name",
+    "form.namePh": "Your name",
+    "form.email": "Email",
+    "form.emailPh": "you@example.com",
+    "form.vehicle": "Vehicle",
+    "form.vehicleCar": "Car",
+    "form.vehicleMoto": "Motorcycle",
+    "form.message": "Your question",
+    "form.messagePh": "Tell us about your vehicle and what you'd like to know…",
+    "form.submit": "Send message",
+    "form.sending": "Sending…",
+    "form.success": "Thanks! Your message has been sent. We'll get back to you as soon as possible.",
+    "form.error": "Something went wrong while sending. Please try again in a moment.",
+    "form.invalid": "Please fill in all fields with a valid email address.",
+
+    "footer.tag": "Detailing until it could not be more perfect.",
+
+    "page.top": "Back to top",
+    "page.bottom": "Jump to bottom",
+
+    "lightbox.label": "Photo gallery",
+    "lightbox.close": "Close",
+    "lightbox.prev": "Previous photo",
+    "lightbox.next": "Next photo"
+  },
+
+  nl: {
+    "nav.services": "Diensten",
+    "nav.about": "Over ons",
+    "nav.gallery": "Galerij",
+    "nav.contact": "Contact",
+
+    "header.call": "Bel",
+    "header.or": "of",
+    "header.email": "mail ons direct",
+
+    "hero.kicker": "Premium detailing — auto's & motoren",
+    "hero.title": "Perfectie in elk detail.",
+    "hero.subtitle": "Hoogwaardige detailing voor auto's en motoren. Gereinigd, gepolijst en beschermd — tot het niet perfecter kan.",
+    "hero.ctaPrimary": "Neem contact op",
+    "hero.ctaSecondary": "Bekijk diensten",
+
+    "services.kicker": "Wat wij doen",
+    "services.title": "Onze diensten",
+    "services.intro": "Dit is ons basisaanbod — meer gespecialiseerde diensten volgen nog. Elke behandeling voeren we met de hand uit, met premium producten en een obsessie voor het eindresultaat.",
+
+    "cars.groupTitle": "Voor je auto",
+    "cars.clean.title": "Reiniging buiten & binnen",
+    "cars.clean.desc": "Een grondige handwas, diep gereinigde velgen en wielkasten, en een complete interieurbehandeling — van bekleding tot het kleinste sierstukje. Je auto vertrekt fris, van binnen én buiten.",
+    "cars.polish.title": "Polijsten",
+    "cars.polish.desc": "Machinaal polijsten dat swirls, waas en lichte krassen verwijdert en een diepe, spiegelende glans terugbrengt die je lak al jaren niet heeft laten zien.",
+    "cars.ceramic.title": "Keramische coating",
+    "cars.ceramic.desc": "Langdurige lakbescherming met extreme glans en een sterk waterafstotend effect. Vuil glijdt eraf, wassen wordt makkelijker en de finish blijft langer strak.",
+
+    "clean.int.title": "Interieur reiniging",
+    "clean.int.desc": "Een complete interieurbehandeling: stofzuigen, bekleding en matten, dashboard, sierstukken en ramen. Stap in een fris, schoon interieur.",
+    "clean.ext.title": "Exterieur reiniging",
+    "clean.ext.desc": "Een grondige handwas met diep gereinigde velgen, banden en wielkasten, deurranden en ramen. De buitenkant van je auto, vlekkeloos.",
+
+    "moto.groupTitle": "Voor je motor",
+    "moto.deep.title": "Complete dieptereiniging",
+    "moto.deep.desc": "Een volledige dieptereiniging van je motor — blok, frame, wielen, ketting en elke moeilijk bereikbare plek. Zorgvuldig, lakvriendelijk en afgewerkt tot in perfectie.",
+    "moto.lube.title": "Jouw ketting, jouw keuze",
+    "moto.lube.desc": "Na het reinigen en ontvetten van de ketting bepaal jij welk smeermiddel wij aanbrengen — afgestemd op hoe en waar jij rijdt.",
+    "moto.lube.wet.title": "Wet lubricant",
+    "moto.lube.wet.desc": "Blijft zitten bij regen en op lange ritten. Maximale bescherming, ideaal voor rijders die het hele jaar door en touren.",
+    "moto.lube.dry.title": "Dry lubricant",
+    "moto.lube.dry.desc": "Strakke finish die minder stof en vuil aantrekt. Perfect voor mooi-weer-ritten en een vlekkeloze look.",
+
+    "about.kicker": "Onze standaard",
+    "about.title": "Goed genoeg is niet goed genoeg.",
+    "about.p1": "Detailing is geen snelle wasbeurt — het is vakmanschap. Wij nemen de tijd die anderen niet nemen, werken paneel voor paneel en controleren elk resultaat onder het licht voordat het voor ons klaar is.",
+    "about.p2": "Of het nu je daily driver is, je geliefde sportwagen of je motor: alles krijgt dezelfde obsessieve aandacht, tot het niet perfecter kan.",
+    "about.s1t": "Met de hand afgewerkt",
+    "about.s1d": "Elk voertuig, elke keer",
+    "about.s2t": "Premium producten",
+    "about.s2d": "Lakvriendelijk en bewezen",
+    "about.s3t": "Auto's & motoren",
+    "about.s3d": "Eén hoge standaard voor beiden",
+    "about.s4t": "Oog voor detail",
+    "about.s4d": "Gecontroleerd tot het foutloos is",
+
+    "gallery.kicker": "Recent werk",
+    "gallery.title": "De resultaten spreken voor zich.",
+    "gallery.open": "Bekijk meer foto's van dit resultaat",
+
+    "contact.kicker": "Contact",
+    "contact.title": "Vraag het ons gerust.",
+    "contact.p1": "Heb je een specifieke vraag over het detaillen van je auto of motor? Twijfel je welke behandeling bij je voertuig past? Stuur ons een bericht — we denken graag met je mee.",
+    "contact.note": "We reageren zo snel mogelijk, meestal binnen één werkdag.",
+
+    "form.name": "Naam",
+    "form.namePh": "Je naam",
+    "form.email": "E-mail",
+    "form.emailPh": "jij@voorbeeld.nl",
+    "form.vehicle": "Voertuig",
+    "form.vehicleCar": "Auto",
+    "form.vehicleMoto": "Motor",
+    "form.message": "Je vraag",
+    "form.messagePh": "Vertel over je voertuig en wat je graag wilt weten…",
+    "form.submit": "Verstuur bericht",
+    "form.sending": "Versturen…",
+    "form.success": "Bedankt! Je bericht is verzonden. We nemen zo snel mogelijk contact met je op.",
+    "form.error": "Er ging iets mis bij het versturen. Probeer het zo nog eens.",
+    "form.invalid": "Vul alle velden in met een geldig e-mailadres.",
+
+    "footer.tag": "Detailing tot het niet perfecter kan.",
+
+    "page.top": "Naar boven",
+    "page.bottom": "Naar beneden",
+
+    "lightbox.label": "Fotogalerij",
+    "lightbox.close": "Sluiten",
+    "lightbox.prev": "Vorige foto",
+    "lightbox.next": "Volgende foto"
+  }
+};
