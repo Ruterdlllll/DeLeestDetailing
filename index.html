@@ -23,13 +23,6 @@
         <span class="logo-text">De Leest <em>Detailing</em></span>
       </a>
 
-      <div class="header-contact">
-        <a href="tel:+31620781765"><span data-i18n="header.call">Call</span> +31(6)20781765</a>
-        <span class="header-contact-sep" data-i18n="header.or">or</span>
-        <!-- TODO: replace with the real email address once available -->
-        <a href="mailto:" data-i18n="header.email">e-mail us directly</a>
-      </div>
-
       <nav class="main-nav" id="mainNav" aria-label="Main navigation">
         <a href="#services" data-i18n="nav.services">Services</a>
         <a href="#gallery" data-i18n="nav.gallery">Gallery</a>
@@ -235,6 +228,15 @@
           <h2 class="reveal" data-i18n="contact.title">Ask us anything.</h2>
           <p class="reveal" data-i18n="contact.p1">Have a specific question about detailing your car or motorcycle? Not sure which treatment fits your vehicle? Send us a message — we're happy to think along with you.</p>
           <p class="contact-note reveal" data-i18n="contact.note">We reply as quickly as possible, usually within one working day.</p>
+          <div class="hours reveal">
+            <h3 class="hours-title" data-i18n="hours.title">Opening hours</h3>
+            <ul class="hours-list">
+              <li><span data-i18n="hours.monFri">Monday – Friday</span><span>08:30 – 17:30</span></li>
+              <li><span data-i18n="hours.sat">Saturday</span><span data-i18n="hours.satVal">By appointment</span></li>
+              <li><span data-i18n="hours.sun">Sunday</span><span data-i18n="hours.sunVal">Closed</span></li>
+            </ul>
+            <p class="hours-note" data-i18n="hours.note">During the week you're welcome to walk in anytime — on Saturdays we work by appointment only.</p>
+          </div>
         </div>
 
         <form class="contact-form reveal" id="contactForm"
@@ -263,6 +265,10 @@
           </div>
           <button type="submit" class="btn btn-primary btn-block" data-i18n="form.submit">Send message</button>
           <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+          <p class="form-call">
+            <span data-i18n="form.call">Prefer to call? We're available Monday to Friday from 08:30 to 17:30 on</span>
+            <a href="tel:+31620781765">+31(6)20781765</a>.
+          </p>
         </form>
       </div>
     </section>

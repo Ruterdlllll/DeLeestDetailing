@@ -137,22 +137,6 @@ h3.group-title {
   transition: color 0.2s ease;
 }
 
-.header-contact {
-  display: flex;
-  align-items: center;
-  gap: 0.45rem;
-  font-size: 0.88rem;
-  color: var(--muted);
-  white-space: nowrap;
-}
-.header-contact a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.2s ease;
-}
-.header-contact a:hover { color: var(--accent-2); }
-
 /* ---------- Social links ---------- */
 .social-links { display: flex; align-items: center; gap: 1.15rem; }
 .social-links a {
@@ -370,6 +354,43 @@ h3.group-title {
 .contact-body p { color: var(--muted); }
 .contact-note { margin-top: 1.2rem; font-size: 0.9rem; }
 
+.hours {
+  margin-top: 1.6rem;
+  background: var(--panel);
+  border: 1px solid var(--panel-border);
+  border-radius: var(--radius);
+  padding: 1.4rem 1.6rem;
+}
+.hours-title {
+  font-family: var(--font-head);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--accent-2);
+  margin: 0 0 0.8rem;
+}
+.hours-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+.hours-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 0.92rem;
+}
+.hours-list li span:first-child { color: var(--muted); }
+.hours-list li span:last-child { color: var(--text); white-space: nowrap; }
+.hours-note {
+  margin: 0.9rem 0 0;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--panel-border);
+  font-size: 0.88rem;
+}
+
 .contact-form {
   background: var(--panel);
   border: 1px solid var(--panel-border);
@@ -414,6 +435,20 @@ h3.group-title {
 .form-status { font-size: 0.92rem; min-height: 1.2em; }
 .form-status.success { color: #8fd6a0; }
 .form-status.error { color: #e89a9a; }
+
+.form-call {
+  border-top: 1px solid var(--panel-border);
+  padding-top: 1.1rem;
+  font-size: 0.88rem;
+  color: var(--muted);
+}
+.form-call a {
+  color: var(--accent-2);
+  text-decoration: none;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.form-call a:hover { text-decoration: underline; }
 
 /* ---------- Footer ---------- */
 .site-footer {
@@ -466,7 +501,7 @@ h3.group-title {
   .moto-media img { aspect-ratio: 16 / 10; }
   .gallery-grid { grid-template-columns: repeat(3, 1fr); }
   .about-media { order: -1; }
-  .header-contact, .header-social { display: none; }
+  .header-social { display: none; }
 }
 
 @media (max-width: 768px) {

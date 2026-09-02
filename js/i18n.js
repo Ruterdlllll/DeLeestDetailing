@@ -10,10 +10,6 @@ const I18N = {
     "nav.gallery": "Gallery",
     "nav.contact": "Contact",
 
-    "header.call": "Call",
-    "header.or": "or",
-    "header.email": "e-mail us directly",
-
     "hero.kicker": "Premium detailing — cars & motorcycles",
     "hero.title": "Perfection in every detail.",
     "hero.subtitle": "High-end detailing for cars and motorcycles. Cleaned, polished and protected — until it could not be more perfect.",
@@ -69,6 +65,14 @@ const I18N = {
     "contact.p1": "Have a specific question about detailing your car or motorcycle? Not sure which treatment fits your vehicle? Send us a message — we're happy to think along with you.",
     "contact.note": "We reply as quickly as possible, usually within one working day.",
 
+    "hours.title": "Opening hours",
+    "hours.monFri": "Monday – Friday",
+    "hours.sat": "Saturday",
+    "hours.satVal": "By appointment",
+    "hours.sun": "Sunday",
+    "hours.sunVal": "Closed",
+    "hours.note": "During the week you're welcome to walk in anytime — on Saturdays we work by appointment only.",
+
     "form.name": "Name",
     "form.namePh": "Your name",
     "form.email": "Email",
@@ -83,6 +87,7 @@ const I18N = {
     "form.success": "Thanks! Your message has been sent. We'll get back to you as soon as possible.",
     "form.error": "Something went wrong while sending. Please try again in a moment.",
     "form.invalid": "Please fill in all fields with a valid email address.",
+    "form.call": "Prefer to call? We're available Monday to Friday from 08:30 to 17:30 on",
 
     "footer.tag": "Detailing until it could not be more perfect.",
 
@@ -100,10 +105,6 @@ const I18N = {
     "nav.about": "Over ons",
     "nav.gallery": "Galerij",
     "nav.contact": "Contact",
-
-    "header.call": "Bel",
-    "header.or": "of",
-    "header.email": "mail ons direct",
 
     "hero.kicker": "Premium detailing — auto's & motoren",
     "hero.title": "Perfectie in elk detail.",
@@ -160,6 +161,14 @@ const I18N = {
     "contact.p1": "Heb je een specifieke vraag over het detaillen van je auto of motor? Twijfel je welke behandeling bij je voertuig past? Stuur ons een bericht — we denken graag met je mee.",
     "contact.note": "We reageren zo snel mogelijk, meestal binnen één werkdag.",
 
+    "hours.title": "Openingstijden",
+    "hours.monFri": "Maandag t/m vrijdag",
+    "hours.sat": "Zaterdag",
+    "hours.satVal": "Op afspraak",
+    "hours.sun": "Zondag",
+    "hours.sunVal": "Gesloten",
+    "hours.note": "Van maandag t/m vrijdag loop je zo bij ons binnen — op zaterdag werken we uitsluitend op afspraak.",
+
     "form.name": "Naam",
     "form.namePh": "Je naam",
     "form.email": "E-mail",
@@ -174,6 +183,7 @@ const I18N = {
     "form.success": "Bedankt! Je bericht is verzonden. We nemen zo snel mogelijk contact met je op.",
     "form.error": "Er ging iets mis bij het versturen. Probeer het zo nog eens.",
     "form.invalid": "Vul alle velden in met een geldig e-mailadres.",
+    "form.call": "Liever bellen? We zijn op maandag t/m vrijdag bereikbaar van 08:30 tot 17:30 op",
 
     "footer.tag": "Detailing tot het niet perfecter kan.",
 
