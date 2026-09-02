@@ -487,6 +487,10 @@ h3.group-title {
   .main-nav.open { transform: translateY(0); }
   .main-nav a { padding: 0.9rem 6%; font-size: 1rem; border-top: 1px solid rgba(255,255,255,0.05); }
   .main-nav a:first-child { border-top: none; }
+  /* Anchor hero content to the bottom on mobile so there is no long
+     black stretch between the CTA buttons and the services section */
+  .hero { align-items: flex-end; }
+  .hero-content { padding-bottom: 3rem; }
   /* Mobile footer: socials move above the tagline, everything left-aligned */
   .footer-inner { flex-direction: column; }
   .footer-right { align-items: flex-start; }
@@ -545,8 +549,8 @@ a, button, select { -webkit-tap-highlight-color: transparent; }
 /* 16px minimum on form fields prevents iOS Safari auto-zoom on focus */
 .field input, .field select, .field textarea { font-size: 1rem; }
 
-/* Dynamic viewport height: hero stays full-screen behind mobile browser chrome */
-.hero { min-height: 100dvh; }
+/* Stable viewport height: keep svh (NOT dvh) so the hero does not resize
+   and reflow the page when mobile browser chrome collapses during scroll */
 
 /* Notched devices: keep header content clear of the curved corners */
 .site-header {

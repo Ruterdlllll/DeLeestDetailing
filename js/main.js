@@ -92,6 +92,15 @@
     })
   );
 
+  /* Tap anywhere outside the open menu closes it */
+  document.addEventListener("click", (event) => {
+    if (!mainNav.classList.contains("open")) return;
+    if (mainNav.contains(event.target) || navToggle.contains(event.target)) return;
+    mainNav.classList.remove("open");
+    navToggle.classList.remove("open");
+    navToggle.setAttribute("aria-expanded", "false");
+  });
+
   /* ---------- Reveal on scroll ---------- */
   const revealEls = document.querySelectorAll(".reveal");
   if ("IntersectionObserver" in window) {
