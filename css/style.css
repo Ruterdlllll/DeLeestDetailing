@@ -34,6 +34,11 @@ body {
 
 img { display: block; max-width: 100%; }
 
+/* <picture> wrappers only switch the photo per device (assets/img/pc-ipad vs
+   assets/img/mobile, breakpoint 767px) — keep them layout-neutral so the
+   existing img rules below keep applying */
+picture { display: block; }
+
 h1, h2, h3, h4, h5 {
   font-family: var(--font-head);
   font-weight: 700;
@@ -500,6 +505,7 @@ h3.group-title {
   transition: transform 0.5s ease, filter 0.5s ease;
   filter: saturate(0.9);
 }
+.gallery-grid picture { height: 100%; }
 .gallery-grid figure:hover img { transform: scale(1.06); filter: saturate(1.15); }
 
 /* ---------- Contact ---------- */

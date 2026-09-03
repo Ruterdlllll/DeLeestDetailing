@@ -224,9 +224,14 @@
       lbRender();
     }
 
+    /* Phones (< 768px) get the assets/img/mobile variants; PC/iPad the pc-ipad ones */
+    const isMobile = window.matchMedia("(max-width: 767px)").matches;
+
     document.querySelectorAll(".gallery-item").forEach((btn) => {
       btn.addEventListener("click", () => {
-        const images = (btn.dataset.images || "")
+        const list =
+          (isMobile && btn.dataset.imagesMobile) || btn.dataset.images || "";
+        const images = list
           .split(",")
           .map((s) => s.trim())
           .filter(Boolean);

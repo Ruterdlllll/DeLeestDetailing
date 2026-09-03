@@ -35,8 +35,14 @@ css/style.css               Single stylesheet, dark premium theme, CSS custom pr
 js/i18n.js                  I18N dictionary: en + nl translations, keys match data-i18n attributes
 js/main.js                  All interactions (IIFE, "use strict", no imports/exports)
 assets/                     favicon.svg, whatsapp-profile.png
-assets/img/                 All site photos, local only (no external image URLs):
-                            hero/, services/, about/, gallery/result-01..08/
+assets/img/                 All site photos, local only (no external image URLs),
+                            split per device category — same structure in both:
+                            pc-ipad/   desktops, laptops and tablets (>= 768px)
+                            mobile/    phones (< 768px)
+                            Each category holds hero/, services/, about/,
+                            gallery/result-01..08/. The site switches via
+                            <picture> + media query; the lightbox picks
+                            data-images-mobile vs data-images in js/main.js.
                             See assets/img/README.md for the file→location mapping.
                             Keep that README in sync when photos change.
 qa/                         Python/Playwright QA scripts (not shipped, see .gitignore for venv)
@@ -69,8 +75,9 @@ CNAME                       Custom domain for GitHub Pages
   scrolling, the lightbox manages focus and arrow keys, nav toggle keeps
   `aria-expanded` in sync. Preserve these behaviours when editing.
 - Code comments and documentation are in English; visible site copy is NL/EN.
-- Known placeholder: header social links still have `href="#"` with a TODO
-  comment — replace with real profile URLs when they exist.
+- Socials: only Instagram is linked (header + footer, still `href="#"` with a
+  TODO comment — replace with the real profile URL once the account exists).
+  Facebook and LinkedIn were deliberately removed.
 
 ## Running locally
 

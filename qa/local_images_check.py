@@ -3,6 +3,7 @@
 Checks (desktop 1440px + mobile 390px, NL):
 - no failed image requests (>= 400) and no external image requests
 - every <img> on index.html has naturalWidth > 0
+- desktop loads photos from assets/img/pc-ipad/, mobile from assets/img/mobile/
 - lightbox opens on a gallery tile and steps through its 3 photos
 Screenshots: hero, services, gallery, about, lightbox -> qa-screenshots/local-images/
 """
@@ -16,15 +17,19 @@ OUT = "qa-screenshots/local-images"
 failures = []
 
 
-def check_page(page, label):
+def check_page(page, label, img_category):
     bad_requests = []
     external_images = []
+    loaded_images = []
 
     def on_response(resp):
         if resp.status >= 400:
             bad_requests.append(f"{resp.status} {resp.url}")
-        if resp.request.resource_type == "image" and "localhost" not in resp.url:
-            external_images.append(resp.url)
+        if resp.request.resource_type == "image":
+            if "localhost" not in resp.url:
+                external_images.append(resp.url)
+            elif "/assets/img/" in resp.url:
+                loaded_images.append(resp.url)
 
     page.on("response", on_response)
     page.goto(f"{BASE}/index.html", wait_until="networkidle")
@@ -55,6 +60,14 @@ def check_page(page, label):
         failures.append(f"[{label}] external image: {item}")
     for item in broken:
         failures.append(f"[{label}] broken img: {item}")
+
+    # Photos must come from the right device-category folder
+    if loaded_images:
+        wrong = [u for u in loaded_images if f"/assets/img/{img_category}/" not in u]
+        for item in wrong:
+            failures.append(f"[{label}] photo not from {img_category}/: {item}")
+    else:
+        failures.append(f"[{label}] no /assets/img/ photos were loaded at all")
 
     for section, name in [
         (".hero", "hero"),
@@ -88,8 +101,8 @@ def main():
 
     with sync_playwright() as pw:
         browser = pw.chromium.launch()
-        check_page(browser.new_page(viewport={"width": 1440, "height": 900}), "desktop")
-        check_page(browser.new_page(viewport={"width": 390, "height": 844}), "mobile")
+        check_page(browser.new_page(viewport={"width": 1440, "height": 900}), "desktop", "pc-ipad")
+        check_page(browser.new_page(viewport={"width": 390, "height": 844}), "mobile", "mobile")
         browser.close()
 
     if failures:
