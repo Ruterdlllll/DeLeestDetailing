@@ -9,7 +9,7 @@ Output: qa-screenshots/<device>/<lang>/<section>.png
 import pathlib
 from playwright.sync_api import sync_playwright
 
-BASE = "http://localhost:8000"
+BASE = "http://localhost:8080"
 OUT = pathlib.Path("qa-screenshots")
 
 DEVICES = {

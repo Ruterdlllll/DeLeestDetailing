@@ -2,7 +2,7 @@
 import sys
 from playwright.sync_api import sync_playwright
 
-BASE = "http://localhost:8000"
+BASE = "http://localhost:8080"
 OUT = "qa-screenshots/gap-check"
 
 with sync_playwright() as p:

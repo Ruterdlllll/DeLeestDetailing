@@ -15,7 +15,7 @@ with sync_playwright() as p:
     browser = p.chromium.launch()
     for name, vp in VIEWPORTS.items():
         page = browser.new_page(viewport=vp)
-        page.goto("http://localhost:8000/index.html", wait_until="networkidle")
+        page.goto("http://localhost:8080/index.html", wait_until="networkidle")
         toggle = page.locator(".lang-toggle")
         toggle.scroll_into_view_if_needed()
         box = toggle.bounding_box()

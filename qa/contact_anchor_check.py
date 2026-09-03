@@ -1,12 +1,12 @@
 """Verify contact-CTA anchors land on the form, and ceramic price on request.
 
-Usage: .qa-venv/bin/python qa/contact_anchor_check.py  (server on :8000)
+Usage: .qa-venv/bin/python qa/contact_anchor_check.py  (server on :8080)
 Output: qa-screenshots/anchor-check/*.png
 """
 import pathlib
 from playwright.sync_api import sync_playwright
 
-BASE = "http://localhost:8000"
+BASE = "http://localhost:8080"
 OUT = pathlib.Path("qa-screenshots/anchor-check")
 OUT.mkdir(parents=True, exist_ok=True)
 

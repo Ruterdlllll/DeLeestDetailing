@@ -13,7 +13,7 @@ async def main():
         browser = await p.chromium.launch()
         for name, w, h in VIEWPORTS:
             page = await browser.new_page(viewport={"width": w, "height": h})
-            await page.goto("http://localhost:8000/", wait_until="networkidle")
+            await page.goto("http://localhost:8080/", wait_until="networkidle")
             await page.wait_for_timeout(600)
             # header shot
             await page.screenshot(path=f"qa-screenshots/hdr-{name}.png", clip={"x": 0, "y": 0, "width": w, "height": 90})
