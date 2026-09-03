@@ -123,125 +123,145 @@
   /* ---------- Contact form (Formspree) ---------- */
   const form = document.getElementById("contactForm");
   const status = document.getElementById("formStatus");
-  const submitBtn = form.querySelector('button[type="submit"]');
 
   function t(key) {
     return (I18N[currentLang()] || I18N.en)[key] || I18N.en[key] || "";
   }
 
-  form.addEventListener("submit", async (event) => {
-    event.preventDefault();
-    status.className = "form-status";
-    status.textContent = "";
+  if (form) {
+    const submitBtn = form.querySelector('button[type="submit"]');
 
-    if (!form.checkValidity()) {
-      status.classList.add("error");
-      status.textContent = t("form.invalid");
-      form.reportValidity();
-      return;
-    }
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      status.className = "form-status";
+      status.textContent = "";
 
-    submitBtn.disabled = true;
-    submitBtn.textContent = t("form.sending");
-
-    try {
-      const response = await fetch(form.action, {
-        method: "POST",
-        body: new FormData(form),
-        headers: { Accept: "application/json" }
-      });
-
-      if (response.ok) {
-        status.classList.add("success");
-        status.textContent = t("form.success");
-        form.reset();
-      } else {
-        throw new Error("Formspree responded with " + response.status);
+      if (!form.checkValidity()) {
+        status.classList.add("error");
+        status.textContent = t("form.invalid");
+        form.reportValidity();
+        return;
       }
-    } catch (err) {
-      status.classList.add("error");
-      status.textContent = t("form.error");
-    } finally {
-      submitBtn.disabled = false;
-      submitBtn.textContent = t("form.submit");
-    }
-  });
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = t("form.sending");
+
+      try {
+        const response = await fetch(form.action, {
+          method: "POST",
+          body: new FormData(form),
+          headers: { Accept: "application/json" }
+        });
+
+        if (response.ok) {
+          status.classList.add("success");
+          status.textContent = t("form.success");
+          form.reset();
+        } else {
+          throw new Error("Formspree responded with " + response.status);
+        }
+      } catch (err) {
+        status.classList.add("error");
+        status.textContent = t("form.error");
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = t("form.submit");
+      }
+    });
+  }
 
   /* ---------- Gallery lightbox ---------- */
   const lightbox = document.getElementById("lightbox");
-  const lbImg = document.getElementById("lightboxImg");
-  const lbCounter = document.getElementById("lightboxCounter");
-  const lbClose = document.getElementById("lightboxClose");
-  const lbPrev = document.getElementById("lightboxPrev");
-  const lbNext = document.getElementById("lightboxNext");
-  let lbImages = [];
-  let lbIndex = 0;
-  let lbLastFocus = null;
 
-  function lbRender() {
-    lbImg.src = lbImages[lbIndex];
-    lbCounter.textContent = (lbIndex + 1) + " / " + lbImages.length;
-    const multiple = lbImages.length > 1;
-    lbPrev.classList.toggle("hidden", !multiple);
-    lbNext.classList.toggle("hidden", !multiple);
-  }
+  if (lightbox) {
+    const lbImg = document.getElementById("lightboxImg");
+    const lbCounter = document.getElementById("lightboxCounter");
+    const lbClose = document.getElementById("lightboxClose");
+    const lbPrev = document.getElementById("lightboxPrev");
+    const lbNext = document.getElementById("lightboxNext");
+    let lbImages = [];
+    let lbIndex = 0;
+    let lbLastFocus = null;
 
-  function lbOpen(images, opener) {
-    lbImages = images;
-    lbIndex = 0;
-    lbLastFocus = opener;
-    lbRender();
-    lightbox.hidden = false;
-    document.body.classList.add("lightbox-open");
-    lbClose.focus();
-  }
+    function lbRender() {
+      lbImg.src = lbImages[lbIndex];
+      lbCounter.textContent = (lbIndex + 1) + " / " + lbImages.length;
+      const multiple = lbImages.length > 1;
+      lbPrev.classList.toggle("hidden", !multiple);
+      lbNext.classList.toggle("hidden", !multiple);
+    }
 
-  function lbHide() {
-    lightbox.hidden = true;
-    document.body.classList.remove("lightbox-open");
-    lbImg.src = "";
-    if (lbLastFocus) lbLastFocus.focus();
-  }
+    function lbOpen(images, opener) {
+      lbImages = images;
+      lbIndex = 0;
+      lbLastFocus = opener;
+      lbRender();
+      lightbox.hidden = false;
+      document.body.classList.add("lightbox-open");
+      lbClose.focus();
+    }
 
-  function lbStep(dir) {
-    if (lbImages.length < 2) return;
-    lbIndex = (lbIndex + dir + lbImages.length) % lbImages.length;
-    lbRender();
-  }
+    function lbHide() {
+      lightbox.hidden = true;
+      document.body.classList.remove("lightbox-open");
+      lbImg.src = "";
+      if (lbLastFocus) lbLastFocus.focus();
+    }
 
-  document.querySelectorAll(".gallery-item").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const images = (btn.dataset.images || "")
-        .split(",")
-        .map((s) => s.trim())
-        .filter(Boolean);
-      if (images.length) lbOpen(images, btn);
+    function lbStep(dir) {
+      if (lbImages.length < 2) return;
+      lbIndex = (lbIndex + dir + lbImages.length) % lbImages.length;
+      lbRender();
+    }
+
+    document.querySelectorAll(".gallery-item").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const images = (btn.dataset.images || "")
+          .split(",")
+          .map((s) => s.trim())
+          .filter(Boolean);
+        if (images.length) lbOpen(images, btn);
+      });
     });
-  });
 
-  lbClose.addEventListener("click", lbHide);
-  lightbox.querySelector("[data-lightbox-close]").addEventListener("click", lbHide);
-  lbPrev.addEventListener("click", () => lbStep(-1));
-  lbNext.addEventListener("click", () => lbStep(1));
+    lbClose.addEventListener("click", lbHide);
+    lightbox.querySelector("[data-lightbox-close]").addEventListener("click", lbHide);
+    lbPrev.addEventListener("click", () => lbStep(-1));
+    lbNext.addEventListener("click", () => lbStep(1));
 
-  document.addEventListener("keydown", (event) => {
-    if (lightbox.hidden) return;
-    if (event.key === "Escape") lbHide();
-    else if (event.key === "ArrowLeft") lbStep(-1);
-    else if (event.key === "ArrowRight") lbStep(1);
-  });
+    document.addEventListener("keydown", (event) => {
+      if (lightbox.hidden) return;
+      if (event.key === "Escape") lbHide();
+      else if (event.key === "ArrowLeft") lbStep(-1);
+      else if (event.key === "ArrowRight") lbStep(1);
+    });
 
-  /* Swipe navigation on touch devices */
-  let lbTouchX = null;
-  lightbox.addEventListener("touchstart", (e) => {
-    lbTouchX = e.changedTouches[0].clientX;
-  }, { passive: true });
-  lightbox.addEventListener("touchend", (e) => {
-    if (lbTouchX === null) return;
-    const dx = e.changedTouches[0].clientX - lbTouchX;
-    if (Math.abs(dx) > 50) lbStep(dx < 0 ? 1 : -1);
-    lbTouchX = null;
-  }, { passive: true });
+    /* Swipe navigation on touch devices */
+    let lbTouchX = null;
+    lightbox.addEventListener("touchstart", (e) => {
+      lbTouchX = e.changedTouches[0].clientX;
+    }, { passive: true });
+    lightbox.addEventListener("touchend", (e) => {
+      if (lbTouchX === null) return;
+      const dx = e.changedTouches[0].clientX - lbTouchX;
+      if (Math.abs(dx) > 50) lbStep(dx < 0 ? 1 : -1);
+      lbTouchX = null;
+    }, { passive: true });
+  }
+
+  /* ---------- Cookie consent ---------- */
+  const cookieBanner = document.getElementById("cookieBanner");
+  const CONSENT_KEY = "dld-cookie-consent";
+  let consent = null;
+  try { consent = localStorage.getItem(CONSENT_KEY); } catch (e) { /* private mode */ }
+  if (!consent) cookieBanner.hidden = false;
+
+  function setConsent(value) {
+    try { localStorage.setItem(CONSENT_KEY, value); } catch (e) { /* private mode */ }
+    cookieBanner.hidden = true;
+  }
+  document.getElementById("cookieAccept").addEventListener("click", () => setConsent("accepted"));
+  document.getElementById("cookieDecline").addEventListener("click", () => setConsent("declined"));
 
   /* ---------- Footer year ---------- */
   document.getElementById("year").textContent = String(new Date().getFullYear());

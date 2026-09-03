@@ -28,6 +28,7 @@
         <a href="#gallery" data-i18n="nav.gallery">Gallery</a>
         <a href="#about" data-i18n="nav.about">About</a>
         <a href="#contact" data-i18n="nav.contact">Contact</a>
+        <a href="#pricing" data-i18n="nav.pricing">Prijzen</a>
       </nav>
 
       <div class="header-actions">
@@ -82,27 +83,32 @@
         <p class="section-intro reveal" data-i18n="services.intro">This is our base offering — more specialist services will follow. Every treatment is carried out by hand, with premium products and an obsession for the end result.</p>
 
         <h3 class="group-title reveal" data-i18n="cars.groupTitle">For your car</h3>
-        <div class="card-grid">
-          <article class="card reveal">
-            <span class="card-num" aria-hidden="true">01</span>
-            <h4 data-i18n="clean.int.title">Interior cleaning</h4>
-            <p data-i18n="clean.int.desc">A complete interior treatment: vacuuming, upholstery and carpets, dashboard, trim and glass. Step into a fresh, clean cabin.</p>
-          </article>
-          <article class="card reveal">
-            <span class="card-num" aria-hidden="true">02</span>
-            <h4 data-i18n="clean.ext.title">Exterior cleaning</h4>
-            <p data-i18n="clean.ext.desc">A thorough hand wash with deep-cleaned rims, tyres and wheel arches, door shuts and windows. The outside of your car, spotless.</p>
-          </article>
-          <article class="card reveal">
-            <span class="card-num" aria-hidden="true">03</span>
-            <h4 data-i18n="cars.polish.title">Polishing</h4>
-            <p data-i18n="cars.polish.desc">Machine polishing that removes swirls, haze and light scratches, bringing back a deep, mirror-like gloss your paintwork hasn't shown in years.</p>
-          </article>
-          <article class="card reveal">
-            <span class="card-num" aria-hidden="true">04</span>
-            <h4 data-i18n="cars.ceramic.title">Ceramic coating</h4>
-            <p data-i18n="cars.ceramic.desc">Long-lasting paint protection with extreme gloss and a strong hydrophobic effect. Dirt slides off, washing gets easier, and the finish stays sharper for longer.</p>
-          </article>
+        <div class="moto-block">
+          <div class="moto-media reveal">
+            <img src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=1200&q=80" alt="Red Ferrari with a flawless glossy finish" loading="lazy">
+          </div>
+          <div class="card-grid">
+            <article class="card card-flat reveal">
+              <span class="card-num" aria-hidden="true">01</span>
+              <h4 data-i18n="clean.int.title">Interior cleaning</h4>
+              <p data-i18n="clean.int.desc">A complete interior treatment: vacuuming, upholstery and carpets, dashboard, trim and glass. Step into a fresh, clean cabin.</p>
+            </article>
+            <article class="card card-flat reveal">
+              <span class="card-num" aria-hidden="true">02</span>
+              <h4 data-i18n="clean.ext.title">Exterior cleaning</h4>
+              <p data-i18n="clean.ext.desc">A thorough hand wash with deep-cleaned rims, tyres and wheel arches, door shuts and windows. The outside of your car, spotless.</p>
+            </article>
+            <article class="card card-flat reveal">
+              <span class="card-num" aria-hidden="true">03</span>
+              <h4 data-i18n="cars.polish.title">Polishing</h4>
+              <p data-i18n="cars.polish.desc">Machine polishing that removes swirls, haze and light scratches, bringing back a deep, mirror-like gloss your paintwork hasn't shown in years.</p>
+            </article>
+            <article class="card card-flat reveal">
+              <span class="card-num" aria-hidden="true">04</span>
+              <h4 data-i18n="cars.ceramic.title">Ceramic coating</h4>
+              <p data-i18n="cars.ceramic.desc">Long-lasting paint protection with extreme gloss and a strong hydrophobic effect. Dirt slides off, washing gets easier, and the finish stays sharper for longer.</p>
+            </article>
+          </div>
         </div>
 
         <!-- ===== Services: Motorcycles ===== -->
@@ -133,6 +139,10 @@
             </div>
           </div>
         </div>
+
+        <p class="services-pricing-cta reveal">
+          <a href="prijzen.html" class="btn btn-ghost" data-i18n="services.pricingCta">Bekijk pakketten &amp; prijzen</a>
+        </p>
       </div>
     </section>
 
@@ -273,13 +283,85 @@
       </div>
     </section>
 
+    <!-- ===== Pricing packages ===== -->
+    <section class="section section-alt" id="pricing">
+      <div class="container">
+        <p class="kicker reveal" data-i18n="pricing.kicker">Pakketten &amp; prijzen</p>
+        <h2 class="reveal" data-i18n="pricing.title">Voor elke auto een passend pakket.</h2>
+        <p class="section-intro reveal pricing-intro" data-i18n="pricing.intro">Van een grondige wasbeurt voor tussendoor tot volledige lakcorrectie met keramische bescherming. Elk pakket voeren we met de hand uit, met dezelfde obsessie voor het eindresultaat.</p>
+
+        <div class="pricing-grid">
+          <article class="card price-card reveal">
+            <h3 data-i18n="pkg.basic.name">Basic Wash</h3>
+            <p class="price-tag" data-i18n="pkg.basic.tag">Een grondige handwas, binnen en buiten — perfect voor tussendoor.</p>
+            <p class="price"><span class="price-from" data-i18n="pricing.from">vanaf</span> <span class="price-value">€35</span></p>
+            <ul class="price-features">
+              <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pkg.basic.f1">Handwas &amp; drogen</span></li>
+              <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pkg.basic.f2">Velgen &amp; banden reinigen</span></li>
+              <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pkg.basic.f3">Interieur stofzuigen</span></li>
+            </ul>
+            <a href="#contact" class="btn btn-ghost btn-block" data-i18n="pricing.cta">Boek dit pakket</a>
+          </article>
+
+          <article class="card price-card reveal">
+            <h3 data-i18n="pkg.std.name">Standard Detail</h3>
+            <p class="price-tag" data-i18n="pkg.std.tag">Een complete opfrisbeurt met waxbescherming voor blijvende glans.</p>
+            <p class="price"><span class="price-from" data-i18n="pricing.from">vanaf</span> <span class="price-value">€90</span></p>
+            <ul class="price-features">
+              <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pkg.std.f1">Alles uit Basic Wash</span></li>
+              <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pkg.std.f2">Insecten &amp; teer verwijderen + clay bar</span></li>
+              <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pkg.std.f3">Dashboard &amp; ramen binnenzijde</span></li>
+              <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pkg.std.f4">Wax aanbrengen &amp; banden dressen</span></li>
+            </ul>
+            <a href="#contact" class="btn btn-ghost btn-block" data-i18n="pricing.cta">Boek dit pakket</a>
+          </article>
+
+          <article class="card price-card price-card-featured reveal">
+            <span class="price-badge" data-i18n="pricing.popular">Populairst</span>
+            <h3 data-i18n="pkg.premium.name">Premium Detail</h3>
+            <p class="price-tag" data-i18n="pkg.premium.tag">Dieptereiniging van het interieur plus eenstaps polijsten en sealant.</p>
+            <p class="price"><span class="price-from" data-i18n="pricing.from">vanaf</span> <span class="price-value">€180</span></p>
+            <ul class="price-features">
+              <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pkg.premium.f1">Alles uit Standard Detail</span></li>
+              <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pkg.premium.f2">Stoomreiniging &amp; leerverzorging</span></li>
+              <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pkg.premium.f3">Eenstaps polijsten</span></li>
+              <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pkg.premium.f4">Paint sealant &amp; motorruimte</span></li>
+            </ul>
+            <a href="#contact" class="btn btn-primary btn-block" data-i18n="pricing.cta">Boek dit pakket</a>
+          </article>
+
+          <article class="card price-card reveal">
+            <h3 data-i18n="pkg.ceramic.name">Ceramic Package</h3>
+            <p class="price-tag" data-i18n="pkg.ceramic.tag">Ons mooiste werk: volledige correctie met keramische bescherming.</p>
+            <p class="price"><span class="price-from" data-i18n="pricing.from">vanaf</span> <span class="price-value">€350</span></p>
+            <ul class="price-features">
+              <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pkg.ceramic.f1">Alles uit Premium Detail</span></li>
+              <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pkg.ceramic.f2">Meerstaps lakcorrectie</span></li>
+              <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pkg.ceramic.f3">Keramische coating — lak</span></li>
+              <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pkg.ceramic.f4">Keramische coating — velgen</span></li>
+            </ul>
+            <a href="#contact" class="btn btn-ghost btn-block" data-i18n="pricing.cta">Boek dit pakket</a>
+          </article>
+        </div>
+
+        <p class="pricing-note reveal" data-i18n="pricing.note">Alle prijzen zijn vanaf-prijzen — de exacte prijs hangt af van de grootte en staat van je voertuig. Vraag vrijblijvend een offerte aan.</p>
+
+        <p class="services-pricing-cta reveal">
+          <a href="prijzen.html" class="btn btn-ghost" data-i18n="pricing.compareCta">Vergelijk alle pakketten</a>
+        </p>
+      </div>
+    </section>
+
   </main>
 
   <!-- ===== Footer ===== -->
   <footer class="site-footer">
     <div class="container footer-inner">
       <div>
-        <span class="logo-text">De Leest <em>Detailing</em></span>
+        <a href="#top" class="logo" aria-label="De Leest Detailing">
+          <img src="assets/favicon.svg" alt="" class="logo-mark" width="28" height="28">
+          <span class="logo-text">De Leest <em>Detailing</em></span>
+        </a>
         <div class="social-links footer-social-top">
           <!-- Mobile position of the socials; same TODO applies: replace # with real profile URLs -->
           <a href="#" aria-label="Facebook" target="_blank" rel="noopener">
@@ -300,6 +382,8 @@
           <a href="#gallery" data-i18n="nav.gallery">Gallery</a>
           <a href="#about" data-i18n="nav.about">About</a>
           <a href="#contact" data-i18n="nav.contact">Contact</a>
+          <a href="#pricing" data-i18n="nav.pricing">Prijzen</a>
+          <a href="algemene-voorwaarden.html" data-i18n="footer.terms">Algemene voorwaarden</a>
         </nav>
         <div class="social-links footer-social">
           <!-- TODO: replace the # hrefs with the real profile URLs once the accounts exist -->
@@ -344,6 +428,16 @@
     <button type="button" class="page-nav-btn" id="pageNavBottom" data-i18n-aria="page.bottom" aria-label="Naar beneden">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14"/><path d="M19 12l-7 7-7-7"/></svg>
     </button>
+  </div>
+
+  <!-- ===== Cookie consent ===== -->
+  <div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite"
+       data-i18n-aria="cookie.label" aria-label="Cookie-instellingen" hidden>
+    <p class="cookie-text" data-i18n="cookie.text">Wij gebruiken alleen functionele cookies en vergelijkbare technieken — bijvoorbeeld om je taalvoorkeur te onthouden. Er worden geen tracking- of marketingcookies geplaatst.</p>
+    <div class="cookie-actions">
+      <button type="button" class="btn btn-primary" id="cookieAccept" data-i18n="cookie.accept">Accepteren</button>
+      <button type="button" class="btn btn-ghost" id="cookieDecline" data-i18n="cookie.decline">Weigeren</button>
+    </div>
   </div>
 
   <script src="js/i18n.js"></script>
