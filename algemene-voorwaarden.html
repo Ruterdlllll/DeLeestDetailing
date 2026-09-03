@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="theme-color" content="#0b0d10">
-  <title>Algemene voorwaarden — De Leest Detailing</title>
-  <meta name="description" content="Algemene voorwaarden van De Leest Detailing.">
+  <title data-i18n="legal.meta.title">Algemene voorwaarden — De Leest Detailing</title>
+  <meta name="description" content="Algemene voorwaarden van De Leest Detailing." data-i18n-content="legal.meta.desc">
   <meta name="robots" content="noindex">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,8 +20,9 @@
     Deze tekst is overgenomen van vermijlcardetail.be (Belgisch recht) als
     startpunt. Controleer en pas aan vóór publicatie:
     - alle [HAAKJES]-placeholders invullen (KvK, BTW, adres, IBAN, e-mail);
-    - Belgische verwijzingen zijn vervangen door Nederlandse placeholders —
-      laat de tekst het beste even nalopen op Nederlandse wetgeving.
+    - laat de tekst het beste even nalopen op Nederlandse wetgeving.
+    De teksten staan in js/i18n.js onder de "legal.*"-keys — de Nederlandse
+    én Engelse versie daar aanpassen, deze HTML alleen voor opmaak wijzigen.
   -->
 
   <!-- ===== Header ===== -->
@@ -33,67 +34,75 @@
       </a>
 
       <nav class="main-nav" aria-label="Main navigation">
-        <a href="index.html#services">Diensten</a>
-        <a href="index.html#gallery">Galerij</a>
-        <a href="index.html#about">Over ons</a>
-        <a href="index.html#contactForm">Contact</a>
-        <a href="index.html#pricing">Prijzen</a>
+        <a href="index.html#services" data-i18n="nav.services">Diensten</a>
+        <a href="index.html#gallery" data-i18n="nav.gallery">Galerij</a>
+        <a href="index.html#about" data-i18n="nav.about">Over ons</a>
+        <a href="index.html#contactForm" data-i18n="nav.contact">Contact</a>
+        <a href="index.html#pricing" data-i18n="nav.pricing">Prijzen</a>
       </nav>
+
+      <div class="header-actions">
+        <div class="lang-toggle" role="group" aria-label="Taal / Language">
+          <button type="button" data-lang="nl" class="lang-btn active">NL</button>
+          <span class="lang-sep" aria-hidden="true">/</span>
+          <button type="button" data-lang="en" class="lang-btn">EN</button>
+        </div>
+      </div>
     </div>
   </header>
 
   <main>
     <section class="legal-body">
       <div class="container legal-content">
-        <p class="kicker">Juridisch</p>
-        <h1>Algemene voorwaarden</h1>
+        <p class="kicker" data-i18n="legal.kicker">Juridisch</p>
+        <h1 data-i18n="legal.title">Algemene voorwaarden</h1>
 
-        <h2>Artikel 1. Identiteit</h2>
-        <p>De Leest Detailing, gevestigd te [STRAAT + HUISNUMMER], [POSTCODE + PLAATS], ingeschreven bij de Kamer van Koophandel onder nummer [KVK-NUMMER].</p>
+        <h2 data-i18n="legal.a1.title">Artikel 1. Identiteit</h2>
+        <p data-i18n="legal.a1.p1">De Leest Detailing, gevestigd te [STRAAT + HUISNUMMER], [POSTCODE + PLAATS], ingeschreven bij de Kamer van Koophandel onder nummer [KVK-NUMMER].</p>
         <p>
           De Leest Detailing<br>
-          Vestigingsadres: [STRAAT + HUISNUMMER], [POSTCODE + PLAATS], Nederland<br>
-          E-mailadres: [E-MAILADRES]<br>
-          Telefoonnummer: +31 (0)6 20781765<br>
-          KvK-nummer: [KVK-NUMMER]<br>
-          Btw-nummer: [BTW-NUMMER]
+          <span data-i18n="legal.a1.line2">Vestigingsadres: [STRAAT + HUISNUMMER], [POSTCODE + PLAATS], Nederland</span><br>
+          <span data-i18n="legal.a1.line3">E-mailadres: [E-MAILADRES]</span><br>
+          <span data-i18n="legal.a1.line4">Telefoonnummer: +31 (0)6 20781765</span><br>
+          <span data-i18n="legal.a1.line5">KvK-nummer: [KVK-NUMMER]</span><br>
+          <span data-i18n="legal.a1.line6">Btw-nummer: [BTW-NUMMER]</span>
         </p>
 
-        <h2>Artikel 2. Toepasselijkheid &amp; voorwaarden</h2>
-        <p>Deze algemene voorwaarden zijn van toepassing op alle offertes, facturen en soortgelijke overeenkomsten. Bij een overeenkomst aanvaardt de klant de algemene voorwaarden van De Leest Detailing.</p>
+        <h2 data-i18n="legal.a2.title">Artikel 2. Toepasselijkheid &amp; voorwaarden</h2>
+        <p data-i18n="legal.a2.p1">Deze algemene voorwaarden zijn van toepassing op alle offertes, facturen en soortgelijke overeenkomsten. Bij een overeenkomst aanvaardt de klant de algemene voorwaarden van De Leest Detailing.</p>
 
-        <h2>Artikel 3. Prijs en offertes</h2>
-        <p>De richtprijzen die van toepassing zijn voor onze diensten worden weergegeven op de website. Een exacte prijs is steeds afhankelijk van de staat en het model van het voertuig. De prijzen kunnen op ieder ogenblik worden gewijzigd. Offertes zijn geheel vrijblijvend en geldig tot maximaal 3 maanden na datum van opstelling.</p>
+        <h2 data-i18n="legal.a3.title">Artikel 3. Prijs en offertes</h2>
+        <p data-i18n="legal.a3.p1">De richtprijzen die van toepassing zijn voor onze diensten worden weergegeven op de website. Een exacte prijs is steeds afhankelijk van de staat en het model van het voertuig. De prijzen kunnen op ieder ogenblik worden gewijzigd. Offertes zijn geheel vrijblijvend en geldig tot maximaal 3 maanden na datum van opstelling.</p>
 
-        <h2>Artikel 4. Overeenkomst, voorschot en annulatie</h2>
-        <p>De overeenkomst van een dienst komt tot stand na een aantoonbaar bewijs van bevestiging. Dit kan per e-mail, brief of telefoon/sms.</p>
-        <p>Voor meerdaagse behandelingen of bij langere wachttijden brengen wij een voorschot in rekening van minimaal 20% van het totaalbedrag. Voorschotten zijn niet recupereerbaar. Onze behandelingen nemen vaak meerdere dagen in beslag en op deze manier hebben wij zekerheid van onze planning. Het voorschot wordt in mindering gebracht bij de eindafrekening.</p>
-        <p>Bij annulatie na bevestiging van de overeenkomst dient De Leest Detailing als volgt vergoed te worden:</p>
+        <h2 data-i18n="legal.a4.title">Artikel 4. Overeenkomst, voorschot en annulatie</h2>
+        <p data-i18n="legal.a4.p1">De overeenkomst van een dienst komt tot stand na een aantoonbaar bewijs van bevestiging. Dit kan per e-mail, brief of telefoon/sms.</p>
+        <p data-i18n="legal.a4.p2">Voor meerdaagse behandelingen of bij langere wachttijden brengen wij een voorschot in rekening van minimaal 20% van het totaalbedrag. Voorschotten zijn niet recupereerbaar. Onze behandelingen nemen vaak meerdere dagen in beslag en op deze manier hebben wij zekerheid van onze planning. Het voorschot wordt in mindering gebracht bij de eindafrekening.</p>
+        <p data-i18n="legal.a4.p3">Bij annulatie na bevestiging van de overeenkomst dient De Leest Detailing als volgt vergoed te worden:</p>
         <ul>
-          <li>annulatie tot 24 uur voordien: minimum 75% van de afgesproken totaalprijs;</li>
-          <li>annulatie tot 48 uur voordien: minimum 50% van de afgesproken totaalprijs;</li>
-          <li>annulatie tot 72 uur voordien: minimum 25% van de afgesproken totaalprijs.</li>
+          <li data-i18n="legal.a4.li1">annulatie tot 24 uur voordien: minimum 75% van de afgesproken totaalprijs;</li>
+          <li data-i18n="legal.a4.li2">annulatie tot 48 uur voordien: minimum 50% van de afgesproken totaalprijs;</li>
+          <li data-i18n="legal.a4.li3">annulatie tot 72 uur voordien: minimum 25% van de afgesproken totaalprijs.</li>
         </ul>
 
-        <h2>Artikel 5. Betalingen</h2>
-        <p><strong>Particulieren</strong> — De betaling dient contant afgerekend te worden of per vooruitbetaling.</p>
-        <p><strong>Bedrijven/professionelen</strong> — De factuur is contant betaalbaar of per overschrijving met betalingsplicht binnen de afgesproken betalingstermijn (14 kalenderdagen). Bij iedere vertraging in de betaling is er van rechtswege en zonder ingebrekestelling een intrest van 1% per maand verschuldigd. Bij wanbetaling zal het bedrag van de factuur verhoogd worden met een forfaitaire schadevergoeding van 10%, met een minimum van € 75. Alle klachten in verband met de factuur dienen ons overgemaakt te worden per aangetekend schrijven binnen de acht dagen. Voor alle betwistingen zijn uitsluitend de bevoegde Nederlandse rechtbanken bevoegd. De klant ontvangt per e-mail een factuur om het bedrag over te maken op bankrekeningnummer [IBAN] van De Leest Detailing.</p>
+        <h2 data-i18n="legal.a5.title">Artikel 5. Betalingen</h2>
+        <p><strong data-i18n="legal.a5.p1lead">Particulieren</strong> — <span data-i18n="legal.a5.p1text">De betaling dient contant afgerekend te worden of per vooruitbetaling.</span></p>
+        <p><strong data-i18n="legal.a5.p2lead">Bedrijven/professionelen</strong> — <span data-i18n="legal.a5.p2text">De factuur is contant betaalbaar of per overschrijving met betalingsplicht binnen de afgesproken betalingstermijn (14 kalenderdagen). Bij iedere vertraging in de betaling is er van rechtswege en zonder ingebrekestelling een intrest van 1% per maand verschuldigd. Bij wanbetaling zal het bedrag van de factuur verhoogd worden met een forfaitaire schadevergoeding van 10%, met een minimum van € 75. Alle klachten in verband met de factuur dienen ons overgemaakt te worden per aangetekend schrijven binnen de acht dagen. Voor alle betwistingen zijn uitsluitend de bevoegde Nederlandse rechtbanken bevoegd. De klant ontvangt per e-mail een factuur om het bedrag over te maken op bankrekeningnummer [IBAN] van De Leest Detailing.</span></p>
 
-        <h2>Artikel 6. Klachten</h2>
-        <p>Indien je niet tevreden bent met ons werk of denkt dat er een probleem is met een service die we geleverd hebben, neem dan binnen 48 uur contact met ons op zodat we snel kunnen handelen om het probleem op te lossen. Vanwege de manier waarop voertuigen worden gebruikt en blootgesteld aan mogelijke schade, kunnen wij niet verantwoordelijk worden gehouden voor defecten die na 48 uur worden ontdekt. Vanwege deze reden kunnen wij niet garanderen dat wij de oorzaak zijn.</p>
+        <h2 data-i18n="legal.a6.title">Artikel 6. Klachten</h2>
+        <p data-i18n="legal.a6.p1">Indien je niet tevreden bent met ons werk of denkt dat er een probleem is met een service die we geleverd hebben, neem dan binnen 48 uur contact met ons op zodat we snel kunnen handelen om het probleem op te lossen. Vanwege de manier waarop voertuigen worden gebruikt en blootgesteld aan mogelijke schade, kunnen wij niet verantwoordelijk worden gehouden voor defecten die na 48 uur worden ontdekt. Vanwege deze reden kunnen wij niet garanderen dat wij de oorzaak zijn.</p>
 
-        <h2>Artikel 7. Garantie</h2>
-        <p>Bij de installatie van een keramische coating kan je je verwachten aan de voorgeschreven levensduur van het product. De resultaten en verwachte levensduur zijn echter afhankelijk van de manier waarop en hoe vaak je het voertuig gebruikt, hoe goed het voertuig wordt onderhouden en soortgelijke factoren. Een correct onderhoud met onze aanbevolen producten loont en zorgt voor een langdurig resultaat. Een slecht onderhoud laat echter zijn sporen. Onder 'garantie' dient verstaan te worden dat het resultaat van de behandeling min of meer in de buurt komt van de verwachte, gemiddelde levensduur. Het verliezen van de hydrofobe eigenschappen valt niet onder de garantie, deze wordt beïnvloed door contaminaties van buitenaf en kan hersteld worden door een behandeling bij De Leest Detailing of door de klant zelf met het juiste product. Aansprakelijkheid is enkel van toepassing indien de volledige behandeling (inclusief vereist voorbereidingswerk) werd verricht door De Leest Detailing.</p>
-        <p>Na de installatie van een keramische coating dient de wagen minimaal 24 uur niet in contact te komen met elementen van buitenaf. De Leest Detailing is op geen enkele manier verantwoordelijk voor nadelige resultaten wanneer deze rusttijd niet kan worden nageleefd. Gedurende de eerste 7 dagen na de installatie dien je zoveel mogelijk wrijving, watercontact en chemicaliën te voorkomen. Na deze periode van 7 dagen kan je de wagen zonder problemen de eerste wasbeurt geven.</p>
+        <h2 data-i18n="legal.a7.title">Artikel 7. Garantie</h2>
+        <p data-i18n="legal.a7.p1">Bij de installatie van een keramische coating kan je je verwachten aan de voorgeschreven levensduur van het product. De resultaten en verwachte levensduur zijn echter afhankelijk van de manier waarop en hoe vaak je het voertuig gebruikt, hoe goed het voertuig wordt onderhouden en soortgelijke factoren. Een correct onderhoud met onze aanbevolen producten loont en zorgt voor een langdurig resultaat. Een slecht onderhoud laat echter zijn sporen. Onder 'garantie' dient verstaan te worden dat het resultaat van de behandeling min of meer in de buurt komt van de verwachte, gemiddelde levensduur. Het verliezen van de hydrofobe eigenschappen valt niet onder de garantie, deze wordt beïnvloed door contaminaties van buitenaf en kan hersteld worden door een behandeling bij De Leest Detailing of door de klant zelf met het juiste product. Aansprakelijkheid is enkel van toepassing indien de volledige behandeling (inclusief vereist voorbereidingswerk) werd verricht door De Leest Detailing.</p>
+        <p data-i18n="legal.a7.p2">Na de installatie van een keramische coating dient de wagen minimaal 24 uur niet in contact te komen met elementen van buitenaf. De Leest Detailing is op geen enkele manier verantwoordelijk voor nadelige resultaten wanneer deze rusttijd niet kan worden nageleefd. Gedurende de eerste 7 dagen na de installatie dien je zoveel mogelijk wrijving, watercontact en chemicaliën te voorkomen. Na deze periode van 7 dagen kan je de wagen zonder problemen de eerste wasbeurt geven.</p>
 
-        <h2>Artikel 8. Intellectuele eigendom en eigendomsrechten</h2>
-        <p>De volledige inhoud op de website van De Leest Detailing (foto's, teksten, handelsnamen, logo's en andere grafische elementen) is beschermd met auteursrecht en/of ander intellectueel eigendomsrecht. De inhoud van de website mag uitsluitend door De Leest Detailing worden gebruikt. Voor andere gebruikers is het verboden om deze inhoud op eender welke manier te gebruiken of te bewerken, zonder toestemming van De Leest Detailing.</p>
-        <p>Indien bovenstaande regels geschonden worden, zal De Leest Detailing eisen om de informatie per direct te verwijderen en optreden met een boete voor onrechtmatig gebruik van deze informatie. Deze boete kan eveneens een schadevergoeding omvatten voor het onrechtmatig gebruik. Bijkomende kosten zoals proces- en advocaatkosten van de auteursrechthebbende dienen te worden vergoed.</p>
-        <p>Indien een akkoord voor behandeling werd overeengekomen heeft De Leest Detailing het recht om zowel fotomateriaal als videomateriaal te creëren van het voertuig en deze aan zijn portfolio toe te voegen. Het ontwikkelde beeldmateriaal van de wagen mag voor alle doeleinden van De Leest Detailing gebruikt worden.</p>
+        <h2 data-i18n="legal.a8.title">Artikel 8. Intellectuele eigendom en eigendomsrechten</h2>
+        <p data-i18n="legal.a8.p1">De volledige inhoud op de website van De Leest Detailing (foto's, teksten, handelsnamen, logo's en andere grafische elementen) is beschermd met auteursrecht en/of ander intellectueel eigendomsrecht. De inhoud van de website mag uitsluitend door De Leest Detailing worden gebruikt. Voor andere gebruikers is het verboden om deze inhoud op eender welke manier te gebruiken of te bewerken, zonder toestemming van De Leest Detailing.</p>
+        <p data-i18n="legal.a8.p2">Indien bovenstaande regels geschonden worden, zal De Leest Detailing eisen om de informatie per direct te verwijderen en optreden met een boete voor onrechtmatig gebruik van deze informatie. Deze boete kan eveneens een schadevergoeding omvatten voor het onrechtmatig gebruik. Bijkomende kosten zoals proces- en advocaatkosten van de auteursrechthebbende dienen te worden vergoed.</p>
+        <p data-i18n="legal.a8.p3">Indien een akkoord voor behandeling werd overeengekomen heeft De Leest Detailing het recht om zowel fotomateriaal als videomateriaal te creëren van het voertuig en deze aan zijn portfolio toe te voegen. Het ontwikkelde beeldmateriaal van de wagen mag voor alle doeleinden van De Leest Detailing gebruikt worden.</p>
 
-        <h2>Artikel 9. Overmacht</h2>
-        <p>In geval van overmacht zijn wij niet gehouden onze verplichtingen na te komen. In dat geval kunnen wij ofwel onze verplichtingen opschorten voor de duur van de overmacht, ofwel de overeenkomst definitief ontbinden.</p>
-        <p>Overmacht is elke omstandigheid buiten onze wil en controle die de nakoming van onze verplichtingen geheel of gedeeltelijk verhindert. Hieronder begrijpen wij onder meer stakingen, brand, pandemieën, bedrijfsstoringen, energiestoringen, storingen in een (telecommunicatie-)netwerk of verbinding of gebruikte communicatiesystemen en/of het op enig moment niet beschikbaar zijn van onze website, niet- of niet-tijdige levering van toeleveranciers of andere ingeschakelde derden.</p>
+        <h2 data-i18n="legal.a9.title">Artikel 9. Overmacht</h2>
+        <p data-i18n="legal.a9.p1">In geval van overmacht zijn wij niet gehouden onze verplichtingen na te komen. In dat geval kunnen wij ofwel onze verplichtingen opschorten voor de duur van de overmacht, ofwel de overeenkomst definitief ontbinden.</p>
+        <p data-i18n="legal.a9.p2">Overmacht is elke omstandigheid buiten onze wil en controle die de nakoming van onze verplichtingen geheel of gedeeltelijk verhindert. Hieronder begrijpen wij onder meer stakingen, brand, pandemieën, bedrijfsstoringen, energiestoringen, storingen in een (telecommunicatie-)netwerk of verbinding of gebruikte communicatiesystemen en/of het op enig moment niet beschikbaar zijn van onze website, niet- of niet-tijdige levering van toeleveranciers of andere ingeschakelde derden.</p>
       </div>
     </section>
   </main>
@@ -106,21 +115,23 @@
           <img src="assets/favicon.svg" alt="" class="logo-mark" width="28" height="28">
           <span class="logo-text">De Leest <em>Detailing</em></span>
         </a>
-        <p class="footer-tag">Detailing tot het niet perfecter kan.</p>
+        <p class="footer-tag" data-i18n="footer.tag">Detailing tot het niet perfecter kan.</p>
       </div>
       <div class="footer-right">
         <nav class="footer-nav" aria-label="Footer">
-          <a href="index.html#services">Diensten</a>
-          <a href="index.html#gallery">Galerij</a>
-          <a href="index.html#about">Over ons</a>
-          <a href="index.html#contactForm">Contact</a>
-          <a href="index.html#pricing">Prijzen</a>
-          <a href="algemene-voorwaarden.html">Algemene voorwaarden</a>
+          <a href="index.html#services" data-i18n="nav.services">Diensten</a>
+          <a href="index.html#gallery" data-i18n="nav.gallery">Galerij</a>
+          <a href="index.html#about" data-i18n="nav.about">Over ons</a>
+          <a href="index.html#contactForm" data-i18n="nav.contact">Contact</a>
+          <a href="index.html#pricing" data-i18n="nav.pricing">Prijzen</a>
+          <a href="algemene-voorwaarden.html" data-i18n="footer.terms">Algemene voorwaarden</a>
         </nav>
       </div>
     </div>
-    <p class="footer-copy">© 2026 De Leest Detailing</p>
+    <p class="footer-copy">© <span id="year">2026</span> De Leest Detailing</p>
   </footer>
 
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

@@ -1,6 +1,7 @@
 /* ============================================================
    De Leest Detailing — translations (EN / NL)
-   Keys match data-i18n / data-i18n-placeholder attributes.
+   Keys match data-i18n / data-i18n-placeholder / data-i18n-aria /
+   data-i18n-content attributes.
    ============================================================ */
 
 const I18N = {
@@ -19,7 +20,7 @@ const I18N = {
 
     "services.kicker": "What we do",
     "services.title": "Our services",
-    "services.intro": "This is our base offering — more specialist services will follow. Every treatment is carried out by hand, with premium products and an obsession for the end result.",
+    "services.intro": "This is our base offering. A detailed overview can be found in the pricing. Every treatment is carried out by hand, with premium products and an obsession for the end result.",
     "services.pricingCta": "View packages & pricing",
 
     "cars.groupTitle": "For your car",
@@ -95,7 +96,7 @@ const I18N = {
     "footer.terms": "Terms & conditions",
 
     "pricing.kicker": "Packages & pricing",
-    "pricing.title": "One package for every car.",
+    "pricing.title": "One package for every vehicle.",
     "pricing.intro": "From a thorough wash in between to full paint correction with ceramic protection. Every package is carried out by hand, with the same obsession for the end result.",
     "pricing.popular": "Most popular",
     "pricing.from": "from",
@@ -176,7 +177,56 @@ const I18N = {
     "cookie.label": "Cookie settings",
     "cookie.text": "We only use functional cookies and similar techniques — for example to remember your language preference. No tracking or marketing cookies are placed.",
     "cookie.accept": "Accept",
-    "cookie.decline": "Decline"
+    "cookie.decline": "Decline",
+
+    "legal.meta.title": "Terms & conditions — De Leest Detailing",
+    "legal.meta.desc": "Terms and conditions of De Leest Detailing.",
+    "legal.kicker": "Legal",
+    "legal.title": "Terms & conditions",
+
+    "legal.a1.title": "Article 1. Identity",
+    "legal.a1.p1": "De Leest Detailing, established at [STREET + HOUSE NUMBER], [POSTCODE + CITY], registered with the Dutch Chamber of Commerce (Kamer van Koophandel) under number [COC NUMBER].",
+    "legal.a1.line2": "Registered address: [STREET + HOUSE NUMBER], [POSTCODE + CITY], The Netherlands",
+    "legal.a1.line3": "Email address: [EMAIL ADDRESS]",
+    "legal.a1.line4": "Phone number: +31 (0)6 20781765",
+    "legal.a1.line5": "Chamber of Commerce number: [COC NUMBER]",
+    "legal.a1.line6": "VAT number: [VAT NUMBER]",
+
+    "legal.a2.title": "Article 2. Applicability & conditions",
+    "legal.a2.p1": "These terms and conditions apply to all quotations, invoices and similar agreements. By entering into an agreement, the customer accepts the terms and conditions of De Leest Detailing.",
+
+    "legal.a3.title": "Article 3. Prices and quotations",
+    "legal.a3.p1": "The guide prices applicable to our services are shown on the website. An exact price always depends on the condition and model of the vehicle. Prices may be changed at any time. Quotations are entirely without obligation and valid for up to 3 months from the date of issue.",
+
+    "legal.a4.title": "Article 4. Agreement, deposit and cancellation",
+    "legal.a4.p1": "An agreement for a service is established after demonstrable proof of confirmation. This can be by email, letter or phone/text message.",
+    "legal.a4.p2": "For multi-day treatments or longer waiting times we charge a deposit of at least 20% of the total amount. Deposits are non-refundable. Our treatments often take several days and this gives us certainty in our planning. The deposit is deducted from the final invoice.",
+    "legal.a4.p3": "In case of cancellation after confirmation of the agreement, De Leest Detailing must be compensated as follows:",
+    "legal.a4.li1": "cancellation up to 24 hours in advance: minimum 75% of the agreed total price;",
+    "legal.a4.li2": "cancellation up to 48 hours in advance: minimum 50% of the agreed total price;",
+    "legal.a4.li3": "cancellation up to 72 hours in advance: minimum 25% of the agreed total price.",
+
+    "legal.a5.title": "Article 5. Payments",
+    "legal.a5.p1lead": "Private individuals",
+    "legal.a5.p1text": "Payment must be made in cash or by payment in advance.",
+    "legal.a5.p2lead": "Businesses/professionals",
+    "legal.a5.p2text": "The invoice is payable in cash or by bank transfer, with payment due within the agreed payment term (14 calendar days). For any delay in payment, an interest of 1% per month is due by operation of law and without notice of default. In case of non-payment, the invoice amount will be increased by a fixed compensation of 10%, with a minimum of € 75. All complaints regarding the invoice must be submitted to us by registered letter within eight days. For all disputes, only the competent Dutch courts have jurisdiction. The customer receives an invoice by email to transfer the amount to bank account number [IBAN] of De Leest Detailing.",
+
+    "legal.a6.title": "Article 6. Complaints",
+    "legal.a6.p1": "If you are not satisfied with our work or think there is a problem with a service we have provided, please contact us within 48 hours so we can act quickly to resolve the problem. Because of the way vehicles are used and exposed to possible damage, we cannot be held responsible for defects discovered after 48 hours. For this reason, we cannot guarantee that we are the cause.",
+
+    "legal.a7.title": "Article 7. Warranty",
+    "legal.a7.p1": "With the installation of a ceramic coating you can expect the prescribed lifespan of the product. However, the results and expected lifespan depend on how and how often you use the vehicle, how well the vehicle is maintained and similar factors. Proper maintenance with our recommended products pays off and ensures a long-lasting result. Poor maintenance, however, leaves its marks. 'Warranty' means that the result of the treatment more or less approaches the expected, average lifespan. Loss of the hydrophobic properties is not covered by the warranty; it is influenced by external contamination and can be restored by a treatment at De Leest Detailing or by the customer with the right product. Liability only applies if the full treatment (including required preparation work) was carried out by De Leest Detailing.",
+    "legal.a7.p2": "After the installation of a ceramic coating, the car must not come into contact with external elements for at least 24 hours. De Leest Detailing is in no way responsible for adverse results when this resting period cannot be observed. During the first 7 days after installation, you should avoid friction, water contact and chemicals as much as possible. After this 7-day period, you can give the car its first wash without any problems.",
+
+    "legal.a8.title": "Article 8. Intellectual property and ownership rights",
+    "legal.a8.p1": "The entire content of the De Leest Detailing website (photos, texts, trade names, logos and other graphic elements) is protected by copyright and/or other intellectual property rights. The content of the website may only be used by De Leest Detailing. Other users are prohibited from using or editing this content in any way without the permission of De Leest Detailing.",
+    "legal.a8.p2": "If the above rules are violated, De Leest Detailing will demand that the information be removed immediately and will take action with a fine for unlawful use of this information. This fine may also include compensation for the unlawful use. Additional costs such as litigation and attorney fees of the copyright holder must be reimbursed.",
+    "legal.a8.p3": "If an agreement for a treatment has been reached, De Leest Detailing has the right to create both photo and video material of the vehicle and add it to its portfolio. The developed imagery of the car may be used for all purposes of De Leest Detailing.",
+
+    "legal.a9.title": "Article 9. Force majeure",
+    "legal.a9.p1": "In the event of force majeure, we are not obliged to fulfil our obligations. In that case we may either suspend our obligations for the duration of the force majeure, or definitively dissolve the agreement.",
+    "legal.a9.p2": "Force majeure is any circumstance beyond our will and control that wholly or partially prevents the fulfilment of our obligations. This includes, among other things, strikes, fire, pandemics, business interruptions, energy failures, failures in a (telecommunications) network or connection or communication systems used, and/or the unavailability of our website at any time, non-delivery or late delivery by suppliers or other third parties engaged."
   },
 
   nl: {
@@ -194,7 +244,7 @@ const I18N = {
 
     "services.kicker": "Wat wij doen",
     "services.title": "Onze diensten",
-    "services.intro": "Dit is ons basisaanbod — meer gespecialiseerde diensten volgen nog. Elke behandeling voeren we met de hand uit, met premium producten en een obsessie voor het eindresultaat.",
+    "services.intro": "Dit is ons basisaanbod. Een gedetailleerd overzicht kunt u bij de prijzen vinden. Elke behandeling voeren we met de hand uit, met premium producten en een obsessie voor het eindresultaat.",
     "services.pricingCta": "Bekijk pakketten & prijzen",
 
     "cars.groupTitle": "Voor je auto",
@@ -214,7 +264,7 @@ const I18N = {
     "moto.lube.title": "Jouw ketting, jouw keuze",
     "moto.lube.desc": "Na het reinigen en ontvetten van de ketting bepaal jij welk smeermiddel wij aanbrengen — afgestemd op hoe en waar jij rijdt.",
     "moto.lube.wet.title": "Wet lubricant",
-    "moto.lube.wet.desc": "Blijft zitten bij regen en op lange ritten. Maximale bescherming, ideaal voor rijders die het hele jaar door en touren.",
+    "moto.lube.wet.desc": "Blijft zitten bij regen en op lange ritten. Maximale bescherming, ideaal voor rijders die het hele jaar door rijden en touren.",
     "moto.lube.dry.title": "Dry lubricant",
     "moto.lube.dry.desc": "Strakke finish die minder stof en vuil aantrekt. Perfect voor mooi-weer-ritten en een vlekkeloze look.",
 
@@ -270,7 +320,7 @@ const I18N = {
     "footer.terms": "Algemene voorwaarden",
 
     "pricing.kicker": "Pakketten & prijzen",
-    "pricing.title": "Voor elke auto een passend pakket.",
+    "pricing.title": "Voor elk voertuig een passend pakket.",
     "pricing.intro": "Van een grondige wasbeurt voor tussendoor tot volledige lakcorrectie met keramische bescherming. Elk pakket voeren we met de hand uit, met dezelfde obsessie voor het eindresultaat.",
     "pricing.popular": "Populairst",
     "pricing.from": "vanaf",
@@ -351,6 +401,55 @@ const I18N = {
     "cookie.label": "Cookie-instellingen",
     "cookie.text": "Wij gebruiken alleen functionele cookies en vergelijkbare technieken — bijvoorbeeld om je taalvoorkeur te onthouden. Er worden geen tracking- of marketingcookies geplaatst.",
     "cookie.accept": "Accepteren",
-    "cookie.decline": "Weigeren"
+    "cookie.decline": "Weigeren",
+
+    "legal.meta.title": "Algemene voorwaarden — De Leest Detailing",
+    "legal.meta.desc": "Algemene voorwaarden van De Leest Detailing.",
+    "legal.kicker": "Juridisch",
+    "legal.title": "Algemene voorwaarden",
+
+    "legal.a1.title": "Artikel 1. Identiteit",
+    "legal.a1.p1": "De Leest Detailing, gevestigd te [STRAAT + HUISNUMMER], [POSTCODE + PLAATS], ingeschreven bij de Kamer van Koophandel onder nummer [KVK-NUMMER].",
+    "legal.a1.line2": "Vestigingsadres: [STRAAT + HUISNUMMER], [POSTCODE + PLAATS], Nederland",
+    "legal.a1.line3": "E-mailadres: [E-MAILADRES]",
+    "legal.a1.line4": "Telefoonnummer: +31 (0)6 20781765",
+    "legal.a1.line5": "KvK-nummer: [KVK-NUMMER]",
+    "legal.a1.line6": "Btw-nummer: [BTW-NUMMER]",
+
+    "legal.a2.title": "Artikel 2. Toepasselijkheid & voorwaarden",
+    "legal.a2.p1": "Deze algemene voorwaarden zijn van toepassing op alle offertes, facturen en soortgelijke overeenkomsten. Bij een overeenkomst aanvaardt de klant de algemene voorwaarden van De Leest Detailing.",
+
+    "legal.a3.title": "Artikel 3. Prijs en offertes",
+    "legal.a3.p1": "De richtprijzen die van toepassing zijn voor onze diensten worden weergegeven op de website. Een exacte prijs is steeds afhankelijk van de staat en het model van het voertuig. De prijzen kunnen op ieder ogenblik worden gewijzigd. Offertes zijn geheel vrijblijvend en geldig tot maximaal 3 maanden na datum van opstelling.",
+
+    "legal.a4.title": "Artikel 4. Overeenkomst, voorschot en annulatie",
+    "legal.a4.p1": "De overeenkomst van een dienst komt tot stand na een aantoonbaar bewijs van bevestiging. Dit kan per e-mail, brief of telefoon/sms.",
+    "legal.a4.p2": "Voor meerdaagse behandelingen of bij langere wachttijden brengen wij een voorschot in rekening van minimaal 20% van het totaalbedrag. Voorschotten zijn niet recupereerbaar. Onze behandelingen nemen vaak meerdere dagen in beslag en op deze manier hebben wij zekerheid van onze planning. Het voorschot wordt in mindering gebracht bij de eindafrekening.",
+    "legal.a4.p3": "Bij annulatie na bevestiging van de overeenkomst dient De Leest Detailing als volgt vergoed te worden:",
+    "legal.a4.li1": "annulatie tot 24 uur voordien: minimum 75% van de afgesproken totaalprijs;",
+    "legal.a4.li2": "annulatie tot 48 uur voordien: minimum 50% van de afgesproken totaalprijs;",
+    "legal.a4.li3": "annulatie tot 72 uur voordien: minimum 25% van de afgesproken totaalprijs.",
+
+    "legal.a5.title": "Artikel 5. Betalingen",
+    "legal.a5.p1lead": "Particulieren",
+    "legal.a5.p1text": "De betaling dient contant afgerekend te worden of per vooruitbetaling.",
+    "legal.a5.p2lead": "Bedrijven/professionelen",
+    "legal.a5.p2text": "De factuur is contant betaalbaar of per overschrijving met betalingsplicht binnen de afgesproken betalingstermijn (14 kalenderdagen). Bij iedere vertraging in de betaling is er van rechtswege en zonder ingebrekestelling een intrest van 1% per maand verschuldigd. Bij wanbetaling zal het bedrag van de factuur verhoogd worden met een forfaitaire schadevergoeding van 10%, met een minimum van € 75. Alle klachten in verband met de factuur dienen ons overgemaakt te worden per aangetekend schrijven binnen de acht dagen. Voor alle betwistingen zijn uitsluitend de bevoegde Nederlandse rechtbanken bevoegd. De klant ontvangt per e-mail een factuur om het bedrag over te maken op bankrekeningnummer [IBAN] van De Leest Detailing.",
+
+    "legal.a6.title": "Artikel 6. Klachten",
+    "legal.a6.p1": "Indien je niet tevreden bent met ons werk of denkt dat er een probleem is met een service die we geleverd hebben, neem dan binnen 48 uur contact met ons op zodat we snel kunnen handelen om het probleem op te lossen. Vanwege de manier waarop voertuigen worden gebruikt en blootgesteld aan mogelijke schade, kunnen wij niet verantwoordelijk worden gehouden voor defecten die na 48 uur worden ontdekt. Vanwege deze reden kunnen wij niet garanderen dat wij de oorzaak zijn.",
+
+    "legal.a7.title": "Artikel 7. Garantie",
+    "legal.a7.p1": "Bij de installatie van een keramische coating kan je je verwachten aan de voorgeschreven levensduur van het product. De resultaten en verwachte levensduur zijn echter afhankelijk van de manier waarop en hoe vaak je het voertuig gebruikt, hoe goed het voertuig wordt onderhouden en soortgelijke factoren. Een correct onderhoud met onze aanbevolen producten loont en zorgt voor een langdurig resultaat. Een slecht onderhoud laat echter zijn sporen. Onder 'garantie' dient verstaan te worden dat het resultaat van de behandeling min of meer in de buurt komt van de verwachte, gemiddelde levensduur. Het verliezen van de hydrofobe eigenschappen valt niet onder de garantie, deze wordt beïnvloed door contaminaties van buitenaf en kan hersteld worden door een behandeling bij De Leest Detailing of door de klant zelf met het juiste product. Aansprakelijkheid is enkel van toepassing indien de volledige behandeling (inclusief vereist voorbereidingswerk) werd verricht door De Leest Detailing.",
+    "legal.a7.p2": "Na de installatie van een keramische coating dient de wagen minimaal 24 uur niet in contact te komen met elementen van buitenaf. De Leest Detailing is op geen enkele manier verantwoordelijk voor nadelige resultaten wanneer deze rusttijd niet kan worden nageleefd. Gedurende de eerste 7 dagen na de installatie dien je zoveel mogelijk wrijving, watercontact en chemicaliën te voorkomen. Na deze periode van 7 dagen kan je de wagen zonder problemen de eerste wasbeurt geven.",
+
+    "legal.a8.title": "Artikel 8. Intellectuele eigendom en eigendomsrechten",
+    "legal.a8.p1": "De volledige inhoud op de website van De Leest Detailing (foto's, teksten, handelsnamen, logo's en andere grafische elementen) is beschermd met auteursrecht en/of ander intellectueel eigendomsrecht. De inhoud van de website mag uitsluitend door De Leest Detailing worden gebruikt. Voor andere gebruikers is het verboden om deze inhoud op eender welke manier te gebruiken of te bewerken, zonder toestemming van De Leest Detailing.",
+    "legal.a8.p2": "Indien bovenstaande regels geschonden worden, zal De Leest Detailing eisen om de informatie per direct te verwijderen en optreden met een boete voor onrechtmatig gebruik van deze informatie. Deze boete kan eveneens een schadevergoeding omvatten voor het onrechtmatig gebruik. Bijkomende kosten zoals proces- en advocaatkosten van de auteursrechthebbende dienen te worden vergoed.",
+    "legal.a8.p3": "Indien een akkoord voor behandeling werd overeengekomen heeft De Leest Detailing het recht om zowel fotomateriaal als videomateriaal te creëren van het voertuig en deze aan zijn portfolio toe te voegen. Het ontwikkelde beeldmateriaal van de wagen mag voor alle doeleinden van De Leest Detailing gebruikt worden.",
+
+    "legal.a9.title": "Artikel 9. Overmacht",
+    "legal.a9.p1": "In geval van overmacht zijn wij niet gehouden onze verplichtingen na te komen. In dat geval kunnen wij ofwel onze verplichtingen opschorten voor de duur van de overmacht, ofwel de overeenkomst definitief ontbinden.",
+    "legal.a9.p2": "Overmacht is elke omstandigheid buiten onze wil en controle die de nakoming van onze verplichtingen geheel of gedeeltelijk verhindert. Hieronder begrijpen wij onder meer stakingen, brand, pandemieën, bedrijfsstoringen, energiestoringen, storingen in een (telecommunicatie-)netwerk of verbinding of gebruikte communicatiesystemen en/of het op enig moment niet beschikbaar zijn van onze website, niet- of niet-tijdige levering van toeleveranciers of andere ingeschakelde derden."
   }
 };

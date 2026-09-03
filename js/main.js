@@ -27,6 +27,11 @@
       if (dict[key]) el.setAttribute("aria-label", dict[key]);
     });
 
+    document.querySelectorAll("[data-i18n-content]").forEach((el) => {
+      const key = el.getAttribute("data-i18n-content");
+      if (dict[key]) el.setAttribute("content", dict[key]);
+    });
+
     document.documentElement.setAttribute("lang", lang);
     langButtons.forEach((btn) =>
       btn.classList.toggle("active", btn.dataset.lang === lang)
@@ -57,49 +62,54 @@
   function scrollToY(y) {
     window.scrollTo({ top: y, behavior: reduceMotion ? "auto" : "smooth" });
   }
-  pageNavTop.addEventListener("click", () => scrollToY(0));
-  pageNavBottom.addEventListener("click", () =>
-    scrollToY(document.documentElement.scrollHeight)
-  );
 
-  function onScroll() {
-    const y = window.scrollY;
-    header.classList.toggle("scrolled", y > 24);
-    pageNavTop.classList.toggle("hidden", y < 300);
-    pageNavBottom.classList.toggle(
-      "hidden",
-      y + window.innerHeight >= document.documentElement.scrollHeight - 120
+  if (header && pageNavTop && pageNavBottom) {
+    pageNavTop.addEventListener("click", () => scrollToY(0));
+    pageNavBottom.addEventListener("click", () =>
+      scrollToY(document.documentElement.scrollHeight)
     );
+
+    function onScroll() {
+      const y = window.scrollY;
+      header.classList.toggle("scrolled", y > 24);
+      pageNavTop.classList.toggle("hidden", y < 300);
+      pageNavBottom.classList.toggle(
+        "hidden",
+        y + window.innerHeight >= document.documentElement.scrollHeight - 120
+      );
+    }
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
   }
-  window.addEventListener("scroll", onScroll, { passive: true });
-  onScroll();
 
   /* ---------- Mobile menu ---------- */
   const navToggle = document.getElementById("navToggle");
   const mainNav = document.getElementById("mainNav");
 
-  navToggle.addEventListener("click", () => {
-    const open = mainNav.classList.toggle("open");
-    navToggle.classList.toggle("open", open);
-    navToggle.setAttribute("aria-expanded", String(open));
-  });
+  if (navToggle && mainNav) {
+    navToggle.addEventListener("click", () => {
+      const open = mainNav.classList.toggle("open");
+      navToggle.classList.toggle("open", open);
+      navToggle.setAttribute("aria-expanded", String(open));
+    });
 
-  mainNav.querySelectorAll("a").forEach((link) =>
-    link.addEventListener("click", () => {
+    mainNav.querySelectorAll("a").forEach((link) =>
+      link.addEventListener("click", () => {
+        mainNav.classList.remove("open");
+        navToggle.classList.remove("open");
+        navToggle.setAttribute("aria-expanded", "false");
+      })
+    );
+
+    /* Tap anywhere outside the open menu closes it */
+    document.addEventListener("click", (event) => {
+      if (!mainNav.classList.contains("open")) return;
+      if (mainNav.contains(event.target) || navToggle.contains(event.target)) return;
       mainNav.classList.remove("open");
       navToggle.classList.remove("open");
       navToggle.setAttribute("aria-expanded", "false");
-    })
-  );
-
-  /* Tap anywhere outside the open menu closes it */
-  document.addEventListener("click", (event) => {
-    if (!mainNav.classList.contains("open")) return;
-    if (mainNav.contains(event.target) || navToggle.contains(event.target)) return;
-    mainNav.classList.remove("open");
-    navToggle.classList.remove("open");
-    navToggle.setAttribute("aria-expanded", "false");
-  });
+    });
+  }
 
   /* ---------- Reveal on scroll ---------- */
   const revealEls = document.querySelectorAll(".reveal");
@@ -251,18 +261,22 @@
 
   /* ---------- Cookie consent ---------- */
   const cookieBanner = document.getElementById("cookieBanner");
-  const CONSENT_KEY = "dld-cookie-consent";
-  let consent = null;
-  try { consent = localStorage.getItem(CONSENT_KEY); } catch (e) { /* private mode */ }
-  if (!consent) cookieBanner.hidden = false;
 
-  function setConsent(value) {
-    try { localStorage.setItem(CONSENT_KEY, value); } catch (e) { /* private mode */ }
-    cookieBanner.hidden = true;
+  if (cookieBanner) {
+    const CONSENT_KEY = "dld-cookie-consent";
+    let consent = null;
+    try { consent = localStorage.getItem(CONSENT_KEY); } catch (e) { /* private mode */ }
+    if (!consent) cookieBanner.hidden = false;
+
+    function setConsent(value) {
+      try { localStorage.setItem(CONSENT_KEY, value); } catch (e) { /* private mode */ }
+      cookieBanner.hidden = true;
+    }
+    document.getElementById("cookieAccept").addEventListener("click", () => setConsent("accepted"));
+    document.getElementById("cookieDecline").addEventListener("click", () => setConsent("declined"));
   }
-  document.getElementById("cookieAccept").addEventListener("click", () => setConsent("accepted"));
-  document.getElementById("cookieDecline").addEventListener("click", () => setConsent("declined"));
 
   /* ---------- Footer year ---------- */
-  document.getElementById("year").textContent = String(new Date().getFullYear());
+  const yearEl = document.getElementById("year");
+  if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 })();
