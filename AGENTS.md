@@ -106,9 +106,12 @@ scrolling, so full-page screenshots must scroll down in steps first (see
 
 ## Deployment
 
-Push to `main` triggers `.github/workflows/static.yml`, which uploads the
-**entire repository** as the GitHub Pages artifact and deploys it. Deployment
-is fully automatic — there is nothing to build. Keep the `CNAME` file intact.
+Push to `main` triggers `.github/workflows/static.yml`. The workflow stages
+**only the files the website needs** (`index.html`, `prijzen.html`,
+`algemene-voorwaarden.html`, `CNAME`, `css/`, `js/`, `assets/`) into `public/`
+and deploys that as the GitHub Pages artifact — QA scripts, docs and repo
+metadata are kept in the repo but never published. Deployment is fully
+automatic — there is nothing to build. Keep the `CNAME` file intact.
 
 ## Security considerations
 
