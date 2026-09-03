@@ -10,8 +10,9 @@ just plain HTML, CSS and vanilla JavaScript served as-is. The site is bilingual
 - Live domain: `deleestdetailing.nl` (see `CNAME`).
 - Contact form posts to Formspree (`https://formspree.io/f/xkjnjdzb`, submitted
   via `fetch` in `js/main.js`).
-- Only third-party runtime dependencies: Google Fonts (Sora + Inter), Unsplash
-  images, Formspree. No cookies are set beyond a `localStorage` consent flag.
+- Only third-party runtime dependencies: Google Fonts (Sora + Inter) and
+  Formspree. All photos are local files under `assets/img/`. No cookies are set
+  beyond a `localStorage` consent flag.
 
 ## Working rules
 
@@ -34,6 +35,10 @@ css/style.css               Single stylesheet, dark premium theme, CSS custom pr
 js/i18n.js                  I18N dictionary: en + nl translations, keys match data-i18n attributes
 js/main.js                  All interactions (IIFE, "use strict", no imports/exports)
 assets/                     favicon.svg, whatsapp-profile.png
+assets/img/                 All site photos, local only (no external image URLs):
+                            hero/, services/, about/, gallery/result-01..08/
+                            See assets/img/README.md for the file→location mapping.
+                            Keep that README in sync when photos change.
 qa/                         Python/Playwright QA scripts (not shipped, see .gitignore for venv)
 qa-screenshots/             QA screenshot output (gitignored)
 .qa-venv/                   Local Python venv with Playwright (gitignored)
