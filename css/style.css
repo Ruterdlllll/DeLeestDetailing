@@ -360,6 +360,29 @@ h3.group-title {
 .pricing-note + .pricing-note { margin-top: 0.4rem; }
 .services-pricing-cta { margin-top: 3rem; text-align: center; }
 
+/* Motorcycle pricing block */
+.moto-price {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  margin-top: 1.4rem;
+  padding: 1.8rem 2rem;
+  background: var(--panel);
+  border: 1px solid var(--panel-border);
+  border-radius: var(--radius);
+}
+.moto-price-info { flex: 1; }
+.moto-price-info h3 { font-size: 1.2rem; margin-bottom: 0.5rem; }
+.moto-price-info .price-tag { min-height: 0; margin-bottom: 1.1rem; }
+.moto-price-info .price-features { margin-bottom: 0; }
+.moto-price-side { text-align: center; flex: none; }
+.moto-price-side .price { justify-content: center; margin: 0 0 1rem; }
+@media (max-width: 900px) {
+  .moto-price { flex-direction: column; align-items: flex-start; gap: 1.4rem; }
+  .moto-price-side { text-align: left; }
+  .moto-price-side .price { justify-content: flex-start; }
+}
+
 /* Comparison table */
 .compare-wrap {
   overflow-x: auto;
