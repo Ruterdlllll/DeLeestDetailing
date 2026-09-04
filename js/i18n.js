@@ -74,6 +74,12 @@ const I18N = {
     "hours.sunVal": "Closed",
     "hours.note": "During the week you're welcome to walk in anytime — on Saturdays we work by appointment only.",
 
+    "visit.title": "Find us",
+    "visit.address": "Address",
+    "visit.phone": "Phone",
+    "visit.mail": "Email",
+    "visit.maps": "View route on Google Maps →",
+
     "form.name": "Name",
     "form.namePh": "Your name",
     "form.email": "Email",
@@ -94,6 +100,7 @@ const I18N = {
 
     "footer.tag": "Detailing until it could not be more perfect.",
     "footer.terms": "Terms & conditions",
+    "footer.privacy": "Privacy policy",
 
     "pricing.kicker": "Packages & pricing",
     "pricing.title": "One package for every vehicle.",
@@ -115,6 +122,8 @@ const I18N = {
     "pkg.basic.f1": "Hand wash & dry",
     "pkg.basic.f2": "Wheel & tire cleaning",
     "pkg.basic.f3": "Vacuum interior",
+    "pkg.basic.f4": "Dashboard & console cleaning",
+    "pkg.basic.f5": "Interior glass cleaning",
 
     "pkg.std.name": "Standard Detail",
     "pkg.std.tag": "A complete refresh with wax protection for lasting shine.",
@@ -126,7 +135,7 @@ const I18N = {
     "pkg.premium.name": "Premium Detail",
     "pkg.premium.tag": "Deep interior cleaning plus a single-stage polish and sealant.",
     "pkg.premium.f1": "Everything from Standard Detail",
-    "pkg.premium.f2": "Steam cleaning & leather care",
+    "pkg.premium.f2": "Leather cleaning & conditioning",
     "pkg.premium.f3": "Single-stage polish",
     "pkg.premium.f4": "Paint sealant & engine bay",
 
@@ -152,9 +161,7 @@ const I18N = {
     "tbl.r5": "Vacuum interior",
     "tbl.r6": "Dashboard & console cleaning",
     "tbl.r7": "Interior glass cleaning",
-    "tbl.r8": "Steam cleaning",
     "tbl.r9": "Leather cleaning & conditioning",
-    "tbl.r10": "Odor removal treatment",
     "tbl.r11": "Single-stage polish",
     "tbl.r12": "Multi-stage paint correction",
     "tbl.r13": "Wax application",
@@ -185,12 +192,12 @@ const I18N = {
     "legal.title": "Terms & conditions",
 
     "legal.a1.title": "Article 1. Identity",
-    "legal.a1.p1": "De Leest Detailing, established at [STREET + HOUSE NUMBER], [POSTCODE + CITY], registered with the Dutch Chamber of Commerce (Kamer van Koophandel) under number [COC NUMBER].",
-    "legal.a1.line2": "Registered address: [STREET + HOUSE NUMBER], [POSTCODE + CITY], The Netherlands",
-    "legal.a1.line3": "Email address: [EMAIL ADDRESS]",
+    "legal.a1.p1": "De Leest Detailing, established at Molenstraat 44, 5737 BW Lieshout, registered with the Dutch Chamber of Commerce (Kamer van Koophandel) under number 86191365.",
+    "legal.a1.line2": "Registered address: Molenstraat 44, 5737 BW Lieshout, The Netherlands",
+    "legal.a1.line3": "Email address: info@deleestdetailing.nl",
     "legal.a1.line4": "Phone number: +31 (0)6 20781765",
-    "legal.a1.line5": "Chamber of Commerce number: [COC NUMBER]",
-    "legal.a1.line6": "VAT number: [VAT NUMBER]",
+    "legal.a1.line5": "Chamber of Commerce number: 86191365",
+    "legal.a1.line6": "VAT number: NL004206102B84",
 
     "legal.a2.title": "Article 2. Applicability & conditions",
     "legal.a2.p1": "These terms and conditions apply to all quotations, invoices and similar agreements. By entering into an agreement, the customer accepts the terms and conditions of De Leest Detailing.",
@@ -226,7 +233,31 @@ const I18N = {
 
     "legal.a9.title": "Article 9. Force majeure",
     "legal.a9.p1": "In the event of force majeure, we are not obliged to fulfil our obligations. In that case we may either suspend our obligations for the duration of the force majeure, or definitively dissolve the agreement.",
-    "legal.a9.p2": "Force majeure is any circumstance beyond our will and control that wholly or partially prevents the fulfilment of our obligations. This includes, among other things, strikes, fire, pandemics, business interruptions, energy failures, failures in a (telecommunications) network or connection or communication systems used, and/or the unavailability of our website at any time, non-delivery or late delivery by suppliers or other third parties engaged."
+    "legal.a9.p2": "Force majeure is any circumstance beyond our will and control that wholly or partially prevents the fulfilment of our obligations. This includes, among other things, strikes, fire, pandemics, business interruptions, energy failures, failures in a (telecommunications) network or connection or communication systems used, and/or the unavailability of our website at any time, non-delivery or late delivery by suppliers or other third parties engaged.",
+
+    "privacy.meta.title": "Privacy policy — De Leest Detailing",
+    "privacy.meta.desc": "Privacy policy of De Leest Detailing: which cookies and data we use, and what we do with them.",
+    "privacy.kicker": "Legal",
+    "privacy.title": "Privacy policy",
+    "privacy.intro": "De Leest Detailing handles your privacy with care. We collect as little data as possible and never store our clients' data unnecessarily. On this page you can read which techniques and data we use, and what we do with them.",
+
+    "privacy.s1.title": "1. Who we are",
+    "privacy.s1.p1": "De Leest Detailing, established at Molenstraat 44, 5737 BW Lieshout, registered with the Dutch Chamber of Commerce (Kamer van Koophandel) under number 86191365. You can reach us via info@deleestdetailing.nl or +31 (0)6 20781765.",
+
+    "privacy.s2.title": "2. Cookies and similar techniques",
+    "privacy.s2.p1": "This website does not use tracking, analytics or marketing cookies. We do not place cookies that follow you across the internet or build a profile of you.",
+    "privacy.s2.p2": "We only use functional storage in your own browser (localStorage). It remembers two preferences on your device: your chosen language and whether you have accepted or declined the cookie banner. These contain no personal data, are never sent to us or to third parties, and you can delete them at any time via your browser settings.",
+    "privacy.s2.p3": "To display the fonts, your browser loads Google Fonts from Google's servers. Your browser makes a technical connection to Google for this; we place no cookies through this and receive no data from it.",
+
+    "privacy.s3.title": "3. Contact form",
+    "privacy.s3.p1": "When you fill in the contact form, the details you enter (such as your name, email address and message) are delivered to our mailbox via the external service Formspree. We use this information solely to answer your question or request.",
+    "privacy.s3.p2": "We do not store your data in our own database, do not add you to a mailing list and never share or sell your data to third parties. Once your request has been handled, we do not keep your data any longer than necessary.",
+
+    "privacy.s4.title": "4. Your rights",
+    "privacy.s4.p1": "You have the right to view, correct or have deleted the personal data we hold about you. Email info@deleestdetailing.nl and we will respond as soon as possible. You can also file a complaint with the Dutch Data Protection Authority (Autoriteit Persoonsgegevens).",
+
+    "privacy.s5.title": "5. Changes",
+    "privacy.s5.p1": "We may update this privacy policy when our website or the law changes. The most recent version is always published on this page."
   },
 
   nl: {
@@ -298,6 +329,12 @@ const I18N = {
     "hours.sunVal": "Gesloten",
     "hours.note": "Van maandag t/m vrijdag loop je zo bij ons binnen — op zaterdag werken we uitsluitend op afspraak.",
 
+    "visit.title": "Vind ons",
+    "visit.address": "Adres",
+    "visit.phone": "Telefoon",
+    "visit.mail": "E-mail",
+    "visit.maps": "Bekijk de route op Google Maps →",
+
     "form.name": "Naam",
     "form.namePh": "Je naam",
     "form.email": "E-mail",
@@ -318,6 +355,7 @@ const I18N = {
 
     "footer.tag": "Detailing tot het niet perfecter kan.",
     "footer.terms": "Algemene voorwaarden",
+    "footer.privacy": "Privacybeleid",
 
     "pricing.kicker": "Pakketten & prijzen",
     "pricing.title": "Voor elk voertuig een passend pakket.",
@@ -339,6 +377,8 @@ const I18N = {
     "pkg.basic.f1": "Handwas & drogen",
     "pkg.basic.f2": "Velgen & banden reinigen",
     "pkg.basic.f3": "Interieur stofzuigen",
+    "pkg.basic.f4": "Dashboard & console reinigen",
+    "pkg.basic.f5": "Ramen binnenzijde reinigen",
 
     "pkg.std.name": "Standard Detail",
     "pkg.std.tag": "Een complete opfrisbeurt met waxbescherming voor blijvende glans.",
@@ -350,7 +390,7 @@ const I18N = {
     "pkg.premium.name": "Premium Detail",
     "pkg.premium.tag": "Dieptereiniging van het interieur plus eenstaps polijsten en sealant.",
     "pkg.premium.f1": "Alles uit Standard Detail",
-    "pkg.premium.f2": "Stoomreiniging & leerverzorging",
+    "pkg.premium.f2": "Leer reinigen & conditioneren",
     "pkg.premium.f3": "Eenstaps polijsten",
     "pkg.premium.f4": "Paint sealant & motorruimte",
 
@@ -376,9 +416,7 @@ const I18N = {
     "tbl.r5": "Interieur stofzuigen",
     "tbl.r6": "Dashboard & console reinigen",
     "tbl.r7": "Ramen binnenzijde reinigen",
-    "tbl.r8": "Stoomreiniging",
     "tbl.r9": "Leer reinigen & conditioneren",
-    "tbl.r10": "Geurverwijdering",
     "tbl.r11": "Eenstaps polijsten",
     "tbl.r12": "Meerstaps lakcorrectie",
     "tbl.r13": "Wax aanbrengen",
@@ -409,12 +447,12 @@ const I18N = {
     "legal.title": "Algemene voorwaarden",
 
     "legal.a1.title": "Artikel 1. Identiteit",
-    "legal.a1.p1": "De Leest Detailing, gevestigd te [STRAAT + HUISNUMMER], [POSTCODE + PLAATS], ingeschreven bij de Kamer van Koophandel onder nummer [KVK-NUMMER].",
-    "legal.a1.line2": "Vestigingsadres: [STRAAT + HUISNUMMER], [POSTCODE + PLAATS], Nederland",
-    "legal.a1.line3": "E-mailadres: [E-MAILADRES]",
+    "legal.a1.p1": "De Leest Detailing, gevestigd te Molenstraat 44, 5737 BW Lieshout, ingeschreven bij de Kamer van Koophandel onder nummer 86191365.",
+    "legal.a1.line2": "Vestigingsadres: Molenstraat 44, 5737 BW Lieshout, Nederland",
+    "legal.a1.line3": "E-mailadres: info@deleestdetailing.nl",
     "legal.a1.line4": "Telefoonnummer: +31 (0)6 20781765",
-    "legal.a1.line5": "KvK-nummer: [KVK-NUMMER]",
-    "legal.a1.line6": "Btw-nummer: [BTW-NUMMER]",
+    "legal.a1.line5": "KvK-nummer: 86191365",
+    "legal.a1.line6": "Btw-nummer: NL004206102B84",
 
     "legal.a2.title": "Artikel 2. Toepasselijkheid & voorwaarden",
     "legal.a2.p1": "Deze algemene voorwaarden zijn van toepassing op alle offertes, facturen en soortgelijke overeenkomsten. Bij een overeenkomst aanvaardt de klant de algemene voorwaarden van De Leest Detailing.",
@@ -450,6 +488,30 @@ const I18N = {
 
     "legal.a9.title": "Artikel 9. Overmacht",
     "legal.a9.p1": "In geval van overmacht zijn wij niet gehouden onze verplichtingen na te komen. In dat geval kunnen wij ofwel onze verplichtingen opschorten voor de duur van de overmacht, ofwel de overeenkomst definitief ontbinden.",
-    "legal.a9.p2": "Overmacht is elke omstandigheid buiten onze wil en controle die de nakoming van onze verplichtingen geheel of gedeeltelijk verhindert. Hieronder begrijpen wij onder meer stakingen, brand, pandemieën, bedrijfsstoringen, energiestoringen, storingen in een (telecommunicatie-)netwerk of verbinding of gebruikte communicatiesystemen en/of het op enig moment niet beschikbaar zijn van onze website, niet- of niet-tijdige levering van toeleveranciers of andere ingeschakelde derden."
+    "legal.a9.p2": "Overmacht is elke omstandigheid buiten onze wil en controle die de nakoming van onze verplichtingen geheel of gedeeltelijk verhindert. Hieronder begrijpen wij onder meer stakingen, brand, pandemieën, bedrijfsstoringen, energiestoringen, storingen in een (telecommunicatie-)netwerk of verbinding of gebruikte communicatiesystemen en/of het op enig moment niet beschikbaar zijn van onze website, niet- of niet-tijdige levering van toeleveranciers of andere ingeschakelde derden.",
+
+    "privacy.meta.title": "Privacybeleid — De Leest Detailing",
+    "privacy.meta.desc": "Privacybeleid van De Leest Detailing: welke cookies en gegevens we gebruiken en wat we daarmee doen.",
+    "privacy.kicker": "Juridisch",
+    "privacy.title": "Privacybeleid",
+    "privacy.intro": "De Leest Detailing gaat zorgvuldig om met je privacy. We verzamelen zo min mogelijk gegevens en bewaren nooit onnodig gegevens van onze klanten. Op deze pagina lees je welke technieken en gegevens we gebruiken en wat we daarmee doen.",
+
+    "privacy.s1.title": "1. Wie zijn wij",
+    "privacy.s1.p1": "De Leest Detailing, gevestigd te Molenstraat 44, 5737 BW Lieshout, ingeschreven bij de Kamer van Koophandel onder nummer 86191365. Je bereikt ons via info@deleestdetailing.nl of +31 (0)6 20781765.",
+
+    "privacy.s2.title": "2. Cookies en vergelijkbare technieken",
+    "privacy.s2.p1": "Deze website maakt geen gebruik van tracking-, analyse- of marketingcookies. We plaatsen geen cookies die je op internet volgen of een profiel van je opbouwen.",
+    "privacy.s2.p2": "We gebruiken alleen functionele opslag in je eigen browser (localStorage). Daarin worden twee voorkeuren op je eigen apparaat onthouden: je gekozen taal en of je de cookiebanner hebt geaccepteerd of geweigerd. Deze bevatten geen persoonsgegevens, worden nooit naar ons of derden verstuurd en je kunt ze op elk moment verwijderen via je browserinstellingen.",
+    "privacy.s2.p3": "Voor het tonen van de lettertypen laadt je browser Google Fonts vanaf de servers van Google. Je browser maakt hiervoor een technische verbinding met Google; wij plaatsen hier geen cookies mee en ontvangen er geen gegevens uit.",
+
+    "privacy.s3.title": "3. Contactformulier",
+    "privacy.s3.p1": "Wanneer je het contactformulier invult, worden de door jou ingevulde gegevens (zoals je naam, e-mailadres en bericht) via de externe dienst Formspree in onze mailbox afgeleverd. Wij gebruiken deze gegevens uitsluitend om je vraag of aanvraag te beantwoorden.",
+    "privacy.s3.p2": "Wij bewaren je gegevens niet in een eigen database, voegen je niet toe aan een mailinglijst en delen of verkopen je gegevens nooit aan derden. Nadat je aanvraag is afgehandeld, bewaren wij je gegevens niet langer dan noodzakelijk.",
+
+    "privacy.s4.title": "4. Jouw rechten",
+    "privacy.s4.p1": "Je hebt het recht om de persoonsgegevens die wij van je hebben in te zien, te laten corrigeren of te laten verwijderen. Mail hiervoor naar info@deleestdetailing.nl en wij reageren zo snel mogelijk. Je kunt ook een klacht indienen bij de Autoriteit Persoonsgegevens.",
+
+    "privacy.s5.title": "5. Wijzigingen",
+    "privacy.s5.p1": "Wij kunnen dit privacybeleid aanpassen wanneer onze website of de wetgeving verandert. De meest recente versie staat altijd op deze pagina."
   }
 };

@@ -47,7 +47,7 @@ def main():
             "const s = getComputedStyle(a);"
             "return r.width > 0 && r.height > 0 && s.visibility !== 'hidden' && s.display !== 'none';})")
         page.screenshot(path=str(OUT / "01-mobile-menu-open.png"))
-        ok = nav_open and links == ["Diensten", "Galerij", "Over ons", "Contact"] and all(visible)
+        ok = nav_open and links == ["Diensten", "Galerij", "Over ons", "Contact", "Prijzen"] and all(visible)
         report(1, "Mobile menu opens", ok,
                f"class .open={nav_open}, links={links}, all visible={all(visible)}, "
                f"screenshot=01-mobile-menu-open.png")

@@ -29,7 +29,9 @@ Tips for best results:
 - Use `.jpg` files. Landscape (wider than tall) for `pc-ipad/`; for
   `mobile/` a portrait or more tightly cropped photo often works better.
 - Minimum width: ~2000px for the hero, ~1600px for everything else.
-- Keep file sizes reasonable (under ~500 KB per photo is plenty).
+- Keep file sizes reasonable — up to ~2 MB per photo is fine. Photos below
+  the top banner load lazily, so larger files won't slow down the first page
+  load.
 
 ## Where each photo appears
 
