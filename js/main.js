@@ -134,6 +134,20 @@
   const form = document.getElementById("contactForm");
   const status = document.getElementById("formStatus");
 
+  /* Pre-select the package dropdown from ?package=… links and
+     in-page "Book this package" buttons */
+  const packageSelect = document.getElementById("cf-package");
+  if (packageSelect) {
+    const validPackages = ["basic", "standard", "premium", "ceramic", "motorcycle"];
+    const selectPackage = (value) => {
+      if (validPackages.includes(value)) packageSelect.value = value;
+    };
+    selectPackage(new URLSearchParams(window.location.search).get("package"));
+    document.querySelectorAll("[data-package]").forEach((el) =>
+      el.addEventListener("click", () => selectPackage(el.dataset.package))
+    );
+  }
+
   function t(key) {
     return (I18N[currentLang()] || I18N.en)[key] || I18N.en[key] || "";
   }
