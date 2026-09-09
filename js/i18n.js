@@ -6,6 +6,10 @@
 
 const I18N = {
   en: {
+    "meta.title.home": "Car & Motorcycle Detailing in Lieshout | De Leest Detailing",
+    "meta.description.home": "Premium car and motorcycle detailing in Lieshout, Eindhoven region. Polishing, ceramic coating and deep cleaning — perfection in every detail.",
+    "meta.title.pricing": "Detailing packages & prices | De Leest Detailing Lieshout",
+    "meta.description.pricing": "Detailing packages and starting prices: hand wash, polishing and ceramic coating for cars and motorcycles in Lieshout, Eindhoven region.",
     "nav.services": "Services",
     "nav.about": "About",
     "nav.gallery": "Gallery",
@@ -14,13 +18,13 @@ const I18N = {
 
     "hero.kicker": "Premium detailing — cars & motorcycles",
     "hero.title": "Perfection in every detail.",
-    "hero.subtitle": "High-end detailing for cars and motorcycles. Cleaned, polished and protected — until it could not be more perfect.",
+    "hero.subtitle": "High-end car and motorcycle detailing in Lieshout, near Eindhoven. Cleaned, polished and protected with ceramic coating — until it could not be more perfect.",
     "hero.ctaPrimary": "Get in touch",
     "hero.ctaSecondary": "View services",
 
     "services.kicker": "What we do",
     "services.title": "Our services",
-    "services.intro": "This is our base offering. A detailed overview can be found in the pricing. Every treatment is carried out by hand, with premium products and an obsession for the end result.",
+    "services.intro": "From interior cleaning and a thorough hand wash to polishing and ceramic coating — every treatment is carried out by hand, with premium products and an obsession for the end result. See our packages and pricing for the full offering.",
     "services.pricingCta": "View packages & pricing",
 
     "cars.groupTitle": "For your car",
@@ -46,8 +50,8 @@ const I18N = {
 
     "about.kicker": "Our standard",
     "about.title": "Good enough is not good enough.",
-    "about.p1": "Detailing is not a quick wash — it's craftsmanship. We take the time it takes, work panel by panel and check every result under the light before we call it done.",
-    "about.p2": "Whether it's your daily driver, your pride-and-joy sports car or your motorcycle: it gets the same obsessive attention, until it could not be more perfect.",
+    "about.p1": "Detailing is not a quick wash — it's craftsmanship. In our workshop in Lieshout we take the time it takes, work panel by panel and check every result under the light before we call it done.",
+    "about.p2": "Whether it's your daily driver, your pride-and-joy sports car or your motorcycle: it gets the same obsessive attention. Customers from across the region — Eindhoven, Helmond, Veghel, Uden and beyond — find us in Lieshout.",
     "about.s1t": "Hand-finished",
     "about.s1d": "Every vehicle, every time",
     "about.s2t": "Premium products",
@@ -63,7 +67,7 @@ const I18N = {
 
     "contact.kicker": "Contact",
     "contact.title": "Ask us anything.",
-    "contact.p1": "Have a specific question about detailing your car or motorcycle? Not sure which treatment fits your vehicle? Send us a message — we're happy to think along with you.",
+    "contact.p1": "Have a question about detailing your car or motorcycle, about polishing or ceramic coating? Not sure which treatment fits your vehicle? Send us a message — we're happy to think along with you.",
     "contact.note": "We reply as quickly as possible, usually within one working day.",
 
     "hours.title": "Opening hours",
@@ -263,6 +267,10 @@ const I18N = {
   },
 
   nl: {
+    "meta.title.home": "Auto & Motor Detailing in Lieshout | De Leest Detailing",
+    "meta.description.home": "Premium auto detailing en motor detailing in Lieshout, regio Eindhoven. Polijsten, keramische coating en dieptereiniging — perfectie in elk detail.",
+    "meta.title.pricing": "Pakketten & prijzen auto detailing | De Leest Detailing Lieshout",
+    "meta.description.pricing": "Detailingpakketten en vanaf-prijzen: handwas, polijsten en keramische coating voor auto en motor in Lieshout, regio Eindhoven. Vraag vrijblijvend advies.",
     "nav.services": "Diensten",
     "nav.about": "Over ons",
     "nav.gallery": "Galerij",
@@ -271,13 +279,13 @@ const I18N = {
 
     "hero.kicker": "Premium detailing — auto's & motoren",
     "hero.title": "Perfectie in elk detail.",
-    "hero.subtitle": "Hoogwaardige detailing voor auto's en motoren. Gereinigd, gepolijst en beschermd — tot het niet perfecter kan.",
+    "hero.subtitle": "Auto detailing en motor detailing op het hoogste niveau in Lieshout, regio Eindhoven. Gereinigd, gepolijst en beschermd met keramische coating — tot het niet perfecter kan.",
     "hero.ctaPrimary": "Neem contact op",
     "hero.ctaSecondary": "Bekijk diensten",
 
     "services.kicker": "Wat wij doen",
     "services.title": "Onze diensten",
-    "services.intro": "Dit is ons basisaanbod. Een gedetailleerd overzicht kunt u bij de prijzen vinden. Elke behandeling voeren we met de hand uit, met premium producten en een obsessie voor het eindresultaat.",
+    "services.intro": "Van interieurreiniging en een grondige handwas tot polijsten en keramische coating — elke behandeling voeren we met de hand uit, met premium producten en een obsessie voor het eindresultaat. Bekijk onze pakketten en prijzen voor het complete aanbod.",
     "services.pricingCta": "Bekijk pakketten & prijzen",
 
     "cars.groupTitle": "Voor je auto",
@@ -303,8 +311,8 @@ const I18N = {
 
     "about.kicker": "Onze standaard",
     "about.title": "Goed genoeg is niet goed genoeg.",
-    "about.p1": "Detailing is geen snelle wasbeurt — het is vakmanschap. Wij nemen de tijd die nodig is, werken paneel voor paneel en controleren elk resultaat onder het licht voordat het voor ons klaar is.",
-    "about.p2": "Of het nu je daily driver is, je geliefde sportwagen of je motor: alles krijgt dezelfde obsessieve aandacht, tot het niet perfecter kan.",
+    "about.p1": "Detailing is geen snelle wasbeurt — het is vakmanschap. In onze werkplaats in Lieshout nemen we de tijd die nodig is, werken we paneel voor paneel en controleren we elk resultaat onder het licht voordat het voor ons klaar is.",
+    "about.p2": "Of het nu je daily driver is, je geliefde sportwagen of je motor: alles krijgt dezelfde obsessieve aandacht. Klanten uit de hele regio — Eindhoven, Helmond, Veghel, Uden en omgeving — vinden ons in Lieshout.",
     "about.s1t": "Met de hand afgewerkt",
     "about.s1d": "Elk voertuig, elke keer",
     "about.s2t": "Premium producten",
@@ -320,7 +328,7 @@ const I18N = {
 
     "contact.kicker": "Contact",
     "contact.title": "Vraag het ons gerust.",
-    "contact.p1": "Heb je een specifieke vraag over het detaillen van je auto of motor? Twijfel je welke behandeling bij je voertuig past? Stuur ons een bericht — we denken graag met je mee.",
+    "contact.p1": "Heb je een vraag over detailing van je auto of motor, over polijsten of keramische coating? Twijfel je welke behandeling bij je voertuig past? Stuur ons een bericht — we denken graag met je mee.",
     "contact.note": "We reageren zo snel mogelijk, meestal binnen één werkdag.",
 
     "hours.title": "Openingstijden",
