@@ -46,7 +46,7 @@ def main():
         panel_hidden = page.evaluate(
             "getComputedStyle(document.querySelector('#mainNav .nav-dropdown-panel')).display === 'none'")
         page.screenshot(path=str(OUT / "01-mobile-menu-open.png"))
-        ok = (nav_open and links == ["Galerij", "Over ons", "Contact", "Pakket"]
+        ok = (nav_open and links == ["Galerij", "Over ons", "Contact"]
               and toggle == "Diensten" and panel_hidden)
         report(1, "Mobile menu opens", ok,
                f"class .open={nav_open}, links={links}, toggle={toggle}, panel hidden={panel_hidden}, "

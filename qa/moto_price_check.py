@@ -1,4 +1,9 @@
-"""Screenshot the motorcycle pricing block on index, phone + desktop, NL + EN."""
+"""Screenshot the Motor Detailing section on diensten.html, phone + desktop, NL + EN.
+
+(Used to target the .moto-price band on index.html; that band is hidden along
+with the #pricing section since 2026-10-28, so this now covers the motor
+detailing pricing cards on diensten.html.)
+"""
 from pathlib import Path
 
 from playwright.sync_api import sync_playwright
@@ -10,39 +15,29 @@ VIEWPORTS = {
     "phone": {"width": 390, "height": 844},
     "desktop": {"width": 1920, "height": 1080},
 }
-PAGES = ["index.html"]
 
 with sync_playwright() as p:
     browser = p.chromium.launch()
-    for page_name in PAGES:
-        for vp_name, vp in VIEWPORTS.items():
-            page = browser.new_page(viewport=vp)
-            page.goto(f"http://localhost:8080/{page_name}", wait_until="networkidle")
-            for lang in ("nl", "en"):
-                if lang == "en":
-                    page.click('.lang-btn[data-lang="en"]')
-                    page.wait_for_timeout(300)
-                block = page.locator(".moto-price")
-                block.scroll_into_view_if_needed()
-                page.wait_for_timeout(700)  # let reveal animation finish
-                box = block.bounding_box()
-                clip = {
-                    "x": max(box["x"] - 16, 0),
-                    "y": max(box["y"] - 16, 0),
-                    "width": min(box["width"] + 32, vp["width"]),
-                    "height": box["height"] + 32,
-                }
-                page.screenshot(
-                    path=str(OUT / f"{page_name.replace('.html', '')}-{vp_name}-{lang}.png"),
-                    clip=clip,
-                )
-                # sanity checks
-                text = block.inner_text()
-                assert "€200" in text, f"missing price on {page_name}/{vp_name}/{lang}"
-                expected_from = "vanaf" if lang == "nl" else "from"
-                assert expected_from in text, f"missing from-prefix on {page_name}/{vp_name}/{lang}: {text!r}"
-                href = block.locator("a.btn").first.get_attribute("href")
-                assert href == "diensten.html#motor-detailing", f"unexpected CTA href: {href}"
-            page.close()
+    for vp_name, vp in VIEWPORTS.items():
+        page = browser.new_page(viewport=vp)
+        page.goto("http://localhost:8080/diensten.html#motor-detailing",
+                  wait_until="networkidle")
+        for lang in ("nl", "en"):
+            if lang == "en":
+                page.click('.lang-btn[data-lang="en"]')
+                page.wait_for_timeout(300)
+            block = page.locator("#motor-detailing .pricing-grid")
+            block.scroll_into_view_if_needed()
+            page.wait_for_timeout(700)  # let reveal animation finish
+            page.screenshot(
+                path=str(OUT / f"diensten-motor-{vp_name}-{lang}.png"),
+            )
+            # sanity checks
+            text = block.inner_text()
+            for price in ("€200,-", "€250,-", "€350,-"):
+                assert price in text, f"missing {price} on {vp_name}/{lang}: {text!r}"
+            href = block.locator("a.btn").first.get_attribute("href")
+            assert href == "index.html#contactForm", f"unexpected CTA href: {href}"
+        page.close()
     browser.close()
 print("done")

@@ -1,4 +1,4 @@
-"""Verify contact-CTA anchors land on the form (index + diensten), and ceramic price on request.
+"""Verify contact-CTA anchors land on the form (index + diensten), and ceramic pricing on diensten.
 
 Usage: .qa-venv/bin/python qa/contact_anchor_check.py  (server on :8080)
 Output: qa-screenshots/anchor-check/*.png
@@ -27,39 +27,39 @@ def main():
                 device_scale_factor=2 if cfg["mobile"] else 1,
             )
 
-            # 1) Package CTA on index -> should land on the contact form
+            # 1) Footer "Contact" link on index -> should land on the contact form
             page = ctx.new_page()
             page.goto(f"{BASE}/index.html", wait_until="networkidle")
-            page.locator("#pricing .price-card").first.scroll_into_view_if_needed()
-            page.wait_for_timeout(400)
-            page.locator("#pricing .price-card .btn").first.click()
+            page.locator(".footer-nav a[href='#contactForm']").first.click()
             page.wait_for_timeout(1200)  # smooth scroll
             box = page.locator("#contactForm").bounding_box()
-            print(f"{dev}: form top after CTA click = {box['y']:.0f}px")
+            print(f"{dev}: form top after nav contact click = {box['y']:.0f}px")
             page.screenshot(path=str(OUT / f"{dev}-index-cta.png"))
 
             # 2) Cross-page link from diensten.html -> index.html#contactForm
             page.goto(f"{BASE}/diensten.html", wait_until="networkidle")
-            page.locator("a[href*='index.html#contactForm']").first.click()
+            cta = page.locator("main a[href*='index.html#contactForm']").first
+            cta.scroll_into_view_if_needed()
+            page.wait_for_timeout(400)
+            cta.click()
             page.wait_for_timeout(1800)
             box = page.locator("#contactForm").bounding_box()
             print(f"{dev}: form top from diensten.html = {box['y']:.0f}px")
             page.screenshot(path=str(OUT / f"{dev}-diensten-cta.png"))
 
-            # 3) Ceramic card shows "price on request" (NL + EN)
-            page.goto(f"{BASE}/index.html", wait_until="networkidle")
-            card = page.locator(".price-card",
-                                has=page.locator("h3[data-i18n='pkg.ceramic.name']"))
-            card.scroll_into_view_if_needed()
+            # 3) Ceramic coating section on diensten.html shows its prices (NL + EN)
+            page.goto(f"{BASE}/diensten.html#keramische-coating", wait_until="networkidle")
+            section = page.locator("#keramische-coating")
+            section.scroll_into_view_if_needed()
             page.wait_for_timeout(600)
-            card.screenshot(path=str(OUT / f"{dev}-ceramic-nl.png"))
+            section.screenshot(path=str(OUT / f"{dev}-ceramic-nl.png"))
             page.click('button[data-lang="en"]')
             page.wait_for_timeout(400)
-            card.scroll_into_view_if_needed()
+            section.scroll_into_view_if_needed()
             page.wait_for_timeout(300)
-            card.screenshot(path=str(OUT / f"{dev}-ceramic-en.png"))
-            print(f"{dev}: ceramic EN price text = "
-                  f"{card.locator('.price-value').inner_text()!r}")
+            section.screenshot(path=str(OUT / f"{dev}-ceramic-en.png"))
+            print(f"{dev}: ceramic EN price texts = "
+                  f"{section.locator('.price-value').all_inner_texts()!r}")
             page.close()
             ctx.close()
         browser.close()

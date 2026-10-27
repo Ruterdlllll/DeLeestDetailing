@@ -28,7 +28,7 @@ just plain HTML, CSS and vanilla JavaScript served as-is. The site is bilingual
 ## Repository layout
 
 ```
-index.html                  Homepage (hero, services, gallery, about, contact form, pricing teaser)
+index.html                  Homepage (hero, services, gallery, about, contact form)
 diensten.html               Service detail page: 8 anchored sections with rewritten
                             explanations and per-treatment pricing tables. Pricing
                             structure follows detailcarcare.nl; prose is our own and
@@ -39,8 +39,12 @@ prijzen.html                Pricing page (packages & price tables) — currently
                             all page content is commented out (2026-10-27) at the owner's
                             request; nav/footer links to it in index.html and diensten.html
                             are commented out too, and its sitemap entry is commented out.
-                            Restore by uncommenting. index.html keeps its own #pricing
-                            packages section, which is unaffected.
+                            Restore by uncommenting. The #pricing packages section on
+                            index.html is also HIDDEN (2026-10-28, wrapped in an HTML
+                            comment marked "Pakket section hidden"); all "Pakket"
+                            nav/footer links to it (index, privacybeleid,
+                            algemene-voorwaarden) are commented out as well. The contact
+                            form's "Gewenst pakket" dropdown remains active.
 algemene-voorwaarden.html   Terms & conditions (Dutch only, robots noindex)
 privacybeleid.html          Privacy policy / cookie statement (NL + EN, robots noindex)
 css/style.css               Single stylesheet, dark premium theme, CSS custom properties in :root
