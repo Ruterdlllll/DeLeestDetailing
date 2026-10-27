@@ -40,16 +40,16 @@ def main():
         nav_open = page.evaluate(
             "document.getElementById('mainNav').classList.contains('open')")
         links = page.evaluate(
-            "[...document.querySelectorAll('#mainNav a')].map(a => a.textContent.trim())")
-        visible = page.evaluate(
-            "[...document.querySelectorAll('#mainNav a')].map(a => {"
-            "const r = a.getBoundingClientRect();"
-            "const s = getComputedStyle(a);"
-            "return r.width > 0 && r.height > 0 && s.visibility !== 'hidden' && s.display !== 'none';})")
+            "[...document.querySelectorAll('#mainNav > a')].map(a => a.textContent.trim())")
+        toggle = page.evaluate(
+            "document.querySelector('#mainNav .nav-dropdown-toggle span').textContent.trim()")
+        panel_hidden = page.evaluate(
+            "getComputedStyle(document.querySelector('#mainNav .nav-dropdown-panel')).display === 'none'")
         page.screenshot(path=str(OUT / "01-mobile-menu-open.png"))
-        ok = nav_open and links == ["Diensten", "Galerij", "Over ons", "Contact", "Prijzen"] and all(visible)
+        ok = (nav_open and links == ["Galerij", "Over ons", "Contact", "Pakket"]
+              and toggle == "Diensten" and panel_hidden)
         report(1, "Mobile menu opens", ok,
-               f"class .open={nav_open}, links={links}, all visible={all(visible)}, "
+               f"class .open={nav_open}, links={links}, toggle={toggle}, panel hidden={panel_hidden}, "
                f"screenshot=01-mobile-menu-open.png")
 
         page.click('#mainNav a[href="#gallery"]')

@@ -41,6 +41,7 @@ The table below shows the path inside each category folder — so
 | File | Where on the website |
 | --- | --- |
 | `hero/hero.jpg` | Homepage — large banner at the very top, behind the headline |
+| `diensten/diensten.jpg` | Services page (`diensten.html`) — banner at the top, behind "Our services in detail" |
 | `services/car.jpg` | Homepage — "Our services" → photo next to the **car** services |
 | `services/motorcycle.jpg` | Homepage — "Our services" → photo next to the **motorcycle** services |
 | `about/about.jpg` | Homepage — "Our standard" section, photo beside the text |

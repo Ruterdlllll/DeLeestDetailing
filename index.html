@@ -75,11 +75,27 @@
       </a>
 
       <nav class="main-nav" id="mainNav" aria-label="Main navigation">
-        <a href="#services" data-i18n="nav.services">Services</a>
-        <a href="#gallery" data-i18n="nav.gallery">Gallery</a>
-        <a href="#about" data-i18n="nav.about">About</a>
+        <div class="nav-dropdown">
+          <button type="button" class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true"><span data-i18n="nav.services">Diensten</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+          <div class="nav-dropdown-panel">
+            <a class="nav-dropdown-all" href="diensten.html" data-i18n="nav.allServices">Alle diensten</a>
+            <p class="nav-dropdown-group" data-i18n="nav.group.interieur">Interieur</p>
+            <a href="diensten.html#interieur-reinigen" data-i18n="nav.d.interieur">Interieur Reinigen</a>
+            <a href="diensten.html#vlekken-verwijderen" data-i18n="nav.d.vlekken">Vlekken verwijderen autobekleding</a>
+            <p class="nav-dropdown-group" data-i18n="nav.group.exterieur">Exterieur</p>
+            <a href="diensten.html#handwassen" data-i18n="nav.d.handwassen">Handwassen &amp; Beschermen</a>
+            <a href="diensten.html#polijsten" data-i18n="nav.d.polijsten">Polijsten &amp; Glansherstel</a>
+            <a href="diensten.html#keramische-coating" data-i18n="nav.d.coating">Keramische Coating</a>
+            <a href="diensten.html#cabrio-dak" data-i18n="nav.d.cabrio">Cabriodak reinigen &amp; impregneren</a>
+            <p class="nav-dropdown-group" data-i18n="nav.group.extra">Aanvullend</p>
+            <a href="diensten.html#motor-detailing" data-i18n="nav.d.motor">Motor Detailing</a>
+            <a href="diensten.html#lakdiktemeting" data-i18n="nav.d.lakdikte">Lakdiktemeting</a>
+          </div>
+        </div>
+        <a href="#gallery" data-i18n="nav.gallery">Galerij</a>
+        <a href="#about" data-i18n="nav.about">Over ons</a>
         <a href="#contactForm" data-i18n="nav.contact">Contact</a>
-        <a href="#pricing" data-i18n="nav.pricing">Prijzen</a>
+        <a href="#pricing" data-i18n="nav.pricing">Pakket</a>
       </nav>
 
       <div class="header-actions">
@@ -113,12 +129,12 @@
       </div>
       <div class="hero-overlay" aria-hidden="true"></div>
       <div class="container hero-content">
-        <p class="kicker reveal" data-i18n="hero.kicker">Premium detailing — cars &amp; motorcycles</p>
-        <h1 class="reveal" data-i18n="hero.title">Perfection in every detail.</h1>
+        <p class="kicker reveal" data-i18n="hero.kicker">Premium detailing — auto's &amp; motoren</p>
+        <h1 class="reveal" data-i18n="hero.title">Perfectie in elk detail.</h1>
         <p class="hero-sub reveal" data-i18n="hero.subtitle">Auto detailing en motor detailing op het hoogste niveau in Lieshout, regio Eindhoven. Gereinigd, gepolijst en beschermd met keramische coating — tot het niet perfecter kan.</p>
         <div class="hero-ctas reveal">
-          <a href="#contactForm" class="btn btn-primary" data-i18n="hero.ctaPrimary">Get in touch</a>
-          <a href="#services" class="btn btn-ghost" data-i18n="hero.ctaSecondary">View services</a>
+          <a href="#contactForm" class="btn btn-primary" data-i18n="hero.ctaPrimary">Neem contact op</a>
+          <a href="#services" class="btn btn-ghost" data-i18n="hero.ctaSecondary">Bekijk diensten</a>
         </div>
       </div>
     </section>
@@ -126,11 +142,11 @@
     <!-- ===== Services: Cars ===== -->
     <section class="section" id="services">
       <div class="container">
-        <p class="kicker reveal" data-i18n="services.kicker">What we do</p>
-        <h2 class="reveal" data-i18n="services.title">Our services</h2>
+        <p class="kicker reveal" data-i18n="services.kicker">Wat wij doen</p>
+        <h2 class="reveal" data-i18n="services.title">Onze diensten</h2>
         <p class="section-intro reveal" data-i18n="services.intro">Van interieurreiniging en een grondige handwas tot polijsten en keramische coating — elke behandeling voeren we met de hand uit, met premium producten en een obsessie voor het eindresultaat. Bekijk onze pakketten en prijzen voor het complete aanbod.</p>
 
-        <h3 class="group-title reveal" data-i18n="cars.groupTitle">For your car</h3>
+        <h3 class="group-title reveal" data-i18n="cars.groupTitle">Voor je auto</h3>
         <div class="moto-block">
           <div class="moto-media reveal">
             <picture>
@@ -141,29 +157,33 @@
           <div class="card-grid">
             <article class="card card-flat reveal">
               <span class="card-num" aria-hidden="true">01</span>
-              <h4 data-i18n="clean.int.title">Interior cleaning</h4>
-              <p data-i18n="clean.int.desc">A complete interior treatment: vacuuming, upholstery and carpets, dashboard, trim and glass. Step into a fresh, clean cabin.</p>
+              <h4 data-i18n="clean.int.title">Interieur reiniging</h4>
+              <p data-i18n="clean.int.desc">Een complete interieurbehandeling: stofzuigen, bekleding en matten, dashboard, sierstukken en ramen. Stap in een fris, schoon interieur.</p>
+              <p class="card-more"><a href="diensten.html#interieur-reinigen" data-i18n="svc.more">Meer info →</a></p>
             </article>
             <article class="card card-flat reveal">
               <span class="card-num" aria-hidden="true">02</span>
-              <h4 data-i18n="clean.ext.title">Exterior cleaning</h4>
-              <p data-i18n="clean.ext.desc">A thorough hand wash with deep-cleaned rims, tyres and wheel arches, door shuts and windows. The outside of your car, spotless.</p>
+              <h4 data-i18n="clean.ext.title">Exterieur reiniging</h4>
+              <p data-i18n="clean.ext.desc">Een grondige handwas met diep gereinigde velgen, banden en wielkasten, deurranden en ramen. De buitenkant van je auto, vlekkeloos.</p>
+              <p class="card-more"><a href="diensten.html#handwassen" data-i18n="svc.more">Meer info →</a></p>
             </article>
             <article class="card card-flat reveal">
               <span class="card-num" aria-hidden="true">03</span>
-              <h4 data-i18n="cars.polish.title">Polishing</h4>
-              <p data-i18n="cars.polish.desc">Machine polishing that removes swirls, haze and light scratches, bringing back a deep, mirror-like gloss your paintwork hasn't shown in years.</p>
+              <h4 data-i18n="cars.polish.title">Polijsten</h4>
+              <p data-i18n="cars.polish.desc">Machinaal polijsten dat swirls, waas en lichte krassen verwijdert en een diepe, spiegelende glans terugbrengt die je lak al jaren niet heeft laten zien.</p>
+              <p class="card-more"><a href="diensten.html#polijsten" data-i18n="svc.more">Meer info →</a></p>
             </article>
             <article class="card card-flat reveal">
               <span class="card-num" aria-hidden="true">04</span>
-              <h4 data-i18n="cars.ceramic.title">Ceramic coating</h4>
-              <p data-i18n="cars.ceramic.desc">Long-lasting paint protection with extreme gloss and a strong hydrophobic effect. Dirt slides off, washing gets easier, and the finish stays sharper for longer.</p>
+              <h4 data-i18n="cars.ceramic.title">Keramische coating</h4>
+              <p data-i18n="cars.ceramic.desc">Langdurige lakbescherming met extreme glans en een sterk waterafstotend effect. Vuil glijdt eraf, wassen wordt makkelijker en de finish blijft langer strak.</p>
+              <p class="card-more"><a href="diensten.html#keramische-coating" data-i18n="svc.more">Meer info →</a></p>
             </article>
           </div>
         </div>
 
         <!-- ===== Services: Motorcycles ===== -->
-        <h3 class="group-title reveal" data-i18n="moto.groupTitle">For your motorcycle</h3>
+        <h3 class="group-title reveal" data-i18n="moto.groupTitle">Voor je motor</h3>
         <div class="moto-block">
           <div class="moto-media reveal">
             <picture>
@@ -174,20 +194,21 @@
           <div class="moto-body">
             <article class="card card-flat reveal">
               <span class="card-num" aria-hidden="true">01</span>
-              <h4 data-i18n="moto.deep.title">Full deep clean</h4>
-              <p data-i18n="moto.deep.desc">A complete deep clean of your motorcycle — engine, frame, wheels, chain and every hard-to-reach spot. Careful, paint-safe and finished to perfection.</p>
+              <h4 data-i18n="moto.deep.title">Complete dieptereiniging</h4>
+              <p data-i18n="moto.deep.desc">Een volledige dieptereiniging van je motor — blok, frame, wielen, ketting en elke moeilijk bereikbare plek. Zorgvuldig, lakvriendelijk en afgewerkt tot in perfectie.</p>
+              <p class="card-more"><a href="diensten.html#motor-detailing" data-i18n="svc.more">Meer info →</a></p>
             </article>
             <div class="lube-box reveal">
-              <h4 data-i18n="moto.lube.title">Your chain, your choice</h4>
-              <p data-i18n="moto.lube.desc">After cleaning and degreasing the chain, you decide which lubricant we apply — matched to how and where you ride.</p>
+              <h4 data-i18n="moto.lube.title">Jouw ketting, jouw keuze</h4>
+              <p data-i18n="moto.lube.desc">Na het reinigen en ontvetten van de ketting bepaal jij welk smeermiddel wij aanbrengen — afgestemd op hoe en waar jij rijdt.</p>
               <div class="lube-options">
                 <div class="lube-option">
                   <h5 data-i18n="moto.lube.wet.title">Wet lubricant</h5>
-                  <p data-i18n="moto.lube.wet.desc">Stays put in rain and on long rides. Maximum protection, ideal for all-season and touring riders.</p>
+                  <p data-i18n="moto.lube.wet.desc">Blijft zitten bij regen en op lange ritten. Maximale bescherming, ideaal voor rijders die het hele jaar door rijden en touren.</p>
                 </div>
                 <div class="lube-option">
                   <h5 data-i18n="moto.lube.dry.title">Dry lubricant</h5>
-                  <p data-i18n="moto.lube.dry.desc">Clean finish that attracts less dust and dirt. Perfect for fair-weather riding and a spotless look.</p>
+                  <p data-i18n="moto.lube.dry.desc">Strakke finish die minder stof en vuil aantrekt. Perfect voor mooi-weer-ritten en een vlekkeloze look.</p>
                 </div>
               </div>
             </div>
@@ -195,7 +216,8 @@
         </div>
 
         <p class="services-pricing-cta reveal">
-          <a href="prijzen.html" class="btn btn-ghost" data-i18n="services.pricingCta">Bekijk pakketten &amp; prijzen</a>
+          <!-- Hidden while prijzen.html is disabled (2026-10-27): <a href="prijzen.html" class="btn btn-ghost" data-i18n="services.pricingCta">Bekijk pakketten &amp; prijzen</a> -->
+          <a href="diensten.html" class="btn btn-ghost" data-i18n="services.dienstenCta">Bekijk alle diensten in detail</a>
         </p>
       </div>
     </section>
@@ -203,11 +225,11 @@
     <!-- ===== Gallery ===== -->
     <section class="section section-alt" id="gallery">
       <div class="container">
-        <p class="kicker reveal" data-i18n="gallery.kicker">Recent work</p>
-        <h2 class="reveal" data-i18n="gallery.title">The results speak for themselves.</h2>
+        <p class="kicker reveal" data-i18n="gallery.kicker">Recent werk</p>
+        <h2 class="reveal" data-i18n="gallery.title">De resultaten spreken voor zich.</h2>
         <div class="gallery-grid">
           <figure class="reveal">
-            <button type="button" class="gallery-item" data-i18n-aria="gallery.open" aria-label="View more photos of this result"
+            <button type="button" class="gallery-item" data-i18n-aria="gallery.open" aria-label="Bekijk meer foto's van dit resultaat"
                     data-images="assets/img/pc-ipad/gallery/result-01/01.jpg,assets/img/pc-ipad/gallery/result-01/02.jpg,assets/img/pc-ipad/gallery/result-01/03.jpg"
                     data-images-mobile="assets/img/mobile/gallery/result-01/01.jpg,assets/img/mobile/gallery/result-01/02.jpg,assets/img/mobile/gallery/result-01/03.jpg">
               <picture>
@@ -217,7 +239,7 @@
             </button>
           </figure>
           <figure class="reveal">
-            <button type="button" class="gallery-item" data-i18n-aria="gallery.open" aria-label="View more photos of this result"
+            <button type="button" class="gallery-item" data-i18n-aria="gallery.open" aria-label="Bekijk meer foto's van dit resultaat"
                     data-images="assets/img/pc-ipad/gallery/result-02/01.jpg,assets/img/pc-ipad/gallery/result-02/02.jpg,assets/img/pc-ipad/gallery/result-02/03.jpg"
                     data-images-mobile="assets/img/mobile/gallery/result-02/01.jpg,assets/img/mobile/gallery/result-02/02.jpg,assets/img/mobile/gallery/result-02/03.jpg">
               <picture>
@@ -227,7 +249,7 @@
             </button>
           </figure>
           <figure class="reveal">
-            <button type="button" class="gallery-item" data-i18n-aria="gallery.open" aria-label="View more photos of this result"
+            <button type="button" class="gallery-item" data-i18n-aria="gallery.open" aria-label="Bekijk meer foto's van dit resultaat"
                     data-images="assets/img/pc-ipad/gallery/result-03/01.jpg,assets/img/pc-ipad/gallery/result-03/02.jpg,assets/img/pc-ipad/gallery/result-03/03.jpg"
                     data-images-mobile="assets/img/mobile/gallery/result-03/01.jpg,assets/img/mobile/gallery/result-03/02.jpg,assets/img/mobile/gallery/result-03/03.jpg">
               <picture>
@@ -237,7 +259,7 @@
             </button>
           </figure>
           <figure class="reveal">
-            <button type="button" class="gallery-item" data-i18n-aria="gallery.open" aria-label="View more photos of this result"
+            <button type="button" class="gallery-item" data-i18n-aria="gallery.open" aria-label="Bekijk meer foto's van dit resultaat"
                     data-images="assets/img/pc-ipad/gallery/result-04/01.jpg,assets/img/pc-ipad/gallery/result-04/02.jpg,assets/img/pc-ipad/gallery/result-04/03.jpg"
                     data-images-mobile="assets/img/mobile/gallery/result-04/01.jpg,assets/img/mobile/gallery/result-04/02.jpg,assets/img/mobile/gallery/result-04/03.jpg">
               <picture>
@@ -247,7 +269,7 @@
             </button>
           </figure>
           <figure class="reveal">
-            <button type="button" class="gallery-item" data-i18n-aria="gallery.open" aria-label="View more photos of this result"
+            <button type="button" class="gallery-item" data-i18n-aria="gallery.open" aria-label="Bekijk meer foto's van dit resultaat"
                     data-images="assets/img/pc-ipad/gallery/result-05/01.jpg,assets/img/pc-ipad/gallery/result-05/02.jpg,assets/img/pc-ipad/gallery/result-05/03.jpg"
                     data-images-mobile="assets/img/mobile/gallery/result-05/01.jpg,assets/img/mobile/gallery/result-05/02.jpg,assets/img/mobile/gallery/result-05/03.jpg">
               <picture>
@@ -257,7 +279,7 @@
             </button>
           </figure>
           <figure class="reveal">
-            <button type="button" class="gallery-item" data-i18n-aria="gallery.open" aria-label="View more photos of this result"
+            <button type="button" class="gallery-item" data-i18n-aria="gallery.open" aria-label="Bekijk meer foto's van dit resultaat"
                     data-images="assets/img/pc-ipad/gallery/result-06/01.jpg,assets/img/pc-ipad/gallery/result-06/02.jpg,assets/img/pc-ipad/gallery/result-06/03.jpg"
                     data-images-mobile="assets/img/mobile/gallery/result-06/01.jpg,assets/img/mobile/gallery/result-06/02.jpg,assets/img/mobile/gallery/result-06/03.jpg">
               <picture>
@@ -267,7 +289,7 @@
             </button>
           </figure>
           <figure class="reveal">
-            <button type="button" class="gallery-item" data-i18n-aria="gallery.open" aria-label="View more photos of this result"
+            <button type="button" class="gallery-item" data-i18n-aria="gallery.open" aria-label="Bekijk meer foto's van dit resultaat"
                     data-images="assets/img/pc-ipad/gallery/result-07/01.jpg,assets/img/pc-ipad/gallery/result-07/02.jpg,assets/img/pc-ipad/gallery/result-07/03.jpg"
                     data-images-mobile="assets/img/mobile/gallery/result-07/01.jpg,assets/img/mobile/gallery/result-07/02.jpg,assets/img/mobile/gallery/result-07/03.jpg">
               <picture>
@@ -277,7 +299,7 @@
             </button>
           </figure>
           <figure class="reveal">
-            <button type="button" class="gallery-item" data-i18n-aria="gallery.open" aria-label="View more photos of this result"
+            <button type="button" class="gallery-item" data-i18n-aria="gallery.open" aria-label="Bekijk meer foto's van dit resultaat"
                     data-images="assets/img/pc-ipad/gallery/result-08/01.jpg,assets/img/pc-ipad/gallery/result-08/02.jpg,assets/img/pc-ipad/gallery/result-08/03.jpg"
                     data-images-mobile="assets/img/mobile/gallery/result-08/01.jpg,assets/img/mobile/gallery/result-08/02.jpg,assets/img/mobile/gallery/result-08/03.jpg">
               <picture>
@@ -294,15 +316,15 @@
     <section class="section" id="about">
       <div class="container about-grid">
         <div class="about-body">
-          <p class="kicker reveal" data-i18n="about.kicker">Our standard</p>
-          <h2 class="reveal" data-i18n="about.title">Good enough is not good enough.</h2>
+          <p class="kicker reveal" data-i18n="about.kicker">Onze standaard</p>
+          <h2 class="reveal" data-i18n="about.title">Goed genoeg is niet goed genoeg.</h2>
           <p class="reveal" data-i18n="about.p1">Detailing is geen snelle wasbeurt — het is vakmanschap. In onze werkplaats in Lieshout nemen we de tijd die nodig is, werken we paneel voor paneel en controleren we elk resultaat onder het licht voordat het voor ons klaar is.</p>
           <p class="reveal" data-i18n="about.p2">Of het nu je daily driver is, je geliefde sportwagen of je motor: alles krijgt dezelfde obsessieve aandacht. Klanten uit de hele regio — Eindhoven, Helmond, Veghel, Uden en omgeving — vinden ons in Lieshout.</p>
           <ul class="standards reveal">
-            <li><strong data-i18n="about.s1t">Hand-finished</strong><span data-i18n="about.s1d">Every vehicle, every time</span></li>
-            <li><strong data-i18n="about.s2t">Premium products</strong><span data-i18n="about.s2d">Paint-safe and proven</span></li>
-            <li><strong data-i18n="about.s3t">Cars &amp; motorcycles</strong><span data-i18n="about.s3d">One high standard for both</span></li>
-            <li><strong data-i18n="about.s4t">Eye for detail</strong><span data-i18n="about.s4d">Checked until it's flawless</span></li>
+            <li><strong data-i18n="about.s1t">Met de hand afgewerkt</strong><span data-i18n="about.s1d">Elk voertuig, elke keer</span></li>
+            <li><strong data-i18n="about.s2t">Premium producten</strong><span data-i18n="about.s2d">Lakvriendelijk en bewezen</span></li>
+            <li><strong data-i18n="about.s3t">Auto's &amp; motoren</strong><span data-i18n="about.s3d">Eén hoge standaard voor beide</span></li>
+            <li><strong data-i18n="about.s4t">Oog voor detail</strong><span data-i18n="about.s4d">Gecontroleerd tot het foutloos is</span></li>
           </ul>
         </div>
         <div class="about-media reveal">
@@ -319,58 +341,58 @@
       <div class="container contact-grid">
         <div class="contact-body">
           <p class="kicker reveal" data-i18n="contact.kicker">Contact</p>
-          <h2 class="reveal" data-i18n="contact.title">Ask us anything.</h2>
+          <h2 class="reveal" data-i18n="contact.title">Vraag het ons gerust.</h2>
           <p class="reveal" data-i18n="contact.p1">Heb je een vraag over detailing van je auto of motor, over polijsten of keramische coating? Twijfel je welke behandeling bij je voertuig past? Stuur ons een bericht — we denken graag met je mee.</p>
-          <p class="contact-note reveal" data-i18n="contact.note">We reply as quickly as possible, usually within one working day.</p>
+          <p class="contact-note reveal" data-i18n="contact.note">We reageren zo snel mogelijk, meestal binnen één werkdag.</p>
           <div class="hours reveal">
-            <h3 class="hours-title" data-i18n="hours.title">Opening hours</h3>
+            <h3 class="hours-title" data-i18n="hours.title">Openingstijden</h3>
             <ul class="hours-list">
-              <li><span data-i18n="hours.monFri">Monday – Friday</span><span>08:30 – 17:30</span></li>
-              <li><span data-i18n="hours.sat">Saturday</span><span data-i18n="hours.satVal">By appointment</span></li>
-              <li><span data-i18n="hours.sun">Sunday</span><span data-i18n="hours.sunVal">Closed</span></li>
+              <li><span data-i18n="hours.monFri">Maandag t/m vrijdag</span><span>08:30 – 17:30</span></li>
+              <li><span data-i18n="hours.sat">Zaterdag</span><span data-i18n="hours.satVal">Op afspraak</span></li>
+              <li><span data-i18n="hours.sun">Zondag</span><span data-i18n="hours.sunVal">Gesloten</span></li>
             </ul>
-            <p class="hours-note" data-i18n="hours.note">During the week you're welcome to walk in anytime — on Saturdays we work by appointment only.</p>
+            <p class="hours-note" data-i18n="hours.note">Van maandag t/m vrijdag loop je zo bij ons binnen — op zaterdag werken we uitsluitend op afspraak.</p>
           </div>
           <div class="hours reveal">
-            <h3 class="hours-title" data-i18n="visit.title">Find us</h3>
+            <h3 class="hours-title" data-i18n="visit.title">Vind ons</h3>
             <ul class="hours-list contact-list">
-              <li><span data-i18n="visit.address">Address</span><span>Molenstraat 44, 5737 BW Lieshout</span></li>
-              <li><span data-i18n="visit.phone">Phone</span><span><a href="tel:+31620781765">+31 (0)6 20781765</a></span></li>
-              <li><span data-i18n="visit.mail">Email</span><span><a href="mailto:info@deleestdetailing.nl">info@deleestdetailing.nl</a></span></li>
+              <li><span data-i18n="visit.address">Adres</span><span>Molenstraat 44, 5737 BW Lieshout</span></li>
+              <li><span data-i18n="visit.phone">Telefoon</span><span><a href="tel:+31620781765">+31 (0)6 20781765</a></span></li>
+              <li><span data-i18n="visit.mail">E-mail</span><span><a href="mailto:info@deleestdetailing.nl">info@deleestdetailing.nl</a></span></li>
             </ul>
-            <p class="hours-note"><a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Molenstraat+44,+5737+BW+Lieshout" target="_blank" rel="noopener" data-i18n="visit.maps">View route on Google Maps →</a></p>
+            <p class="hours-note"><a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Molenstraat+44,+5737+BW+Lieshout" target="_blank" rel="noopener" data-i18n="visit.maps">Bekijk de route op Google Maps →</a></p>
           </div>
         </div>
 
         <form class="contact-form reveal" id="contactForm"
               action="https://formspree.io/f/xkjnjdzb" method="POST" novalidate>
           <div class="field">
-            <label for="cf-name" data-i18n="form.name">Name</label>
+            <label for="cf-name" data-i18n="form.name">Naam</label>
             <input type="text" id="cf-name" name="name" required autocomplete="name"
-                   data-i18n-placeholder="form.namePh" placeholder="Your name">
+                   data-i18n-placeholder="form.namePh" placeholder="Je naam">
           </div>
           <div class="field">
-            <label for="cf-email" data-i18n="form.email">Email</label>
+            <label for="cf-email" data-i18n="form.email">E-mail</label>
             <input type="email" id="cf-email" name="email" required autocomplete="email"
-                   data-i18n-placeholder="form.emailPh" placeholder="you@example.com">
+                   data-i18n-placeholder="form.emailPh" placeholder="jij@voorbeeld.nl">
           </div>
           <div class="field">
-            <label for="cf-phone" data-i18n="form.phone">Phone number</label>
+            <label for="cf-phone" data-i18n="form.phone">Telefoonnummer</label>
             <input type="tel" id="cf-phone" name="phone" autocomplete="tel"
                    data-i18n-placeholder="form.phonePh" placeholder="+31 6 12345678">
           </div>
           <div class="field">
-            <label for="cf-vehicle" data-i18n="form.vehicle">Vehicle</label>
+            <label for="cf-vehicle" data-i18n="form.vehicle">Voertuig</label>
             <select id="cf-vehicle" name="vehicle">
-              <option value="car" data-i18n="form.vehicleCar">Car</option>
-              <option value="motorcycle" data-i18n="form.vehicleMoto">Motorcycle</option>
+              <option value="car" data-i18n="form.vehicleCar">Auto</option>
+              <option value="motorcycle" data-i18n="form.vehicleMoto">Motor</option>
             </select>
           </div>
           <div class="field">
-            <label for="cf-package" data-i18n="form.package">Desired package</label>
+            <label for="cf-package" data-i18n="form.package">Gewenst pakket</label>
             <select id="cf-package" name="package">
-              <option value="" data-i18n="form.packageNone">Choose a package (optional)</option>
-              <option value="basic" data-i18n="pkg.basic.name">Basic Wash</option>
+              <option value="" data-i18n="form.packageNone">Kies een pakket (optioneel)</option>
+              <option value="custom" data-i18n="pkg.custom.name">Pakket op maat</option>
               <option value="standard" data-i18n="pkg.std.name">Standard Detail</option>
               <option value="premium" data-i18n="pkg.premium.name">Premium Detail</option>
               <option value="ceramic" data-i18n="pkg.ceramic.name">Ceramic Package</option>
@@ -378,14 +400,14 @@
             </select>
           </div>
           <div class="field">
-            <label for="cf-message" data-i18n="form.message">Your question</label>
+            <label for="cf-message" data-i18n="form.message">Je vraag</label>
             <textarea id="cf-message" name="message" rows="5" required
-                      data-i18n-placeholder="form.messagePh" placeholder="Tell us about your vehicle and what you'd like to know…"></textarea>
+                      data-i18n-placeholder="form.messagePh" placeholder="Vertel over je voertuig en wat je graag wilt weten…"></textarea>
           </div>
-          <button type="submit" class="btn btn-primary btn-block" data-i18n="form.submit">Send message</button>
+          <button type="submit" class="btn btn-primary btn-block" data-i18n="form.submit">Verstuur bericht</button>
           <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
           <p class="form-call">
-            <span data-i18n="form.call">Prefer to call? We're available Monday to Friday from 08:30 to 17:30 on</span>
+            <span data-i18n="form.call">Liever bellen? We zijn op maandag t/m vrijdag bereikbaar van 08:30 tot 17:30 op</span>
             <a href="tel:+31620781765">+31 (0)6 20781765</a>.
           </p>
         </form>
@@ -401,28 +423,18 @@
 
         <div class="pricing-grid">
           <article class="card price-card reveal">
-            <h3 data-i18n="pkg.basic.name">Basic Wash</h3>
-            <p class="price-tag" data-i18n="pkg.basic.tag">Een grondige handwas, binnen en buiten — perfect voor tussendoor.</p>
-            <p class="price"><span class="price-from" data-i18n="pricing.from">vanaf</span> <span class="price-value">€199</span></p>
-            <ul class="price-features">
-              <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pkg.basic.f1">Handwas &amp; drogen</span></li>
-              <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pkg.basic.f2">Velgen &amp; banden reinigen</span></li>
-              <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pkg.basic.f3">Interieur stofzuigen</span></li>
-              <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pkg.basic.f4">Dashboard &amp; console reinigen</span></li>
-              <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pkg.basic.f5">Ramen binnenzijde reinigen</span></li>
-            </ul>
-            <a href="#contactForm" class="btn btn-ghost btn-block" data-package="basic" data-i18n="pricing.cta">Boek dit pakket</a>
-          </article>
-
-          <article class="card price-card reveal">
             <h3 data-i18n="pkg.std.name">Standard Detail</h3>
             <p class="price-tag" data-i18n="pkg.std.tag">Een complete opfrisbeurt met waxbescherming voor blijvende glans.</p>
-            <p class="price"><span class="price-from" data-i18n="pricing.from">vanaf</span> <span class="price-value">€299</span></p>
+            <p class="price"><span class="price-from" data-i18n="pricing.from">vanaf</span> <span class="price-value">€199</span></p>
             <ul class="price-features">
-              <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pkg.std.f1">Alles uit Basic Wash</span></li>
-              <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pkg.std.f2">Insecten &amp; teer verwijderen + clay bar</span></li>
-              <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pkg.std.f3">Wax &amp; paint sealant</span></li>
-              <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pkg.std.f4">Banden dressen</span></li>
+              <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="tbl.r1">Handwas &amp; drogen</span></li>
+              <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="tbl.r2">Velgen &amp; banden reinigen</span></li>
+              <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="tbl.r3">Insecten &amp; teer verwijderen</span></li>
+              <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="tbl.r5">Interieur stofzuigen</span></li>
+              <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="tbl.r6">Dashboard &amp; console reinigen</span></li>
+              <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="tbl.r7">Ramen binnenzijde reinigen</span></li>
+              <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="tbl.r13">Wax aanbrengen</span></li>
+              <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="tbl.r18">Banden dressen</span></li>
             </ul>
             <a href="#contactForm" class="btn btn-ghost btn-block" data-package="standard" data-i18n="pricing.cta">Boek dit pakket</a>
           </article>
@@ -430,13 +442,14 @@
           <article class="card price-card price-card-featured reveal">
             <span class="price-badge" data-i18n="pricing.popular">Populairst</span>
             <h3 data-i18n="pkg.premium.name">Premium Detail</h3>
-            <p class="price-tag" data-i18n="pkg.premium.tag">Dieptereiniging van het interieur plus eenstaps polijsten en sealant.</p>
-            <p class="price"><span class="price-from" data-i18n="pricing.from">vanaf</span> <span class="price-value">€599</span></p>
+            <p class="price-tag" data-i18n="pkg.premium.tag">Dieptereiniging van het interieur plus eenstaps polijsten.</p>
+            <p class="price"><span class="price-from" data-i18n="pricing.from">vanaf</span> <span class="price-value">€399</span></p>
             <ul class="price-features">
               <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pkg.premium.f1">Alles uit Standard Detail</span></li>
+              <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="tbl.r4">Clay bar behandeling</span></li>
               <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pkg.premium.f2">Leer reinigen &amp; conditioneren</span></li>
               <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pkg.premium.f3">Eenstaps polijsten</span></li>
-              <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pkg.premium.f4">Paint sealant &amp; motorruimte</span></li>
+              <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pkg.premium.f4">Motorruimte reinigen</span></li>
             </ul>
             <a href="#contactForm" class="btn btn-primary btn-block" data-package="premium" data-i18n="pricing.cta">Boek dit pakket</a>
           </article>
@@ -450,32 +463,43 @@
               <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pkg.ceramic.f2">Meerstaps lakcorrectie</span></li>
               <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pkg.ceramic.f3">Keramische coating — lak</span></li>
               <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pkg.ceramic.f4">Keramische coating — velgen</span></li>
+              <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="tbl.r19">Glascoating</span></li>
             </ul>
             <a href="#contactForm" class="btn btn-ghost btn-block" data-package="ceramic" data-i18n="pricing.cta">Boek dit pakket</a>
+          </article>
+
+          <article class="card price-card reveal">
+            <h3 data-i18n="pkg.custom.name">Pakket op maat</h3>
+            <p class="price-tag" data-i18n="pkg.custom.tag">Stel zelf je ideale combinatie van behandelingen samen — voor particulieren én bedrijven, altijd kosteloos en vrijblijvend.</p>
+            <p class="price"><span class="price-value" data-i18n="pricing.onRequest">Prijs op aanvraag</span></p>
+            <ul class="price-features">
+              <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pkg.custom.f1">Vrij te kiezen uit alle behandelingen</span></li>
+              <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pkg.custom.f2">Voor particulieren én zakelijke klanten</span></li>
+              <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pkg.custom.f3">Kosteloos en vrijblijvend aan te vragen</span></li>
+              <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pkg.custom.f4">Duidelijke prijs vooraf, geen verrassingen</span></li>
+            </ul>
+            <a href="#contactForm" class="btn btn-ghost btn-block" data-package="custom" data-i18n="pricing.ctaCustom">Vraag een offerte aan</a>
           </article>
         </div>
 
         <div class="moto-price reveal">
           <div class="moto-price-info">
             <h3 data-i18n="pkg.moto.name">Motor Detailing</h3>
-            <p class="price-tag" data-i18n="pkg.moto.tag">Een complete dieptereiniging van je motor, inclusief kettingbehandeling.</p>
-            <ul class="price-features">
-              <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pkg.moto.f1">Dieptereiniging blok, frame &amp; wielen</span></li>
-              <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pkg.moto.f2">Ketting reinigen &amp; ontvetten</span></li>
-              <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pkg.moto.f3">Smeermiddel naar keuze (wet of dry)</span></li>
-            </ul>
+            <p class="price-tag" data-i18n="pkg.moto.tag">Complete detailing- en polijstbehandelingen, afgestemd op jouw motortype — van sportmotor tot cruiser.</p>
           </div>
           <div class="moto-price-side">
-            <p class="price"><span class="price-value">€250</span></p>
-            <a href="#contactForm" class="btn btn-ghost" data-package="motorcycle" data-i18n="pricing.cta">Boek dit pakket</a>
+            <p class="price"><span class="price-from" data-i18n="pricing.from">vanaf</span> <span class="price-value">€200</span></p>
+            <a href="diensten.html#motor-detailing" class="btn btn-ghost" data-i18n="pkg.moto.cta">Bekijk motorpakketten</a>
           </div>
         </div>
 
-        <p class="pricing-note reveal" data-i18n="pricing.note">Alle autoprijzen zijn vanaf-prijzen — de exacte prijs hangt af van de grootte en staat van je voertuig. Motor Detailing heeft een vaste prijs. Alle prijzen zijn inclusief btw. Vraag vrijblijvend een offerte aan.</p>
+        <p class="pricing-note reveal" data-i18n="pricing.note">(*) Alle prijzen zijn gebaseerd op de gemiddelde vervuiling en de staat van het voertuig en zijn inclusief 21% btw. Zakelijke klanten ontvangen een factuur met btw-specificatie. Bij ernstige vervuiling of veel honden- of kattenharen kan een meerprijs gelden. Elke auto is uniek — neem vrijblijvend contact met ons op voor meer informatie.</p>
 
+        <!-- Hidden while prijzen.html is disabled (2026-10-27):
         <p class="services-pricing-cta reveal">
           <a href="prijzen.html#vergelijken" class="btn btn-ghost" data-i18n="pricing.compareCta">Vergelijk alle pakketten</a>
         </p>
+        -->
       </div>
     </section>
 
@@ -497,15 +521,16 @@
             </a>
           </div>
         </div>
-        <p class="footer-tag" data-i18n="footer.tag">Detailing until it could not be more perfect.</p>
+        <p class="footer-tag" data-i18n="footer.tag">Detailing tot het niet perfecter kan.</p>
       </div>
       <div class="footer-right">
         <nav class="footer-nav" aria-label="Footer">
-          <a href="#services" data-i18n="nav.services">Services</a>
-          <a href="#gallery" data-i18n="nav.gallery">Gallery</a>
-          <a href="#about" data-i18n="nav.about">About</a>
+          <a href="#services" data-i18n="nav.services">Diensten</a>
+          <a href="diensten.html" data-i18n="nav.allServices">Alle diensten</a>
+          <a href="#gallery" data-i18n="nav.gallery">Galerij</a>
+          <a href="#about" data-i18n="nav.about">Over ons</a>
           <a href="#contactForm" data-i18n="nav.contact">Contact</a>
-          <a href="#pricing" data-i18n="nav.pricing">Prijzen</a>
+          <a href="#pricing" data-i18n="nav.pricing">Pakket</a>
           <a href="algemene-voorwaarden.html" data-i18n="footer.terms">Algemene voorwaarden</a>
           <a href="privacybeleid.html" data-i18n="footer.privacy">Privacybeleid</a>
         </nav>

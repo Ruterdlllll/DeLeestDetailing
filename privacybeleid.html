@@ -31,11 +31,27 @@
       </a>
 
       <nav class="main-nav" aria-label="Main navigation">
-        <a href="index.html#services" data-i18n="nav.services">Diensten</a>
+        <div class="nav-dropdown">
+          <button type="button" class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true"><span data-i18n="nav.services">Diensten</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+          <div class="nav-dropdown-panel">
+            <a class="nav-dropdown-all" href="diensten.html" data-i18n="nav.allServices">Alle diensten</a>
+            <p class="nav-dropdown-group" data-i18n="nav.group.interieur">Interieur</p>
+            <a href="diensten.html#interieur-reinigen" data-i18n="nav.d.interieur">Interieur Reinigen</a>
+            <a href="diensten.html#vlekken-verwijderen" data-i18n="nav.d.vlekken">Vlekken verwijderen autobekleding</a>
+            <p class="nav-dropdown-group" data-i18n="nav.group.exterieur">Exterieur</p>
+            <a href="diensten.html#handwassen" data-i18n="nav.d.handwassen">Handwassen &amp; Beschermen</a>
+            <a href="diensten.html#polijsten" data-i18n="nav.d.polijsten">Polijsten &amp; Glansherstel</a>
+            <a href="diensten.html#keramische-coating" data-i18n="nav.d.coating">Keramische Coating</a>
+            <a href="diensten.html#cabrio-dak" data-i18n="nav.d.cabrio">Cabriodak reinigen &amp; impregneren</a>
+            <p class="nav-dropdown-group" data-i18n="nav.group.extra">Aanvullend</p>
+            <a href="diensten.html#motor-detailing" data-i18n="nav.d.motor">Motor Detailing</a>
+            <a href="diensten.html#lakdiktemeting" data-i18n="nav.d.lakdikte">Lakdiktemeting</a>
+          </div>
+        </div>
         <a href="index.html#gallery" data-i18n="nav.gallery">Galerij</a>
         <a href="index.html#about" data-i18n="nav.about">Over ons</a>
         <a href="index.html#contactForm" data-i18n="nav.contact">Contact</a>
-        <a href="index.html#pricing" data-i18n="nav.pricing">Prijzen</a>
+        <a href="index.html#pricing" data-i18n="nav.pricing">Pakket</a>
       </nav>
 
       <div class="header-actions">
@@ -89,10 +105,11 @@
       <div class="footer-right">
         <nav class="footer-nav" aria-label="Footer">
           <a href="index.html#services" data-i18n="nav.services">Diensten</a>
+          <a href="diensten.html" data-i18n="nav.allServices">Alle diensten</a>
           <a href="index.html#gallery" data-i18n="nav.gallery">Galerij</a>
           <a href="index.html#about" data-i18n="nav.about">Over ons</a>
           <a href="index.html#contactForm" data-i18n="nav.contact">Contact</a>
-          <a href="index.html#pricing" data-i18n="nav.pricing">Prijzen</a>
+          <a href="index.html#pricing" data-i18n="nav.pricing">Pakket</a>
           <a href="algemene-voorwaarden.html" data-i18n="footer.terms">Algemene voorwaarden</a>
           <a href="privacybeleid.html" data-i18n="footer.privacy">Privacybeleid</a>
         </nav>

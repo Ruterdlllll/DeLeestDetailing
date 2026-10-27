@@ -36,11 +36,27 @@
       </a>
 
       <nav class="main-nav" id="mainNav" aria-label="Main navigation">
-        <a href="index.html#services" data-i18n="nav.services">Diensten</a>
+        <div class="nav-dropdown">
+          <button type="button" class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true"><span data-i18n="nav.services">Diensten</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+          <div class="nav-dropdown-panel">
+            <a class="nav-dropdown-all" href="diensten.html" data-i18n="nav.allServices">Alle diensten</a>
+            <p class="nav-dropdown-group" data-i18n="nav.group.interieur">Interieur</p>
+            <a href="diensten.html#interieur-reinigen" data-i18n="nav.d.interieur">Interieur Reinigen</a>
+            <a href="diensten.html#vlekken-verwijderen" data-i18n="nav.d.vlekken">Vlekken verwijderen autobekleding</a>
+            <p class="nav-dropdown-group" data-i18n="nav.group.exterieur">Exterieur</p>
+            <a href="diensten.html#handwassen" data-i18n="nav.d.handwassen">Handwassen &amp; Beschermen</a>
+            <a href="diensten.html#polijsten" data-i18n="nav.d.polijsten">Polijsten &amp; Glansherstel</a>
+            <a href="diensten.html#keramische-coating" data-i18n="nav.d.coating">Keramische Coating</a>
+            <a href="diensten.html#cabrio-dak" data-i18n="nav.d.cabrio">Cabriodak reinigen &amp; impregneren</a>
+            <p class="nav-dropdown-group" data-i18n="nav.group.extra">Aanvullend</p>
+            <a href="diensten.html#motor-detailing" data-i18n="nav.d.motor">Motor Detailing</a>
+            <a href="diensten.html#lakdiktemeting" data-i18n="nav.d.lakdikte">Lakdiktemeting</a>
+          </div>
+        </div>
         <a href="index.html#gallery" data-i18n="nav.gallery">Galerij</a>
         <a href="index.html#about" data-i18n="nav.about">Over ons</a>
         <a href="index.html#contactForm" data-i18n="nav.contact">Contact</a>
-        <a href="prijzen.html" data-i18n="nav.pricing" aria-current="page">Prijzen</a>
+        <!-- Pakket page hidden 2026-10-27: <a href="prijzen.html" data-i18n="nav.pricing" aria-current="page">Pakket</a> -->
       </nav>
 
       <div class="header-actions">
@@ -65,6 +81,7 @@
   <main>
 
     <!-- ===== Pricing packages ===== -->
+    <!-- HIDDEN 2026-10-27 — pakket page disabled at owner's request; remove the comment markers to restore.
     <section class="section pricing-hero">
       <div class="container">
         <p class="kicker reveal" data-i18n="pricing.kicker">Pakketten &amp; prijzen</p>
@@ -73,28 +90,18 @@
 
         <div class="pricing-grid">
           <article class="card price-card reveal">
-            <h3 data-i18n="pkg.basic.name">Basic Wash</h3>
-            <p class="price-tag" data-i18n="pkg.basic.tag">Een grondige handwas, binnen en buiten — perfect voor tussendoor.</p>
-            <p class="price"><span class="price-from" data-i18n="pricing.from">vanaf</span> <span class="price-value">€199</span></p>
-            <ul class="price-features">
-              <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pkg.basic.f1">Handwas &amp; drogen</span></li>
-              <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pkg.basic.f2">Velgen &amp; banden reinigen</span></li>
-              <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pkg.basic.f3">Interieur stofzuigen</span></li>
-              <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pkg.basic.f4">Dashboard &amp; console reinigen</span></li>
-              <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pkg.basic.f5">Ramen binnenzijde reinigen</span></li>
-            </ul>
-            <a href="index.html?package=basic#contactForm" class="btn btn-ghost btn-block" data-i18n="pricing.cta">Boek dit pakket</a>
-          </article>
-
-          <article class="card price-card reveal">
             <h3 data-i18n="pkg.std.name">Standard Detail</h3>
             <p class="price-tag" data-i18n="pkg.std.tag">Een complete opfrisbeurt met waxbescherming voor blijvende glans.</p>
-            <p class="price"><span class="price-from" data-i18n="pricing.from">vanaf</span> <span class="price-value">€299</span></p>
+            <p class="price"><span class="price-from" data-i18n="pricing.from">vanaf</span> <span class="price-value">€199</span></p>
             <ul class="price-features">
-              <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pkg.std.f1">Alles uit Basic Wash</span></li>
-              <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pkg.std.f2">Insecten &amp; teer verwijderen + clay bar</span></li>
-              <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pkg.std.f3">Wax &amp; paint sealant</span></li>
-              <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pkg.std.f4">Banden dressen</span></li>
+              <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="tbl.r1">Handwas &amp; drogen</span></li>
+              <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="tbl.r2">Velgen &amp; banden reinigen</span></li>
+              <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="tbl.r3">Insecten &amp; teer verwijderen</span></li>
+              <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="tbl.r5">Interieur stofzuigen</span></li>
+              <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="tbl.r6">Dashboard &amp; console reinigen</span></li>
+              <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="tbl.r7">Ramen binnenzijde reinigen</span></li>
+              <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="tbl.r13">Wax aanbrengen</span></li>
+              <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="tbl.r18">Banden dressen</span></li>
             </ul>
             <a href="index.html?package=standard#contactForm" class="btn btn-ghost btn-block" data-i18n="pricing.cta">Boek dit pakket</a>
           </article>
@@ -102,13 +109,14 @@
           <article class="card price-card price-card-featured reveal">
             <span class="price-badge" data-i18n="pricing.popular">Populairst</span>
             <h3 data-i18n="pkg.premium.name">Premium Detail</h3>
-            <p class="price-tag" data-i18n="pkg.premium.tag">Dieptereiniging van het interieur plus eenstaps polijsten en sealant.</p>
-            <p class="price"><span class="price-from" data-i18n="pricing.from">vanaf</span> <span class="price-value">€599</span></p>
+            <p class="price-tag" data-i18n="pkg.premium.tag">Dieptereiniging van het interieur plus eenstaps polijsten.</p>
+            <p class="price"><span class="price-from" data-i18n="pricing.from">vanaf</span> <span class="price-value">€399</span></p>
             <ul class="price-features">
               <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pkg.premium.f1">Alles uit Standard Detail</span></li>
+              <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="tbl.r4">Clay bar behandeling</span></li>
               <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pkg.premium.f2">Leer reinigen &amp; conditioneren</span></li>
               <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pkg.premium.f3">Eenstaps polijsten</span></li>
-              <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pkg.premium.f4">Paint sealant &amp; motorruimte</span></li>
+              <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pkg.premium.f4">Motorruimte reinigen</span></li>
             </ul>
             <a href="index.html?package=premium#contactForm" class="btn btn-primary btn-block" data-i18n="pricing.cta">Boek dit pakket</a>
           </article>
@@ -122,32 +130,43 @@
               <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pkg.ceramic.f2">Meerstaps lakcorrectie</span></li>
               <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pkg.ceramic.f3">Keramische coating — lak</span></li>
               <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pkg.ceramic.f4">Keramische coating — velgen</span></li>
+              <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="tbl.r19">Glascoating</span></li>
             </ul>
             <a href="index.html?package=ceramic#contactForm" class="btn btn-ghost btn-block" data-i18n="pricing.cta">Boek dit pakket</a>
+          </article>
+
+          <article class="card price-card reveal">
+            <h3 data-i18n="pkg.custom.name">Pakket op maat</h3>
+            <p class="price-tag" data-i18n="pkg.custom.tag">Stel zelf je ideale combinatie van behandelingen samen — voor particulieren én bedrijven, altijd kosteloos en vrijblijvend.</p>
+            <p class="price"><span class="price-value" data-i18n="pricing.onRequest">Prijs op aanvraag</span></p>
+            <ul class="price-features">
+              <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pkg.custom.f1">Vrij te kiezen uit alle behandelingen</span></li>
+              <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pkg.custom.f2">Voor particulieren én zakelijke klanten</span></li>
+              <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pkg.custom.f3">Kosteloos en vrijblijvend aan te vragen</span></li>
+              <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pkg.custom.f4">Duidelijke prijs vooraf, geen verrassingen</span></li>
+            </ul>
+            <a href="index.html?package=custom#contactForm" class="btn btn-ghost btn-block" data-i18n="pricing.ctaCustom">Vraag een offerte aan</a>
           </article>
         </div>
 
         <div class="moto-price reveal">
           <div class="moto-price-info">
             <h3 data-i18n="pkg.moto.name">Motor Detailing</h3>
-            <p class="price-tag" data-i18n="pkg.moto.tag">Een complete dieptereiniging van je motor, inclusief kettingbehandeling.</p>
-            <ul class="price-features">
-              <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pkg.moto.f1">Dieptereiniging blok, frame &amp; wielen</span></li>
-              <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pkg.moto.f2">Ketting reinigen &amp; ontvetten</span></li>
-              <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="pkg.moto.f3">Smeermiddel naar keuze (wet of dry)</span></li>
-            </ul>
+            <p class="price-tag" data-i18n="pkg.moto.tag">Complete detailing- en polijstbehandelingen, afgestemd op jouw motortype — van sportmotor tot cruiser.</p>
           </div>
           <div class="moto-price-side">
-            <p class="price"><span class="price-value">€250</span></p>
-            <a href="index.html?package=motorcycle#contactForm" class="btn btn-ghost" data-i18n="pricing.cta">Boek dit pakket</a>
+            <p class="price"><span class="price-from" data-i18n="pricing.from">vanaf</span> <span class="price-value">€200</span></p>
+            <a href="diensten.html#motor-detailing" class="btn btn-ghost" data-i18n="pkg.moto.cta">Bekijk motorpakketten</a>
           </div>
         </div>
 
-        <p class="pricing-note reveal" data-i18n="pricing.note">Alle autoprijzen zijn vanaf-prijzen — de exacte prijs hangt af van de grootte en staat van je voertuig. Motor Detailing heeft een vaste prijs. Alle prijzen zijn inclusief btw. Vraag vrijblijvend een offerte aan.</p>
+        <p class="pricing-note reveal" data-i18n="pricing.note">(*) Alle prijzen zijn gebaseerd op de gemiddelde vervuiling en de staat van het voertuig en zijn inclusief 21% btw. Zakelijke klanten ontvangen een factuur met btw-specificatie. Bij ernstige vervuiling of veel honden- of kattenharen kan een meerprijs gelden. Elke auto is uniek — neem vrijblijvend contact met ons op voor meer informatie.</p>
       </div>
     </section>
+    END HIDDEN (pricing packages) -->
 
     <!-- ===== Comparison table ===== -->
+    <!-- HIDDEN 2026-10-27 (continued)
     <section class="section section-alt" id="vergelijken">
       <div class="container">
         <h2 class="reveal" data-i18n="pricing.compareTitle">Vergelijk de pakketten</h2>
@@ -158,47 +177,47 @@
             <thead>
               <tr>
                 <th scope="col" data-i18n="tbl.service">Behandeling</th>
-                <th scope="col" data-i18n="pkg.basic.name">Basic Wash</th>
                 <th scope="col" data-i18n="pkg.std.name">Standard Detail</th>
                 <th scope="col" class="col-featured" data-i18n="pkg.premium.name">Premium Detail</th>
                 <th scope="col" data-i18n="pkg.ceramic.name">Ceramic Package</th>
+                <th scope="col" data-i18n="pkg.custom.name">Pakket op maat</th>
               </tr>
             </thead>
             <tbody>
-              <tr><td data-i18n="tbl.r1">Handwas &amp; drogen</td><td><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></td><td><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></td><td class="col-featured"><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></td><td><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></td></tr>
-              <tr><td data-i18n="tbl.r2">Velgen &amp; banden reinigen</td><td><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></td><td><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></td><td class="col-featured"><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></td><td><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></td></tr>
-              <tr><td data-i18n="tbl.r3">Insecten &amp; teer verwijderen</td><td><span class="no-check" aria-hidden="true">–</span></td><td><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></td><td class="col-featured"><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></td><td><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></td></tr>
-              <tr><td data-i18n="tbl.r4">Clay bar behandeling</td><td><span class="no-check" aria-hidden="true">–</span></td><td><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></td><td class="col-featured"><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></td><td><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></td></tr>
-              <tr><td data-i18n="tbl.r5">Interieur stofzuigen</td><td><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></td><td><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></td><td class="col-featured"><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></td><td><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></td></tr>
-              <tr><td data-i18n="tbl.r6">Dashboard &amp; console reinigen</td><td><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></td><td><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></td><td class="col-featured"><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></td><td><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></td></tr>
-              <tr><td data-i18n="tbl.r7">Ramen binnenzijde reinigen</td><td><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></td><td><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></td><td class="col-featured"><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></td><td><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></td></tr>
-              <tr><td data-i18n="tbl.r9">Leer reinigen &amp; conditioneren</td><td><span class="no-check" aria-hidden="true">–</span></td><td><span class="no-check" aria-hidden="true">–</span></td><td class="col-featured"><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></td><td><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></td></tr>
-              <tr><td data-i18n="tbl.r11">Eenstaps polijsten</td><td><span class="no-check" aria-hidden="true">–</span></td><td><span class="no-check" aria-hidden="true">–</span></td><td class="col-featured"><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></td><td><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></td></tr>
-              <tr><td data-i18n="tbl.r12">Meerstaps lakcorrectie</td><td><span class="no-check" aria-hidden="true">–</span></td><td><span class="no-check" aria-hidden="true">–</span></td><td class="col-featured"><span class="no-check" aria-hidden="true">–</span></td><td><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></td></tr>
-              <tr><td data-i18n="tbl.r13">Wax aanbrengen</td><td><span class="no-check" aria-hidden="true">–</span></td><td><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></td><td class="col-featured"><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></td><td><span class="no-check" aria-hidden="true">–</span></td></tr>
-              <tr><td data-i18n="tbl.r14">Paint sealant</td><td><span class="no-check" aria-hidden="true">–</span></td><td><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></td><td class="col-featured"><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></td><td><span class="no-check" aria-hidden="true">–</span></td></tr>
-              <tr><td data-i18n="tbl.r15">Keramische coating (lak)</td><td><span class="no-check" aria-hidden="true">–</span></td><td><span class="no-check" aria-hidden="true">–</span></td><td class="col-featured"><span class="no-check" aria-hidden="true">–</span></td><td><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></td></tr>
-              <tr><td data-i18n="tbl.r16">Keramische coating (velgen) *</td><td><span class="no-check" aria-hidden="true">–</span></td><td><span class="no-check" aria-hidden="true">–</span></td><td class="col-featured"><span class="no-check" aria-hidden="true">–</span></td><td><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></td></tr>
-              <tr><td data-i18n="tbl.r17">Motorruimte reinigen</td><td><span class="no-check" aria-hidden="true">–</span></td><td><span class="no-check" aria-hidden="true">–</span></td><td class="col-featured"><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></td><td><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></td></tr>
-              <tr><td data-i18n="tbl.r18">Banden dressen</td><td><span class="no-check" aria-hidden="true">–</span></td><td><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></td><td class="col-featured"><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></td><td><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></td></tr>
+              <tr><td data-i18n="tbl.r1">Handwas &amp; drogen</td><td><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></td><td class="col-featured"><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></td><td><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></td><td><span class="no-check" aria-hidden="true">–</span></td></tr>
+              <tr><td data-i18n="tbl.r2">Velgen &amp; banden reinigen</td><td><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></td><td class="col-featured"><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></td><td><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></td><td><span class="no-check" aria-hidden="true">–</span></td></tr>
+              <tr><td data-i18n="tbl.r3">Insecten &amp; teer verwijderen</td><td><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></td><td class="col-featured"><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></td><td><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></td><td><span class="no-check" aria-hidden="true">–</span></td></tr>
+              <tr><td data-i18n="tbl.r4">Clay bar behandeling</td><td><span class="no-check" aria-hidden="true">–</span></td><td class="col-featured"><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></td><td><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></td><td><span class="no-check" aria-hidden="true">–</span></td></tr>
+              <tr><td data-i18n="tbl.r5">Interieur stofzuigen</td><td><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></td><td class="col-featured"><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></td><td><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></td><td><span class="no-check" aria-hidden="true">–</span></td></tr>
+              <tr><td data-i18n="tbl.r6">Dashboard &amp; console reinigen</td><td><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></td><td class="col-featured"><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></td><td><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></td><td><span class="no-check" aria-hidden="true">–</span></td></tr>
+              <tr><td data-i18n="tbl.r7">Ramen binnenzijde reinigen</td><td><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></td><td class="col-featured"><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></td><td><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></td><td><span class="no-check" aria-hidden="true">–</span></td></tr>
+              <tr><td data-i18n="tbl.r9">Leer reinigen &amp; conditioneren</td><td><span class="no-check" aria-hidden="true">–</span></td><td class="col-featured"><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></td><td><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></td><td><span class="no-check" aria-hidden="true">–</span></td></tr>
+              <tr><td data-i18n="tbl.r11">Eenstaps polijsten</td><td><span class="no-check" aria-hidden="true">–</span></td><td class="col-featured"><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></td><td><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></td><td><span class="no-check" aria-hidden="true">–</span></td></tr>
+              <tr><td data-i18n="tbl.r12">Meerstaps lakcorrectie</td><td><span class="no-check" aria-hidden="true">–</span></td><td class="col-featured"><span class="no-check" aria-hidden="true">–</span></td><td><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></td><td><span class="no-check" aria-hidden="true">–</span></td></tr>
+              <tr><td data-i18n="tbl.r13">Wax aanbrengen</td><td><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></td><td class="col-featured"><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></td><td><span class="no-check" aria-hidden="true">–</span></td><td><span class="no-check" aria-hidden="true">–</span></td></tr>
+              <tr><td data-i18n="tbl.r15">Keramische coating (lak)</td><td><span class="no-check" aria-hidden="true">–</span></td><td class="col-featured"><span class="no-check" aria-hidden="true">–</span></td><td><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></td><td><span class="no-check" aria-hidden="true">–</span></td></tr>
+              <tr><td data-i18n="tbl.r16">Keramische coating (velgen)</td><td><span class="no-check" aria-hidden="true">–</span></td><td class="col-featured"><span class="no-check" aria-hidden="true">–</span></td><td><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></td><td><span class="no-check" aria-hidden="true">–</span></td></tr>
+              <tr><td data-i18n="tbl.r19">Glascoating</td><td><span class="no-check" aria-hidden="true">–</span></td><td class="col-featured"><span class="no-check" aria-hidden="true">–</span></td><td><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></td><td><span class="no-check" aria-hidden="true">–</span></td></tr>
+              <tr><td data-i18n="tbl.r17">Motorruimte reinigen</td><td><span class="no-check" aria-hidden="true">–</span></td><td class="col-featured"><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></td><td><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></td><td><span class="no-check" aria-hidden="true">–</span></td></tr>
+              <tr><td data-i18n="tbl.r18">Banden dressen</td><td><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></td><td class="col-featured"><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></td><td><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></td><td><span class="no-check" aria-hidden="true">–</span></td></tr>
             </tbody>
             <tfoot>
               <tr>
                 <td data-i18n="tbl.price">Prijs</td>
                 <td>€199</td>
-                <td>€299</td>
-                <td class="col-featured">€599</td>
+                <td class="col-featured">€399</td>
+                <td data-i18n="pricing.onRequest">Prijs op aanvraag</td>
                 <td data-i18n="pricing.onRequest">Prijs op aanvraag</td>
               </tr>
             </tfoot>
           </table>
         </div>
-        <p class="pricing-note" data-i18n="tbl.note1">* Niet alle velgen zijn geschikt voor een keramische coating.</p>
-        <p class="pricing-note" data-i18n="tbl.note2">** Reinigingsdiensten kunnen binnen onze pakketten gecombineerd worden. Prijzen zijn dan op aanvraag.</p>
       </div>
     </section>
+    END HIDDEN (comparison table) -->
 
     <!-- ===== CTA band ===== -->
+    <!-- HIDDEN 2026-10-27 (continued)
     <section class="section">
       <div class="container">
         <div class="cta-band reveal">
@@ -208,6 +227,7 @@
         </div>
       </div>
     </section>
+    END HIDDEN (cta band) -->
 
   </main>
 
@@ -232,10 +252,11 @@
       <div class="footer-right">
         <nav class="footer-nav" aria-label="Footer">
           <a href="index.html#services" data-i18n="nav.services">Diensten</a>
+          <a href="diensten.html" data-i18n="nav.allServices">Alle diensten</a>
           <a href="index.html#gallery" data-i18n="nav.gallery">Galerij</a>
           <a href="index.html#about" data-i18n="nav.about">Over ons</a>
           <a href="index.html#contactForm" data-i18n="nav.contact">Contact</a>
-          <a href="prijzen.html" data-i18n="nav.pricing">Prijzen</a>
+          <!-- Pakket page hidden 2026-10-27: <a href="prijzen.html" data-i18n="nav.pricing">Pakket</a> -->
           <a href="algemene-voorwaarden.html" data-i18n="footer.terms">Algemene voorwaarden</a>
           <a href="privacybeleid.html" data-i18n="footer.privacy">Privacybeleid</a>
         </nav>

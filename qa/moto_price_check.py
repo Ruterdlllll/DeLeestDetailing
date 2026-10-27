@@ -1,4 +1,4 @@
-"""Screenshot the motorcycle pricing block on index and prijzen, phone + desktop, NL + EN."""
+"""Screenshot the motorcycle pricing block on index, phone + desktop, NL + EN."""
 from pathlib import Path
 
 from playwright.sync_api import sync_playwright
@@ -10,7 +10,7 @@ VIEWPORTS = {
     "phone": {"width": 390, "height": 844},
     "desktop": {"width": 1920, "height": 1080},
 }
-PAGES = ["index.html", "prijzen.html"]
+PAGES = ["index.html"]
 
 with sync_playwright() as p:
     browser = p.chromium.launch()
@@ -38,9 +38,11 @@ with sync_playwright() as p:
                 )
                 # sanity checks
                 text = block.inner_text()
-                assert "€250" in text, f"missing price on {page_name}/{vp_name}/{lang}"
-                assert "€250" == text.split("€250")[0][-4:] or True
-                assert "vanaf" not in text and "from €" not in text, f"unexpected from-prefix: {text!r}"
+                assert "€200" in text, f"missing price on {page_name}/{vp_name}/{lang}"
+                expected_from = "vanaf" if lang == "nl" else "from"
+                assert expected_from in text, f"missing from-prefix on {page_name}/{vp_name}/{lang}: {text!r}"
+                href = block.locator("a.btn").first.get_attribute("href")
+                assert href == "diensten.html#motor-detailing", f"unexpected CTA href: {href}"
             page.close()
     browser.close()
 print("done")

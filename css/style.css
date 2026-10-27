@@ -142,6 +142,71 @@ h3.group-title {
   transition: color 0.2s ease;
 }
 
+/* ---------- Nav dropdown (Diensten) ---------- */
+.nav-dropdown { position: relative; }
+.nav-dropdown-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+.nav-dropdown-toggle svg {
+  width: 11px; height: 11px;
+  transition: transform 0.2s ease;
+}
+.nav-dropdown-toggle:hover { color: var(--accent-2); }
+.nav-dropdown:hover .nav-dropdown-toggle svg,
+.nav-dropdown:focus-within .nav-dropdown-toggle svg,
+.nav-dropdown.open .nav-dropdown-toggle svg { transform: rotate(180deg); }
+.nav-dropdown-panel {
+  position: absolute;
+  top: calc(100% + 16px);
+  left: 50%;
+  transform: translate(-50%, 8px);
+  min-width: 310px;
+  background: rgba(14, 17, 22, 0.98);
+  border: 1px solid var(--panel-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 0.7rem 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+  z-index: 60;
+}
+.nav-dropdown:hover .nav-dropdown-panel,
+.nav-dropdown:focus-within .nav-dropdown-panel,
+.nav-dropdown.open .nav-dropdown-panel {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, 0);
+}
+.nav-dropdown-panel a {
+  display: block;
+  padding: 0.45rem 1.4rem;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+.nav-dropdown-panel a:hover { color: var(--accent); background: rgba(127, 180, 216, 0.07); }
+.nav-dropdown-all { font-weight: 600 !important; color: var(--accent-2) !important; }
+.nav-dropdown-group {
+  font-family: var(--font-head);
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+  padding: 0.85rem 1.4rem 0.25rem;
+}
+
 /* ---------- Social links ---------- */
 .social-links { display: flex; align-items: center; gap: 1.15rem; }
 .social-links a {
@@ -297,6 +362,27 @@ h3.group-title {
 .pricing-hero { padding-top: calc(var(--header-h) + 4rem); }
 .pricing-hero .section-intro, .pricing-intro { margin-bottom: 3rem; }
 
+/* Page hero with background photo (diensten.html) */
+.page-hero {
+  position: relative;
+  overflow: hidden;
+  padding-top: 0;
+  padding-bottom: 0;
+  display: flex;
+  align-items: center;
+  min-height: 52vh;
+  min-height: 52svh;
+}
+.page-hero-content {
+  position: relative;
+  z-index: 1;
+  padding-top: calc(var(--header-h) + 4rem);
+  padding-bottom: 4.5rem;
+}
+.svc-toc { margin: 0; color: var(--muted); font-size: 0.95rem; line-height: 2; max-width: 760px; }
+.svc-toc a { color: var(--text); text-decoration: none; border-bottom: 1px solid var(--panel-border); transition: color 0.2s, border-color 0.2s; }
+.svc-toc a:hover { color: var(--accent); border-color: var(--accent); }
+
 .pricing-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -309,7 +395,7 @@ h3.group-title {
   padding-top: 1.8rem;
 }
 .price-card:hover { transform: none; }
-.price-card h3 { font-size: 1.2rem; margin-bottom: 0.5rem; }
+.price-card h3 { font-size: 1.2rem; margin-bottom: 0.5rem; hyphens: auto; overflow-wrap: break-word; }
 .price-tag { color: var(--muted); font-size: 0.9rem; min-height: 3.6em; }
 .price {
   margin: 1.1rem 0 1.3rem;
@@ -363,7 +449,11 @@ h3.group-title {
 }
 .pricing-note { color: var(--muted); font-size: 0.88rem; margin-top: 1.4rem; max-width: 620px; }
 .pricing-note + .pricing-note { margin-top: 0.4rem; }
-.services-pricing-cta { margin-top: 3rem; text-align: center; }
+.services-pricing-cta { margin-top: 3rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+/* "Meer info" link at the bottom of a service card */
+.card-more { margin-top: 1rem; }
+.card-more a { color: var(--accent); font-size: 0.88rem; text-decoration: none; font-weight: 500; }
+.card-more a:hover { color: var(--accent-2); text-decoration: underline; }
 
 /* Motorcycle pricing block */
 .moto-price {
@@ -389,6 +479,65 @@ h3.group-title {
   .moto-price-side { text-align: left; }
   .moto-price-side .price { justify-content: flex-start; }
 }
+
+/* ---------- Diensten page (service detail sections) ---------- */
+.svc-section { scroll-margin-top: calc(var(--header-h) + 14px); }
+.svc-werkwijze { margin: 1.6rem 0 2.4rem; max-width: 720px; }
+.svc-werkwijze h3 { font-size: 1.05rem; margin-bottom: 0.8rem; color: var(--accent-2); }
+.svc-werkwijze ul { list-style: none; display: flex; flex-direction: column; gap: 0.55rem; }
+.svc-werkwijze li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.55rem;
+  font-size: 0.92rem;
+  color: #c3cad3;
+}
+/* Flexible grid variant for service pricing cards (2–3 cards per row) */
+.pricing-grid.svc-grid { grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); }
+.svc-grid .price-tag { min-height: 0; }
+/* In the narrower svc cards the "Meest gekozen" badge sits on its own line
+   above the title instead of floating over it */
+.svc-grid .price-badge { position: static; display: inline-block; align-self: flex-start; margin-bottom: 0.7rem; }
+.svc-grid .price-card-featured h3 { padding-right: 0; }
+/* Surcharge / duration lines inside a price card */
+.svc-meta {
+  border-top: 1px solid var(--panel-border);
+  padding-top: 0.9rem;
+  margin-bottom: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.svc-meta p { color: var(--muted); font-size: 0.84rem; }
+/* Price suffix, e.g. "per velg" / "vaste prijs" */
+.price-suffix { color: var(--muted); font-size: 0.85rem; }
+/* Add-on treatment cards */
+.svc-addons { margin-top: 2.4rem; }
+.svc-addons > h3 { font-size: 1.05rem; margin-bottom: 1.1rem; color: var(--accent-2); }
+.svc-addon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.1rem;
+}
+.svc-addon {
+  background: var(--panel);
+  border: 1px solid var(--panel-border);
+  border-radius: var(--radius);
+  padding: 1.3rem 1.4rem;
+}
+.svc-addon h4 { font-size: 0.98rem; margin-bottom: 0.3rem; }
+.svc-addon .addon-price {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--accent-2);
+  margin-bottom: 0.55rem;
+}
+.svc-addon p { color: var(--muted); font-size: 0.87rem; }
+.svc-addon .addon-link { font-size: 0.87rem; color: var(--accent); }
+/* Footnote under a service pricing block */
+.svc-note { color: var(--muted); font-size: 0.84rem; margin-top: 1.4rem; max-width: 720px; }
+.svc-cta { margin-top: 2.2rem; }
 
 /* Comparison table */
 .compare-wrap {
@@ -698,6 +847,31 @@ h3.group-title {
   .main-nav.open { transform: translateY(0); }
   .main-nav a { padding: 0.9rem 6%; font-size: 1rem; border-top: 1px solid rgba(255,255,255,0.05); }
   .main-nav a:first-child { border-top: none; }
+  /* Mobile dropdown: static, tap-to-expand sublist inside the menu */
+  .nav-dropdown { width: 100%; }
+  .nav-dropdown-toggle {
+    width: 100%;
+    justify-content: space-between;
+    padding: 0.9rem 6%;
+    font-size: 1rem;
+    border-top: 1px solid rgba(255,255,255,0.05);
+  }
+  .nav-dropdown-panel {
+    position: static;
+    transform: none;
+    min-width: 0;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 0.2rem 0 0.5rem;
+    display: none;
+    opacity: 1;
+    visibility: visible;
+  }
+  .nav-dropdown.open .nav-dropdown-panel { display: block; transform: none; }
+  .nav-dropdown-panel a { padding: 0.55rem 6% 0.55rem 10%; font-size: 0.95rem; border-top: none; }
+  .nav-dropdown-group { padding: 0.7rem 6% 0.2rem 7.5%; }
   /* Anchor hero content to the bottom on mobile so there is no long
      black stretch between the CTA buttons and the services section */
   .hero { align-items: flex-end; }
@@ -712,6 +886,8 @@ h3.group-title {
 @media (max-width: 560px) {
   .section { padding: 4rem 0; }
   .pricing-hero { padding-top: calc(var(--header-h) + 2.5rem); }
+  .page-hero { min-height: 0; }
+  .page-hero-content { padding-top: calc(var(--header-h) + 2.5rem); padding-bottom: 3rem; }
   .pricing-grid { grid-template-columns: 1fr; }
   .price-tag { min-height: 0; }
   .cta-band { padding: 2rem 1.4rem; }

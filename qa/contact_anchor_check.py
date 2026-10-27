@@ -1,4 +1,4 @@
-"""Verify contact-CTA anchors land on the form, and ceramic price on request.
+"""Verify contact-CTA anchors land on the form (index + diensten), and ceramic price on request.
 
 Usage: .qa-venv/bin/python qa/contact_anchor_check.py  (server on :8080)
 Output: qa-screenshots/anchor-check/*.png
@@ -38,17 +38,18 @@ def main():
             print(f"{dev}: form top after CTA click = {box['y']:.0f}px")
             page.screenshot(path=str(OUT / f"{dev}-index-cta.png"))
 
-            # 2) Cross-page link from prijzen.html -> index.html#contactForm
-            page.goto(f"{BASE}/prijzen.html", wait_until="networkidle")
-            page.locator(".price-card .btn").first.click()
+            # 2) Cross-page link from diensten.html -> index.html#contactForm
+            page.goto(f"{BASE}/diensten.html", wait_until="networkidle")
+            page.locator("a[href*='index.html#contactForm']").first.click()
             page.wait_for_timeout(1800)
             box = page.locator("#contactForm").bounding_box()
-            print(f"{dev}: form top from prijzen.html = {box['y']:.0f}px")
-            page.screenshot(path=str(OUT / f"{dev}-prijzen-cta.png"))
+            print(f"{dev}: form top from diensten.html = {box['y']:.0f}px")
+            page.screenshot(path=str(OUT / f"{dev}-diensten-cta.png"))
 
             # 3) Ceramic card shows "price on request" (NL + EN)
-            page.goto(f"{BASE}/prijzen.html", wait_until="networkidle")
-            card = page.locator(".price-card").nth(3)
+            page.goto(f"{BASE}/index.html", wait_until="networkidle")
+            card = page.locator(".price-card",
+                                has=page.locator("h3[data-i18n='pkg.ceramic.name']"))
             card.scroll_into_view_if_needed()
             page.wait_for_timeout(600)
             card.screenshot(path=str(OUT / f"{dev}-ceramic-nl.png"))

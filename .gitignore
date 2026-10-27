@@ -4,3 +4,18 @@ Thumbs.db
 # Local QA tooling (screenshot loop)
 .qa-venv/
 qa-screenshots/
+
+# Business card designs (kept locally, not shipped)
+business-cards/
+
+# Invoice backgrounds / briefpapier (kept locally, not shipped)
+invoices/
+
+# Agents.md
+Agents.md
+
+# Email signature generator (kept locally, not shipped)
+email/
+
+# Python bytecode cache
+qa/__pycache__/

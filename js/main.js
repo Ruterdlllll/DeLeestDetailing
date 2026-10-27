@@ -111,6 +111,32 @@
     });
   }
 
+  /* ---------- Services dropdown ---------- */
+  /* Desktop opens via CSS :hover/:focus-within; this toggles .open for
+     touch/click and closes on ESC or an outside click */
+  const navDropdown = document.querySelector(".nav-dropdown");
+  if (navDropdown) {
+    const dropdownToggle = navDropdown.querySelector(".nav-dropdown-toggle");
+
+    dropdownToggle.addEventListener("click", (event) => {
+      event.stopPropagation();
+      const open = navDropdown.classList.toggle("open");
+      dropdownToggle.setAttribute("aria-expanded", String(open));
+    });
+
+    document.addEventListener("click", (event) => {
+      if (navDropdown.contains(event.target)) return;
+      navDropdown.classList.remove("open");
+      dropdownToggle.setAttribute("aria-expanded", "false");
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key !== "Escape") return;
+      navDropdown.classList.remove("open");
+      dropdownToggle.setAttribute("aria-expanded", "false");
+    });
+  }
+
   /* ---------- Reveal on scroll ---------- */
   const revealEls = document.querySelectorAll(".reveal");
   if ("IntersectionObserver" in window) {
@@ -138,7 +164,7 @@
      in-page "Book this package" buttons */
   const packageSelect = document.getElementById("cf-package");
   if (packageSelect) {
-    const validPackages = ["basic", "standard", "premium", "ceramic", "motorcycle"];
+    const validPackages = ["custom", "standard", "premium", "ceramic", "motorcycle"];
     const selectPackage = (value) => {
       if (validPackages.includes(value)) packageSelect.value = value;
     };
